@@ -1,8 +1,10 @@
+import DefaultLayoutComponent from "@/components/DefaultLayoutComponent"
 
 export default function Home(props) {
   console.log('props', props)
   return (
     <>
+    <DefaultLayoutComponent>
     <h1>This is the start page</h1>
       {props.wpDataJson.map(post => 
       <div>
@@ -10,6 +12,7 @@ export default function Home(props) {
         <p>{post.slug}</p>
         <p>{post.content.rendered}</p>
       </div>)}
+      </DefaultLayoutComponent>
     </>
   )
 }
