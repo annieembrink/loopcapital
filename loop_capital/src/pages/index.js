@@ -7,11 +7,20 @@ export default function Home(props) {
     <>
     <DefaultLayoutComponent>
     <h1>This is the start page</h1>
-      {props.wpDataJson.map(post => 
+      {props.wpDataJson.map(num => 
       <div>
-        <p>{post.date}</p>
-        <p>{post.slug}</p>
-        <p>{post.content.rendered}</p>
+        <div>
+          <p>{num.acf.investors}</p>
+          <p>investors</p>
+        </div>
+        <div>
+          <p>{num.acf.number_of_investments}</p>
+          <p>numbers of investments</p>
+        </div>
+        <div>
+          <p>{num.acf.msek_investments}</p>
+          <p>(MSEK) investments)</p>
+        </div>
       </div>)}
 
       
@@ -27,9 +36,9 @@ export default function Home(props) {
 export async function getStaticProps({ preview = false }) {
   // const allPosts = await getAllPostsForHome(preview)
 
-  let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/posts')
+  let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/startpage-numbers')
   let wpDataJson = await wpData.json()
-  console.log('wpData', wpDataJson)
+  //console.log('wpData', wpDataJson)
 
   return {
     props: { wpDataJson: wpDataJson },
