@@ -1,3 +1,4 @@
+import CarouselAboutComponent from "@/components/CarouselAboutComponent"
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent"
 
 export default function Home(props) {
@@ -12,7 +13,12 @@ export default function Home(props) {
         <p>{post.slug}</p>
         <p>{post.content.rendered}</p>
       </div>)}
+
+      
+      <CarouselAboutComponent/>
+      
       </DefaultLayoutComponent>
+
     </>
   )
 }
