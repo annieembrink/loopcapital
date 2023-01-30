@@ -5,26 +5,8 @@ import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 
 const Contact = () => {
    
-    const [failMessage, setFailMessage] = useState('');
+    // const [failMessage, setFailMessage] = useState('');
     // const formData = {'your-name': name, 'your-email': email, 'your-subject': subject, 'your-message': message}
-
-const postFormData = (e) => {
-    e.preventDefault()
-
-    fetch('/api/sendFormData', {
-        method: 'post'
-        // body: {name, email, subject, message}
-    })
-    .then(res => res.json())
-    .then(data => {
-        if(data.success) {
-            
-            setFailMessage('')
-        } else if(data.fail) {
-            setFailMessage(data.fail)
-        }
-    })
-}
 
     return (
         <DefaultLayoutComponent>
