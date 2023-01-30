@@ -1,0 +1,70 @@
+/* STYLING CAROUSEL */
+
+/* .wrapper_carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img_carousel {
+    width: 50vw;
+    height: 400px;
+}
+
+.carousel.slide .about_slide {
+    background-color: #CBD8CE;
+    width: 50vw;
+    height: 400px;
+}
+
+.carousel-caption {
+    bottom: 15% !important;
+}
+
+.carousel-caption, p {
+    background: none;
+    color: #11271D;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin-top: 20px !important;
+}
+
+.carousel-caption h3 {
+    background: none;
+    color: #11271D;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px !important;
+    font-weight: 500;
+}
+
+.carousel-caption h4 {
+    background: none;
+    color: #11271D;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
+.carousel-indicators, .carousel-indicators:active {
+    background: none;
+}
+
+.carousel .carousel-indicators button {
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    background-color: #11271D;
+    opacity: 1;
+}
+
+.carousel .carousel-indicators button.active {
+    background-color: #409250 !important;
+    height: 6px;
+    width: 6px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 1rem !important;
+    height: 1rem !important;    
+    background: none;
+} */
