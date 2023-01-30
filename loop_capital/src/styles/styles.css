@@ -1,5 +1,14 @@
 .flexColumn {
     display: flex;
     flex-direction: column;
-    color: red;
 }
+
+input, button {
+    background-color: white;
+    min-height: 3rem;
+}
+
+label {
+    color: white;
+}
+
