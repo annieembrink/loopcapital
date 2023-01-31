@@ -1,60 +1,56 @@
-/* STYLING CAROUSEL */
-
-.wrapper_carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+/* MOBILE FIRST */
 
 .img_carousel {
-    width: 50vw;
+    display: none;
+}
+
+.carousel-item {
+    text-align: center;
+    align-items: center;
+    background-color: #CBD8CE !important;
+    width: 100vw;
     height: 400px;
 }
 
-.carousel.slide .about_slide {
-    background-color: #CBD8CE;
-    width: 50vw;
-    height: 400px;
-}
 
-.carousel-caption {
-    bottom: 15% !important;
-}
-
-.carousel-caption, .p_element_carousel {
+.p_element_carousel {
     background: none;
     color: #11271D;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     margin-top: 20px !important;
+    padding: 16px;
 }
 
-.carousel-caption, h3 {
+.carousel-item h3 {
+    margin-top: 30% !important;
     background: none;
     color: #11271D;
     font-family: 'Roboto Mono', monospace;
-    font-size: 28px !important;
+    font-size: 18px !important;
     font-weight: 500;
 }
 
-.carousel-caption, h4 {
+.carousel-item h4 {
     background: none;
     color: #11271D;
     font-family: 'Roboto Mono', monospace;
-    font-size: 16px !important;
+    font-size: 14px !important;
     font-weight: bold;
+}
+
+.carousel .carousel-indicators button {
+    border-radius: 50% !important;
+    height: 5px;
+    width: 5px;
+    background-color: #11271D;
+    opacity: 1;
 }
 
 .carousel-indicators, .carousel-indicators:active {
     background: none;
 }
 
-.carousel .carousel-indicators button {
-    border-radius: 50%;
-    height: 5px;
-    width: 5px;
-    background-color: #11271D;
-    opacity: 1;
-}
 
 .carousel .carousel-indicators button.active {
     background-color: #409250 !important;
@@ -64,7 +60,37 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 1rem !important;
-    height: 1rem !important;    
-    background: none;
+    display: none !important;
+}
+
+
+
+
+/* DESKTOP */
+
+@media screen and (min-device-width: 1440px) {
+
+.wrapper_carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.carousel-item {
+    width: 50vw;
+}
+
+.img_carousel {
+    display: block;
+    width: 50vw;
+    height: 400px;
+}
+
+.carousel-item h3 {
+    margin-top: 20% !important;
+    font-size: 28px !important;
+}
+
+.carousel-item h4 {
+    font-size: 16px !important;
+}
 }

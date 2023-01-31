@@ -3,45 +3,93 @@
 
 * {
     box-sizing: border-box;
+    padding: 0;
     margin: 0;
     background-color: #11271D;
     color: #CBD8CE;
 }
 
+/* MOBILE FIRST */
+
 p {
     font-size: 16px;
 }
 
+/* Hero section */
+
 h1 {
-    font-size: 60px;
-}
-
-h2 {
-    font-size: 40px;
-}
-
-h3 {
-    font-size: 33px;
-}
-
-h4 {
     font-size: 26px;
 }
 
-h5 {
+/* Company name, We can offer you, Hello Contact, Journey, info  */
+
+h2 {
     font-size: 22px;
 }
 
-h6 {
+/* Headline under Our vision and ambition, button text */
+h3 {
     font-size: 14px;
 }
 
-button {
-    width: 284px;
-    height: 61px;
-    background-color: #409250;
-    color: white;   
-    border: none;
-    font-size: 16px;
-    border-radius: 10px;
+/* Info journey, branch portfolio, company name cards */
+
+h4 {
+    font-size: 12px;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* DESKTOP MEDIA QUERYS */
+
+@media screen and (min-device-width: 1440px) {
+    
+    h1 {
+        font-size: 60px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-size: 33px;
+    }
+    
+    h4 {
+        font-size: 26px;
+    }
+    
+    h5 {
+        font-size: 22px;
+    }
+    
+    h6 {
+        font-size: 14px;
+    }
+    
+    button {
+        width: 284px;
+        height: 61px;
+        background-color: #409250;
+        color: white;   
+        border: none;
+        font-size: 16px;
+        border-radius: 10px !important;
+    }
+    
+    .animated_text {
+        color: #409250;
+    }
+}
+
+
+
