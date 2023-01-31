@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
+import InvestorFormComponent from '@/components/InvestorFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 
 const Contact = () => {
@@ -14,7 +15,7 @@ const Contact = () => {
             <h1>Contact</h1>
   
         {showForm ? 
-        <ContactFormComponent setShowForm={setShowForm}/>
+        <InvestorFormComponent setShowForm={setShowForm}/>
         : 
         <div>
         <div className='hello'>

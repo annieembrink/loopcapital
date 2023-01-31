@@ -2,8 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-
-const ContactFormComponent = ({setShowForm}) => {
+const InvestorFormComponent = ({setShowForm}) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -11,20 +10,18 @@ const ContactFormComponent = ({setShowForm}) => {
     const [message, setMessage] = useState('');
     const [currentInput, setCurrentInput] = useState(0)
 
-    const fd = new FormData()
-    fd.append('your-name', name)
-    fd.append('your-email', email)
-    fd.append('your-subject', subject)
-    fd.append('your-message', message)
+    
 
     const postFormData = (e) => {
         e.preventDefault()
-        console.log(name, email, subject, message)
     
-        fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
+        fetch('/api/sendFormData', {
             method: 'POST',
-            body: fd
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({name, email, subject, message})
         })
+        .then(res => res.json())
+        .then(data => console.log('data', data))
     }
 
     return ( 
@@ -74,4 +71,4 @@ const ContactFormComponent = ({setShowForm}) => {
      );
 }
  
-export default ContactFormComponent;
+export default InvestorFormComponent;
