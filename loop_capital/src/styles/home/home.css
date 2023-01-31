@@ -4,6 +4,10 @@
     display: none;
 }
 
+.wrapper_carousel {
+    margin: -16px;
+}
+
 .carousel-item {
     text-align: center;
     align-items: center;
