@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-
+import Image from 'next/image'
 
 const CarouselAboutComponent = () => {
     return (
@@ -31,7 +31,7 @@ const CarouselAboutComponent = () => {
                         <h3>Our vision and ambition</h3>
                         <h4>Network</h4>
                         <p className='p_element_carousel'>
-                        The network consists of 48 investors with different skills. As we invest at an early stage in the company's journey, we can add both capital and expertise to help and support entrepreneurs.
+                        The network consists of 48 investors with different skills. As we invest at an early stage in the company&apos;s journey, we can add both capital and expertise to help and support entrepreneurs.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -47,7 +47,7 @@ const CarouselAboutComponent = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-            <img src='/images/prisma.jpg' className='img_carousel'></img>
+            <Image width={500} height={500} src='/images/prisma.jpg' className='img_carousel' alt='Prismahuset'/>
             </div>
         </>
     );

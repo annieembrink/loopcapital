@@ -20,7 +20,7 @@ const Contact = () => {
                     <div className='hello'>
                         <h1>Hello</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus ab iusto reiciendis maxime ipsam sint magni alias ut sapiente. Corporis, cum. Fuga mollitia voluptatum officiis harum, minus sequi! Architecto.</p>
-                        <button onClick={() => setShowForm(true)}>Let's get in touch!</button>
+                        <button onClick={() => setShowForm(true)}>Let&apos;s get in touch!</button>
                     </div>
                     <div className='hello'>
                         <h1>Hello</h1>

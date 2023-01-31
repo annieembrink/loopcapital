@@ -1,20 +1,22 @@
+import Link from 'next/link'
+
 const NavBarComponent = () => {
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/portfolio">Portfolio</a>
-                    </li>
-
-                    <li>
-                        <a href="/contact">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li>
+                    <Link href="/">Home</Link>
+                </li>
+                <li>
+                    <Link href="/portfolio">Portfolio</Link>
+                </li>
+                
+                <li>
+                    <Link href="/contact">Contact</Link>
+                </li>
+            </ul>
+        </nav>
         </>
     );
 }
