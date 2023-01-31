@@ -1,17 +1,19 @@
+import Link from 'next/link'
+
 const NavBarComponent = () => {
     return ( 
         <>
         <nav>
             <ul>
                 <li>
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                 </li>
                 <li>
-                    <a href="/portfolio">Portfolio</a>
+                    <Link href="/portfolio">Portfolio</Link>
                 </li>
                 
                 <li>
-                    <a href="/contact">Contact</a>
+                    <Link href="/contact">Contact</Link>
                 </li>
             </ul>
         </nav>
