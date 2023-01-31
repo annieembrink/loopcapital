@@ -13,8 +13,10 @@ const Contact = () => {
     return (
         <DefaultLayoutComponent>
             
+            {formSubmitted ? 
             <h1>{clientMessage}</h1>
-
+            :
+            <>
             {showForm ?
                 <ContactFormComponent setShowForm={setShowForm} setClientMessage={setClientMessage} setFormSubmitted={setFormSubmitted}/>
                 :
@@ -31,7 +33,9 @@ const Contact = () => {
                     </div>
                 </div>
             }
-           
+            </>
+            }
+            
         </DefaultLayoutComponent>
     );
 }
