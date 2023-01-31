@@ -8,7 +8,7 @@ export default function Home(props) {
     <DefaultLayoutComponent>
     <h1>This is the start page</h1>
       {props.wpDataJson.map(num => 
-      <div>
+      <div key={num}>
         <div>
           <p>{num.acf.investors}</p>
           <p>investors</p>
@@ -19,7 +19,7 @@ export default function Home(props) {
         </div>
         <div>
           <p>{num.acf.msek_investments}</p>
-          <p>(MSEK) investments)</p>
+          <p>(MSEK) investments</p>
         </div>
       </div>)}
 

@@ -20,7 +20,7 @@
     bottom: 15% !important;
 }
 
-.carousel-caption, p {
+.carousel-caption, .p_element_carousel {
     background: none;
     color: #11271D;
     font-family: 'Poppins', sans-serif;
