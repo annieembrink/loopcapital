@@ -6,7 +6,7 @@ export default function Home(props) {
   return (
     <>
     <DefaultLayoutComponent>
-    <h1>This is the start page</h1>
+    <h1>Welcome to one of Skåne&apos;s most active early-stage Investors</h1>
       {props.wpDataJson.map(num => 
       <div key={num}>
         <div>

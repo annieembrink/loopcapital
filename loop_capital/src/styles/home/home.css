@@ -1,4 +1,13 @@
-/* STYLING CAROUSEL */
+/* MOBILE FIRST */
+
+.img_carousel {
+    display: none;
+}
+
+
+
+@media screen and (min-device-width: 1440px) {
+    /* STYLING CAROUSEL FOR DESKTOP */
 
 .wrapper_carousel {
     display: grid;
@@ -49,7 +58,7 @@
 }
 
 .carousel .carousel-indicators button {
-    border-radius: 50%;
+    border-radius: 50% !important;
     height: 5px;
     width: 5px;
     background-color: #11271D;
@@ -68,3 +77,5 @@
     height: 1rem !important;    
     background: none;
 }
+}
+
