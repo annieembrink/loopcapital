@@ -25,8 +25,6 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted 
             setShowForm(false)
             setFormSubmitted(true)
     
-            console.log(name, email, subject, message)
-    
             fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
                 method: 'POST',
                 body: fd
