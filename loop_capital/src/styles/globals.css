@@ -11,6 +11,10 @@
 
 /* MOBILE FIRST */
 
+main {
+    margin: 16px;
+}
+
 p {
     font-size: 16px;
 }
@@ -39,16 +43,51 @@ h4 {
 }
 
 
+/* LARGE PHONE */
+
+@media screen and (min-device-width: 430px) {
+    h1 {
+        font-size: 44px;
+    }
+    h2 {
+        font-size: 33px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 14px;
+    }
+}
+
+/* TABLET */
+
+@media screen and (min-device-width: 1024px) {
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 33px;
+    }
+    h4 {
+        font-size: 30px;
+    }
+    h5 {
+        font-size: 22px;
+    }
+    h6 {
+        font-size: 18px;
+    }
+}
 
 
-
-
-
-
-
-
-
-/* DESKTOP MEDIA QUERYS */
+/* DESKTOP */
 
 @media screen and (min-device-width: 1440px) {
     
