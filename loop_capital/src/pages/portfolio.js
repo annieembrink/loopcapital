@@ -7,7 +7,7 @@ export default function Portfolio(props) {
     <DefaultLayoutComponent>
     <h1>PORTFOLIO</h1>
       {props.wpDataJson.map(company => 
-      <div>
+      <div key={company}>
         <h3>{company.acf.company_name}</h3>
         <div style={{
             backgroundImage: `url(${company.acf.image_of_the_company})`,
