@@ -19,7 +19,7 @@ export default function Home(props) {
         </div>
         <div>
           <p>{num.acf.msek_investments}</p>
-          <p>(MSEK) investments)</p>
+          <p>(MSEK) investments</p>
         </div>
       </div>)}
 

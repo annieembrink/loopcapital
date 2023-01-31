@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 const NavBarComponent = () => {
-    return ( 
+    return (
         <>
         <nav>
             <ul>
@@ -18,7 +18,7 @@ const NavBarComponent = () => {
             </ul>
         </nav>
         </>
-     );
+    );
 }
- 
+
 export default NavBarComponent;

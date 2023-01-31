@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import '@/styles/home.css'
+import '@/styles/home/home.css'
 import '@/styles/styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
