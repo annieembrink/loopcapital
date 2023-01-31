@@ -7,15 +7,16 @@ import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 const Contact = () => {
 
     const [showForm, setShowForm] = useState(false);
-    // const formData = {'your-name': name, 'your-email': email, 'your-subject': subject, 'your-message': message}
-
+    const [formSubmitted, setFormSubmitted] = useState(false)
+    const [clientMessage, setClientMessage] = useState('')
 
     return (
         <DefaultLayoutComponent>
-            <h1>Contact</h1>
+            
+            <h1>{clientMessage}</h1>
 
             {showForm ?
-                <ContactFormComponent setShowForm={setShowForm} />
+                <ContactFormComponent setShowForm={setShowForm} setClientMessage={setClientMessage} setFormSubmitted={setFormSubmitted}/>
                 :
                 <div>
                     <div className='hello'>
@@ -30,6 +31,7 @@ const Contact = () => {
                     </div>
                 </div>
             }
+           
         </DefaultLayoutComponent>
     );
 }
