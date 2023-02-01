@@ -122,7 +122,7 @@ h4 {
         color: white;   
         border: none;
         font-size: 16px;
-        border-radius: 10px !important;
+        border-radius: 10px;
     }
     
     .animated_text {
