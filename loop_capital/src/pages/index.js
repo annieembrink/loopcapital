@@ -7,6 +7,30 @@ export default function Home(props) {
     <>
     <DefaultLayoutComponent>
     <h1>Welcome to one of Skåne&apos;s most active early-stage Investors</h1>
+
+    <div>
+      <h2>We can offer you</h2>
+      <ul className="arrowList">
+          <li>
+            <div className="arrow">-</div>
+            <div className="arrowListItems">A creative enviroment</div>
+          </li>
+          <li>
+            <div className="arrow">-</div>
+            <div className="arrowListItems">Possibility to ask for advice</div>
+          </li>
+          <li>
+            <div className="arrow">-</div>
+            <div className="arrowListItems">Wide contact network</div>
+          </li>
+          <li>
+            <div className="arrow">-</div>
+            <div className="arrowListItems">Access to capital</div>
+          </li>
+      </ul>
+    </div>
+
+    {/* MOVE THIS TO COMPONENT? */}
       {props.wpDataJson.map(num => 
       <div key={num}>
         <div>
