@@ -6,8 +6,10 @@ export default function Home(props) {
   return (
     <>
     <DefaultLayoutComponent>
+    
     <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
-    <div className="green-border">
+
+    <div>
       <h2>We can offer you</h2>
       <ul className="arrowList">
           <li>
