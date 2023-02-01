@@ -59,6 +59,12 @@ export default function Home(props) {
         </div>
       </div>)}
 
+      <div>
+        {/* SPAN NEED CLASS FOR GREEN TEXT */}
+        <h2>
+          Skåne will become Sweden&apos;s leading Tech region and build companies active <span>all over the world</span>
+        </h2>
+      </div>
       
       <CarouselAboutComponent/>
       
