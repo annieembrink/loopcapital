@@ -1,5 +1,14 @@
 /* MOBILE FIRST - SMALL PHONE*/
 
+/* WE OFFER YOU */
+/* ADDED BASIC CSS FOR VISUAL */
+
+.arrowList li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* CAROUSEL */
 
