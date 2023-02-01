@@ -14,7 +14,7 @@
 .carousel-item {
     text-align: center;
     align-items: center;
-    background-color: #CBD8CE !important;
+    background-color: #CBD8CE;
     width: 100vw;
     height: 400px;
 }
