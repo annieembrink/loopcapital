@@ -4,7 +4,7 @@ import Image from 'next/image'
 const CarouselAboutComponent = () => {
     return (
         <>
-        <div className="wrapper_carousel">
+        <div className="wrapper-carousel">
             <Carousel>
                 <Carousel.Item interval={8000}>
                         <h3>Our vision and ambition</h3>
@@ -31,9 +31,9 @@ const CarouselAboutComponent = () => {
                         </p>
                 </Carousel.Item>
             </Carousel>
-            <Image width={500} height={500} src='/images/prisma.jpg' className='img_carousel' alt='Prismahuset'/>
+            <Image width={500} height={500} src='/images/prisma.jpg' className='img-carousel' alt='Prismahuset'/>
             </div>
-        </>
+        </> 
     );
 
 }

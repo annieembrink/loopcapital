@@ -3,11 +3,11 @@
 
 /* CAROUSEL */
 
-.img_carousel {
+.img-carousel {
     display: none;
 }
 
-.wrapper_carousel {
+.wrapper-carousel {
     margin: -16px;
 }
 
@@ -54,7 +54,8 @@
     opacity: 1;
 }
 
-.carousel-indicators, .carousel-indicators:active {
+.carousel-indicators,
+.carousel-indicators:active {
     background: none;
 }
 
@@ -70,6 +71,34 @@
     display: none;
 }
 
+/* INVESTMENTS NUMBERS */
+
+.extra-big-font {
+    color: #409250;
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    text-shadow: 0px 4px 20px rgba(238, 249, 241, 0.12);
+}
+
+.green-border-numbers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #409250;
+    border-radius: 30px;
+    border: 3px solid #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
+    padding: 16px;
+    margin: 60px 0 60px 0;
+}
+
 
 /* LARGE PHONE */
 
@@ -79,10 +108,17 @@
     .carousel-item h3 {
         font-size: 30px;
     }
-    
+
     .carousel-item h4 {
         font-size: 18px;
     }
+
+    /* INVESTMENTS NUMBERS */
+
+    .extra-big-font {
+        font-size: 47px;
+    }
+
 }
 
 /* TABLET */
@@ -90,29 +126,52 @@
 @media screen and (min-device-width: 1024px) {
 
     /* CAROUSEL */
-    .wrapper_carousel {
+    .wrapper-carousel {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .carousel-item {
         width: 50vw;
     }
-    
-    .img_carousel {
+
+    .img-carousel {
         display: block;
         width: 50vw;
         height: 400px;
     }
-    
+
     .carousel-item h3 {
         margin-top: 20%;
         font-size: 30px;
     }
-    
+
     .carousel-item h4 {
         font-size: 16px;
     }
+
+    /* INVESTMENTS NUMBERS */
+
+    .extra-big-font {
+        display: flex;
+    }
+
+    .green-border-numbers {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .green-border-numbers div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .green-border-numbers {
+        padding: 80px;
+    }
+    
 }
 
 /* DESKTOP */
@@ -121,27 +180,45 @@
 
     /* CAROUSEL */
 
-.wrapper_carousel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+    .wrapper-carousel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-.carousel-item {
-    width: 50vw;
-}
+    .carousel-item {
+        width: 50vw;
+    }
 
-.img_carousel {
-    display: block;
-    width: 50vw;
-    height: 400px;
-}
+    .img-carousel {
+        display: block;
+        width: 50vw;
+        height: 400px;
+    }
 
-.carousel-item h3 {
-    margin-top: 20%;
-    font-size: 28px;
-}
+    .carousel-item h3 {
+        margin-top: 20%;
+        font-size: 28px;
+    }
 
-.carousel-item h4 {
-    font-size: 16px;
-}
+    .carousel-item h4 {
+        font-size: 16px;
+    }
+
+        /* INVESTMENTS NUMBERS */
+
+        .extra-big-font {
+            font-size: 52px;
+        }
+
+        .green-border-numbers div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .green-border-numbers {
+            padding: 80px;
+        }
+        
 }
