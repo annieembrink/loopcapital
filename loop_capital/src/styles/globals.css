@@ -42,6 +42,8 @@ h4 {
     font-size: 12px;
 }
 
+/* BUTTON */
+
 button {
     background-color: #409250;
     color: #fafafa;
@@ -52,12 +54,40 @@ button {
     height: 50px;
 }
 
+/*  ANIMATED & GREEN TEXT */
 
 .animated-text {
     color: #409250;
     text-decoration: underline;
 }
 
+.green-text {
+    color: #409250;
+}
+
+
+/* NO DOTS ON LISTELEMENTS*/ 
+li {
+    list-style: none;
+}
+
+/* GREEN BORDER */
+
+.green-border {
+    color: #409250;
+    border-radius: 20px;
+    border: 3px solid #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
+    padding: 40px 0 40px 0;
+    margin: 60px 0 60px 0;
+    text-align: center;
+}
+
+/* LIGHTGREEN BACKGROUND */
+
+.lightgreen-background {
+    background-color: #CBD8CE;
+}
 
 /* LARGE PHONE */
 
@@ -139,7 +169,7 @@ button {
     h6 {
         font-size: 14px;
     }
-
+    
     button {
         width: 284px;
         height: 61px;

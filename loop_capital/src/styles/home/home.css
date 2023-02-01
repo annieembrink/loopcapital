@@ -1,5 +1,14 @@
 /* MOBILE FIRST - SMALL PHONE*/
 
+/* WE OFFER YOU */
+/* ADDED BASIC CSS FOR VISUAL */
+
+.arrowList li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* CAROUSEL */
 
@@ -99,6 +108,12 @@
     margin: 60px 0 60px 0;
 }
 
+/* WE CAN OFFER YOU */
+
+
+.arrow-list-items {
+    font-size: 16px;
+}
 
 /* LARGE PHONE */
 
@@ -117,6 +132,12 @@
 
     .extra-big-font {
         font-size: 47px;
+    }
+
+    /* WE CAN OFFER YOU */
+
+    .arrow-list-items {
+        font-size: 18px;
     }
 
 }
@@ -171,6 +192,12 @@
     .green-border-numbers {
         padding: 80px;
     }
+
+    /* WE CAN OFFER YOU */
+
+    .arrow-list-items {
+        font-size: 20px;
+    }
     
 }
 
@@ -221,4 +248,9 @@
             padding: 80px;
         }
         
+        /* WE CAN OFFER YOU */
+        
+    .arrow-list-items {
+        font-size: 20px;
+    }
 }
