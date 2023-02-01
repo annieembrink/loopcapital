@@ -1,15 +1,5 @@
 /* MOBILE FIRST - SMALL PHONE*/
 
-/* WE OFFER YOU */
-/* ADDED BASIC CSS FOR VISUAL */
-
-.arrowList li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 /* CAROUSEL */
 
 .img-carousel {
@@ -80,6 +70,43 @@
     display: none;
 }
 
+
+/* WE OFFER YOU AND QUOTE */
+/* ADDED BASIC CSS FOR VISUAL */
+
+/* Bootstrap gives padding-left of 2rem, dont want it */
+.arrow-list {
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.arrow-list li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.arrow-list .arrow {
+    padding-right: 1rem;
+}
+
+.arrow-list-items {
+    font-size: 20px;
+}
+
+/* Doesn't get the correct font? is imported in global.css*/
+/* , tested with another one, same problem  */
+
+#quote-tag {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+#quote {
+    margin: 1rem 0;
+}
+
 /* INVESTMENTS NUMBERS */
 
 .extra-big-font {
@@ -94,26 +121,50 @@
     text-shadow: 0px 4px 20px rgba(238, 249, 241, 0.12);
 }
 
-.green-border-numbers {
+.green-border {
+    border: 3px solid #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
+    /* padding: 16px; */
+    padding: 2rem 0;
+    /* margin: 60px 0 60px 0; */
+    border-radius: 20px;
+
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.green-border-numbers {
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: center; */
+    /* COLOR - should be on h-tag? */
     color: #409250;
-    border-radius: 30px;
-    border: 3px solid #409250;
+}
+
+.green-border-numbers div {
+    margin: 1rem;
+}
+
+.underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    border-radius: 10px;
+    background-color: #409250;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
-    padding: 16px;
-    margin: 60px 0 60px 0;
 }
 
-/* WE CAN OFFER YOU */
-
-
-.arrow-list-items {
-    font-size: 16px;
-}
 
 /* LARGE PHONE */
 
@@ -134,12 +185,9 @@
         font-size: 47px;
     }
 
-    /* WE CAN OFFER YOU */
-
-    .arrow-list-items {
-        font-size: 18px;
+    #quote-tag {
+        font-size: 130px;
     }
-
 }
 
 /* TABLET */
@@ -179,7 +227,7 @@
 
     .green-border-numbers {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .green-border-numbers div {
@@ -198,12 +246,28 @@
     .arrow-list-items {
         font-size: 20px;
     }
-    
+
+    #quote-tag {
+        font-size: 200px;
+    }
 }
 
 /* DESKTOP */
 
 @media screen and (min-device-width: 1440px) {
+
+    #align-row {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    /* -------------- */
+    /* -------------------NEEDS CHANGE HERE */
+    /* -------------- */
+    #align-row div {
+        width: 50%;
+    }
 
     /* CAROUSEL */
 
@@ -231,25 +295,25 @@
         font-size: 16px;
     }
 
-        /* INVESTMENTS NUMBERS */
+    /* INVESTMENTS NUMBERS */
 
-        .extra-big-font {
-            font-size: 52px;
-        }
+    .extra-big-font {
+        font-size: 52px;
+    }
 
-        .green-border-numbers div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+    .green-border-numbers div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-        .green-border-numbers {
-            padding: 80px;
-        }
-        
-        /* WE CAN OFFER YOU */
-        
+    .green-border-numbers {
+        padding: 80px;
+    }
+
+    /* WE CAN OFFER YOU */
+
     .arrow-list-items {
         font-size: 20px;
     }

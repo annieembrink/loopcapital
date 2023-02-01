@@ -1,12 +1,37 @@
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
+import {useState} from 'react'
 
 export default function Portfolio(props) {
   console.log('PORTFOLIO props', props);
+
+  const [chosenCompanies, setChosenCompanies] = useState(props.wpDataJson)
+
+  const filter = (e) => {
+    e.preventDefault()
+    const filteredData = props.wpDataJson.filter(company => company.acf.branch === e.target.innerText)
+    console.log('filteredData', filteredData)
+    setChosenCompanies(filteredData)
+  }
+
+  const showAll = (e) => {
+    setChosenCompanies(props.wpDataJson)
+  }
+
   return (
     <>
     <DefaultLayoutComponent>
     <h1>PORTFOLIO</h1>
-      {props.wpDataJson.map(company => 
+
+    <div>
+      <ul>
+        <li onClick={(e) => showAll(e)}>All investments</li>
+        <li onClick={(e) => filter(e)}>AI</li>
+        <li onClick={(e) => filter(e)}>Fintech</li>
+        <li onClick={(e) => filter(e)}>Other</li>
+      </ul>
+    </div>
+
+      {chosenCompanies.map(company => 
       <div key={company}>
         <h3>{company.acf.company_name}</h3>
         <div style={{

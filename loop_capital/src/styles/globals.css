@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: #11271D;
     color: #CBD8CE;
+}
+
+body {
+    background-color: #11271D;
 }
 
 /* MOBILE FIRST */
@@ -17,6 +21,8 @@ main {
 
 p {
     font-size: 16px;
+    /* Bootstrap gives margin bottom of 1rem */
+    margin-bottom: 0;
 }
 
 /* Hero section */
@@ -44,6 +50,7 @@ h4 {
 
 /* BUTTON */
 
+
 button {
     background-color: #409250;
     color: #fafafa;
@@ -54,7 +61,7 @@ button {
     height: 50px;
 }
 
-/*  ANIMATED & GREEN TEXT */
+/* ANIMATED AND GREEN TEXT */
 
 .animated-text {
     color: #409250;
@@ -66,48 +73,46 @@ button {
 }
 
 
-/* NO DOTS ON LISTELEMENTS*/ 
+/* NO DOTS ON LISTELEMENTS*/
 li {
     list-style: none;
 }
 
-/* GREEN BORDER */
+/* CLASS FOR FONT-FAMILY */
 
-.green-border {
-    color: #409250;
-    border-radius: 20px;
-    border: 3px solid #409250;
-    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
-    padding: 40px 0 40px 0;
-    margin: 60px 0 60px 0;
-    text-align: center;
+.roboto-font {
+    font-family: 'Roboto Mono', monospace;
 }
 
-/* LIGHTGREEN BACKGROUND */
-
-.lightgreen-background {
-    background-color: #CBD8CE;
+.poppins-font {
+    font-family: 'Poppins', sans-serif;
 }
 
 /* LARGE PHONE */
 
 @media screen and (min-device-width: 430px) {
+
+    /* Hero section */
     h1 {
         font-size: 44px;
     }
 
+    /* Company name, We can offer you, Hello Contact, Journey, info  */
     h2 {
-        font-size: 33px;
-    }
-
-    h3 {
         font-size: 30px;
     }
 
+    /* Headline under Our vision and ambition, button text */
+    h3 {
+        font-size: 28px;
+    }
+
+    /* Info journey, branch portfolio, company name cards */
     h4 {
         font-size: 18px;
     }
 
+    /* Branch */
     h5 {
         font-size: 14px;
     }
@@ -116,28 +121,35 @@ li {
 /* TABLET */
 
 @media screen and (min-device-width: 1024px) {
+
+    /* Hero section */
     h1 {
         font-size: 50px;
     }
 
+    /* Company name popup, We can offer you, Hello Contact, Journey, info  */
     h2 {
         font-size: 40px;
     }
 
+    /* Headline under Our vision and ambition, button text */
     h3 {
         font-size: 33px;
     }
 
+    /* Info journey, branch portfolio, company name cards */
     h4 {
         font-size: 30px;
     }
-
+    /* Branch */
     h5 {
-        font-size: 22px;
+        font-size: 14px;
     }
-
+    /* Company name in portfolio, not popup */
     h6 {
         font-size: 18px;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
     }
 }
 
@@ -145,19 +157,19 @@ li {
 /* DESKTOP */
 
 @media screen and (min-device-width: 1440px) {
-
+    /* Hero section */
     h1 {
         font-size: 60px;
     }
-
+    /* Company name, We can offer you, Hello Contact, Journey, info  */
     h2 {
         font-size: 40px;
     }
-
+    /* Headline under Our vision and ambition, button text */
     h3 {
         font-size: 33px;
     }
-
+    /* Info journey, branch portfolio, company name cards */
     h4 {
         font-size: 26px;
     }
@@ -169,11 +181,12 @@ li {
     h6 {
         font-size: 14px;
     }
-    
+
+    /* BUTTON STYLING DESKTOP */
+
     button {
         width: 284px;
         height: 61px;
         font-size: 16px;
     }
-
 }
