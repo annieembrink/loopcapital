@@ -7,7 +7,6 @@ export default function Home(props) {
   return (
     <>
     <DefaultLayoutComponent>
-
     <div className="hero-section">
       <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
       <p>Lorem ipsum dolor sit</p>
@@ -35,6 +34,7 @@ export default function Home(props) {
             <li>
               <div className="arrow">-</div>
               <div className="arrow-list-items">Access to capital</div>
+
             </li>
         </ul>
       </div>

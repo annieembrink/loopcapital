@@ -150,9 +150,8 @@
 
 .underline-animation {
     display: inline-block;
-    position: relative;
+    position: relative;   
 }
-
 .underline-animation::after {
     content: '';
     position: absolute;
@@ -165,7 +164,16 @@
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
 
+/* Doesn't get the correct font? is imported in global.css */
+#quote-tag {
+    font-family: 'Port Lligat Slab', serif;
+    font-size: 100px;
+    text-align: center;
+}
 
+#quote {
+    margin: 1rem 0;
+}
 /* LARGE PHONE */
 
 @media screen and (min-device-width: 430px) {
@@ -259,7 +267,6 @@
     #align-row {
         display: flex;
         flex-direction: row-reverse;
-
     }
 
     /* -------------- */
