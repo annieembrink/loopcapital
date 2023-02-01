@@ -26,21 +26,11 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
         setClientMessage('Successfully sent form!')
         setShowForm(false)
         setFormSubmitted(true)
-    
-
-
-        setClientMessage('Successfully sent form!')
-        setShowForm(false)
-        setFormSubmitted(true)
-
 
         fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
             method: 'POST',
             body: fd
         })
-
-        
-
 
     }
 
@@ -80,7 +70,6 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
             setValidationError('')
             if (nr) {
                 setCurrentInput(nr)
-
             } else {
                 postForm()
 
@@ -93,11 +82,9 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
         <>
         <h1>{helloMessage}</h1>
 
-        {/* <EntrepreneurFormComponent/> */}
-
-
         <Form className='flexColumn' onSubmit={(e) => validateMessage(e)}>
             <button onClick={() => setShowForm(false)}>Close</button>
+            
             {currentInput === 0 && (
                 <Form.Group>
                     <Form.Label htmlFor="nameInput">What is your first name?</Form.Label>
@@ -134,71 +121,14 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
                     <Form.Label htmlFor="messageInput">Message:</Form.Label>
                     <Form.Control type="text" name="messageInput" id="messageInput" value={message} onChange={(e) => setMessage(e.target.value)} />
                     <button type='submit'>SUBMIT</button>
-                    {/* <button onClick={() => onNextClick('message', 4)}>NEXT</button> */}
 
                     <button onClick={() => onBackClick(2)}>Back</button>
                 </Form.Group>
             )}
 
-        {/* {currentInput === 4 && (
-        <Button type='submit'>Submit the form</Button>
-        )} */}
-
         </Form>
 
         <p>{validationError}</p>
-            <h1>TEST</h1>
-            <Form className='flexColumn' onSubmit={(e) => postFormData(e)}>
-                <Button onClick={() => setShowForm(false)}>Close</Button>
-                {currentInput === 0 && (
-                    <Form.Group>
-                        <Form.Label htmlFor="nameInput">What is your first name?</Form.Label>
-                        <Form.Control type="text" name="nameInput" id="nameInput" value={name} onChange={(e) => setName(e.target.value)} />
-                        <Button onClick={() => onNextClick('name', 1)} >NEXT</Button>
-                    </Form.Group>
-                )}
-
-
-                {currentInput === 1 && (
-                    <Form.Group>
-                        <Form.Label htmlFor="emailInput">Your email:</Form.Label>
-                        <Form.Control type="email" name="emailInput" id="emailInput" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <Button onClick={() => onNextClick('email', 2)}>NEXT</Button>
-
-                        <Button onClick={() => onBackClick(0)}>Back</Button>
-                    </Form.Group>
-                )}
-
-
-                {currentInput === 2 && (
-                    <Form.Group>
-                        <Form.Label htmlFor="subjectInput">Subject:</Form.Label>
-                        <Form.Control type="text" name="subjectInput" id="subjectInput" value={subject} onChange={(e) => setSubject(e.target.value)} />
-                        <Button onClick={() => onNextClick('subject', 3)}>NEXT</Button>
-
-                        <Button onClick={() => onBackClick(1)}>Back</Button>
-                    </Form.Group>
-                )}
-
-
-                {currentInput === 3 && (
-                    <Form.Group>
-                        <Form.Label htmlFor="messageInput">Message:</Form.Label>
-                        <Form.Control type="text" name="messageInput" id="messageInput" value={message} onChange={(e) => setMessage(e.target.value)} />
-                        <Button onClick={() => onNextClick('message', 4)}>NEXT</Button>
-
-                        <Button onClick={() => onBackClick(2)}>Back</Button>
-                    </Form.Group>
-                )}
-
-                {currentInput === 4 && (
-                    <Button type='submit'>Submit the form</Button>
-                )}
-
-            </Form>
-
-            <p>{validationError}</p>
-
         </>
 
     );
