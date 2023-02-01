@@ -6,8 +6,46 @@ export default function Home(props) {
   return (
     <>
     <DefaultLayoutComponent>
+    
     <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
-      
+     
+
+    <div>
+      <h2>We can offer you</h2>
+      <ul className="arrowList">
+          <li>
+            <div className="arrow">-</div>
+            <div className="arrowListItems">A creative enviroment</div>
+          </li>
+          <li>
+            <div className="arrow">-</div>
+            <div className="arrowListItems">Possibility to ask for advice</div>
+          </li>
+          <li>
+            <div className="arrow">-</div>
+            <div className="arrowListItems">Wide contact network</div>
+          </li>
+          <li>
+            <div className="arrow">-</div>
+            <div className="arrowListItems">Access to capital</div>
+          </li>
+      </ul>
+    </div>
+
+    <div>
+      {/* Add quote icon */}
+      <div>"QUOTE"</div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        {/* Right align text */}
+        <p>Name Namesson</p>
+        <p>Position</p>
+    </div>
+
+    {/* MOVE THIS TO COMPONENT? */}
+
       {props.wpDataJson.map(num => 
       <div key={num} className="green-border-numbers">
         <div>
@@ -23,6 +61,15 @@ export default function Home(props) {
           <p className="p-tag-numbers">(MSEK) investments</p>
         </div>
       </div>)}
+
+
+      <div>
+        {/* SPAN NEED CLASS FOR GREEN TEXT */}
+        <h2>
+          Skåne will become Sweden&apos;s leading Tech region and build companies active <span>all over the world</span>
+        </h2>
+      </div>
+
       
       <CarouselAboutComponent/>
       

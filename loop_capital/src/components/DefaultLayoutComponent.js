@@ -4,9 +4,9 @@ import FooterComponent from "./FooterComponent";
 const DefaultLayoutComponent = ({ children }) => {
     return (
         <>
-            <NavBarComponent />
+            <NavBarComponent/>
             <main>{children}</main>
-            <FooterComponent />
+            <FooterComponent/>
         </>
     );
 }
