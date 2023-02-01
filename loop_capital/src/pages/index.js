@@ -6,7 +6,9 @@ export default function Home(props) {
   return (
     <>
     <DefaultLayoutComponent>
-    <h1>Welcome to one of Skåne&apos;s most active early-stage Investors</h1>
+    
+    <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
+     
 
     <div>
       <h2>We can offer you</h2>
@@ -43,21 +45,23 @@ export default function Home(props) {
     </div>
 
     {/* MOVE THIS TO COMPONENT? */}
+
       {props.wpDataJson.map(num => 
-      <div key={num}>
+      <div key={num} className="green-border-numbers">
         <div>
-          <p>{num.acf.investors}</p>
-          <p>investors</p>
+          <p className="extra-big-font">{num.acf.investors}</p>
+          <p className="p-tag-numbers">investors</p>
         </div>
         <div>
-          <p>{num.acf.number_of_investments}</p>
-          <p>numbers of investments</p>
+          <p className="extra-big-font">{num.acf.number_of_investments}</p>
+          <p className="p-tag-numbers">numbers of investments</p>
         </div>
         <div>
-          <p>{num.acf.msek_investments}</p>
-          <p>(MSEK) investments</p>
+          <p className="extra-big-font">{num.acf.msek_investments}</p>
+          <p className="p-tag-numbers">(MSEK) investments</p>
         </div>
       </div>)}
+
 
       <div>
         {/* SPAN NEED CLASS FOR GREEN TEXT */}
@@ -65,6 +69,7 @@ export default function Home(props) {
           Skåne will become Sweden&apos;s leading Tech region and build companies active <span>all over the world</span>
         </h2>
       </div>
+
       
       <CarouselAboutComponent/>
       

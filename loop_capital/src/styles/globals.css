@@ -42,6 +42,24 @@ h4 {
     font-size: 12px;
 }
 
+
+button {
+    background-color: #409250;
+    color: #fafafa;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    width: 215px;
+    height: 50px;
+}
+
+
+.animated-text {
+    color: #409250;
+    text-decoration: underline;
+}
+
+
 .arrowListItems {
     font-size: 16px;
 }
@@ -57,15 +75,19 @@ li {
     h1 {
         font-size: 44px;
     }
+
     h2 {
         font-size: 33px;
     }
+
     h3 {
         font-size: 30px;
     }
+
     h4 {
         font-size: 18px;
     }
+
     h5 {
         font-size: 14px;
     }
@@ -80,18 +102,23 @@ li {
     h1 {
         font-size: 50px;
     }
+
     h2 {
         font-size: 40px;
     }
+
     h3 {
         font-size: 33px;
     }
+
     h4 {
         font-size: 30px;
     }
+
     h5 {
         font-size: 22px;
     }
+
     h6 {
         font-size: 18px;
     }
@@ -104,48 +131,40 @@ li {
 /* DESKTOP */
 
 @media screen and (min-device-width: 1440px) {
-    
+
     h1 {
         font-size: 60px;
     }
-    
+
     h2 {
         font-size: 40px;
     }
-    
+
     h3 {
         font-size: 33px;
     }
-    
+
     h4 {
         font-size: 26px;
     }
-    
+
     h5 {
         font-size: 22px;
     }
-    
+
     h6 {
         font-size: 14px;
     }
+
     .arrowListItems {
         font-size: 20px;
     }
     
+
     button {
         width: 284px;
         height: 61px;
-        background-color: #409250;
-        color: white;   
-        border: none;
         font-size: 16px;
-        border-radius: 10px;
     }
-    
-    .animated_text {
-        color: #409250;
-    }
+
 }
-
-
-
