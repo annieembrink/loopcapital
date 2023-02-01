@@ -1,9 +1,9 @@
-import NavBarComponent from "./NavBarComponent";
+import HeaderComponent from "./HeaderComponent";
 
 const DefaultLayoutComponent = ({children}) => {
     return ( 
     <>
-    <NavBarComponent/>
+    <HeaderComponent/>
     <main>{children}</main>
     </> 
     );
