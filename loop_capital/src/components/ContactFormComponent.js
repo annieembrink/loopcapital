@@ -7,6 +7,7 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
+    const [file, setFile] = useState(null)
     const [validationError, setValidationError] = useState('')
     const [currentInput, setCurrentInput] = useState(0)
 
@@ -15,14 +16,19 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
     fd.append('your-email', email)
     fd.append('your-subject', subject)
     fd.append('your-message', message)
+    fd.append('your-file', file)
 
-    const validateMessage = (e) => {
+    const handleFileChange = (e) => {
+        console.log(e.target.files)
+        if (e.target.files) {
+          setFile(e.target.files[0]);
+        }
+      };
+
+    const postForm = (e) => {
         e.preventDefault()
+        console.log('running postForm')
 
-        validateText(message)
-    }
-
-    const postForm = () => {
         setClientMessage('Successfully sent form!')
         setShowForm(false)
         setFormSubmitted(true)
@@ -31,7 +37,6 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
             method: 'POST',
             body: fd
         })
-
     }
 
     const onNextClick = (input, nr) => {
@@ -62,18 +67,14 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
     }
 
     const validateText = (text, nr) => {
+        console.log('validate text')
         if (text.length === 0) {
             setValidationError('Text too short')
         } else if (text.length > 5) {
             setValidationError('Text too long')
         } else {
             setValidationError('')
-            if (nr) {
-                setCurrentInput(nr)
-            } else {
-                postForm()
-
-            }
+            setCurrentInput(nr)
         }
     }
 
@@ -82,14 +83,15 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
         <>
         <h1>{helloMessage}</h1>
 
-        <Form className='flexColumn' onSubmit={(e) => validateMessage(e)}>
-            <button onClick={() => setShowForm(false)}>Close</button>
-            
+        <Form className='flexColumn' onSubmit={(e) => postForm(e)}>
+           
+            <button type='button' onClick={() => setShowForm(false)}>Close</button>
+
             {currentInput === 0 && (
                 <Form.Group>
                     <Form.Label htmlFor="nameInput">What is your first name?</Form.Label>
                     <Form.Control type="text" name="nameInput" id="nameInput" value={name} onChange={(e) => setName(e.target.value)} />
-                    <button onClick={() => onNextClick('name', 1)} >NEXT</button>
+                    <button type='button' onClick={() => onNextClick('name', 1)} >NEXT</button>
                 </Form.Group>
             )}
 
@@ -98,9 +100,9 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
                 <Form.Group>
                     <Form.Label htmlFor="emailInput">Your email:</Form.Label>
                     <Form.Control type="email" name="emailInput" id="emailInput" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <button onClick={() => onNextClick('email', 2)}>NEXT</button>
+                    <button type='button' onClick={() => onNextClick('email', 2)}>NEXT</button>
                     
-                    <button onClick={() => onBackClick(0)}>Back</button>
+                    <button type='button' onClick={() => onBackClick(0)}>Back</button>
                 </Form.Group>
             )}
 
@@ -109,9 +111,9 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
                 <Form.Group>
                     <Form.Label htmlFor="subjectInput">Subject:</Form.Label>
                     <Form.Control type="text" name="subjectInput" id="subjectInput" value={subject} onChange={(e) => setSubject(e.target.value)} />
-                    <button onClick={() => onNextClick('subject', 3)}>NEXT</button>
+                    <button type='button' onClick={() => onNextClick('subject', 3)}>NEXT</button>
                     
-                    <button onClick={() => onBackClick(1)}>Back</button>
+                    <button type='button' onClick={() => onBackClick(1)}>Back</button>
                 </Form.Group>
             )}
 
@@ -120,10 +122,22 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
                 <Form.Group>
                     <Form.Label htmlFor="messageInput">Message:</Form.Label>
                     <Form.Control type="text" name="messageInput" id="messageInput" value={message} onChange={(e) => setMessage(e.target.value)} />
-                    <button type='submit'>SUBMIT</button>
+                    <button type='button' onClick={() => onNextClick('message', 4)}>NEXT</button>
 
-                    <button onClick={() => onBackClick(2)}>Back</button>
+                    <button type='button' onClick={() => onBackClick(2)}>Back</button>
                 </Form.Group>
+            )}
+
+            {currentInput === 4 && (
+            <Form.Group>
+                <Form.Label>Want to add a file?</Form.Label>
+                <Form.Control type='file' onChange={handleFileChange}></Form.Control>
+                <div>{file && `${file.name} - ${file.type}`}</div>
+                
+                <button type='submit'>SUBMIT</button>
+
+                <button type='button' onClick={() => onBackClick(3)}>Back</button>
+            </Form.Group>
             )}
 
         </Form>
