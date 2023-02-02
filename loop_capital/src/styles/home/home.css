@@ -1,24 +1,5 @@
 /* MOBILE FIRST - SMALL PHONE*/
 
-/* WE OFFER YOU */
-/* ADDED BASIC CSS FOR VISUAL */
-
-/* Bootstrap gives padding-left of 2rem, dont want it */
-.arrowList {
-    padding-left: 0;
-    margin-top: 1rem;
-}
-
-.arrowList li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.arrowList .arrow {
-    padding-right: 1rem;
-}
-
-
 /* CAROUSEL */
 
 .img-carousel {
@@ -87,6 +68,43 @@
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     display: none;
+}
+
+
+/* WE OFFER YOU AND QUOTE */
+/* ADDED BASIC CSS FOR VISUAL */
+
+/* Bootstrap gives padding-left of 2rem, dont want it */
+.arrow-list {
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.arrow-list li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.arrow-list .arrow {
+    padding-right: 1rem;
+}
+
+.arrow-list-items {
+    font-size: 20px;
+}
+
+/* Doesn't get the correct font? is imported in global.css*/
+/* , tested with another one, same problem  */
+
+#quote-tag {
+    font-family: 'PT Sans Caption', sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
+
+#quote {
+    margin: 1rem 0;
 }
 
 /* INVESTMENTS NUMBERS */
@@ -230,7 +248,13 @@
     .green-border-numbers {
         padding: 80px;
     }
-    
+
+    /* WE CAN OFFER YOU */
+
+    .arrow-list-items {
+        font-size: 20px;
+    }
+
     #quote-tag {
         font-size: 200px;
     }
@@ -243,8 +267,8 @@
     #align-row {
         display: flex;
         flex-direction: row-reverse;
-        
     }
+
     /* -------------- */
     /* -------------------NEEDS CHANGE HERE */
     /* -------------- */
@@ -278,21 +302,26 @@
         font-size: 16px;
     }
 
-        /* INVESTMENTS NUMBERS */
+    /* INVESTMENTS NUMBERS */
 
-        .extra-big-font {
-            font-size: 52px;
-        }
+    .extra-big-font {
+        font-size: 52px;
+    }
 
-        .green-border-numbers div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
+    .green-border-numbers div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-        .green-border-numbers {
-            padding: 80px;
-        }
-        
+    .green-border-numbers {
+        padding: 80px;
+    }
+
+    /* WE CAN OFFER YOU */
+
+    .arrow-list-items {
+        font-size: 20px;
+    }
 }
