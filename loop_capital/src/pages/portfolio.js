@@ -1,10 +1,13 @@
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
+import PopupComponent from "@/components/PopupComponent";
 import {useState} from 'react'
 
 export default function Portfolio(props) {
   console.log('PORTFOLIO props', props);
 
   const [chosenCompanies, setChosenCompanies] = useState(props.wpDataJson)
+  const [showPopup, setShowPopup] = useState(false)
+  const [popupCompany, setPopupCompany] = useState({})
 
   const filter = (e) => {
     e.preventDefault()
@@ -17,10 +20,22 @@ export default function Portfolio(props) {
     setChosenCompanies(props.wpDataJson)
   }
 
+  const companyPopup = (e, company) => {
+    console.log('testing popup', company)
+    setShowPopup(true)
+    setPopupCompany(company)
+  }
+
   return (
     <>
+    <div style={{opacity: showPopup ? '70%' : null, zIndex: showPopup ? '-1' : null}}>
+    {/* <div style={{backgroundColor: showPopup ? 'rgba(255, 0, 0, 0.2)' : null}}> */}
     <DefaultLayoutComponent>
     <h1>PORTFOLIO</h1>
+    
+    {showPopup ? 
+    <PopupComponent setShowPopup={setShowPopup} popupCompany={popupCompany}/>  
+    : null}
 
     <div>
       <ul>
@@ -34,7 +49,7 @@ export default function Portfolio(props) {
       {chosenCompanies.map(company => 
       <div key={company}>
         <h3>{company.acf.company_name}</h3>
-        <div style={{
+        <div onClick={(e) => companyPopup(e, company)} style={{
             backgroundImage: `url(${company.acf.image_of_the_company})`,
             width: '200px',
             height: '200px',
@@ -44,7 +59,7 @@ export default function Portfolio(props) {
       </div>)}
       
       </DefaultLayoutComponent>
-
+      </div>
     </>
   )
 }
