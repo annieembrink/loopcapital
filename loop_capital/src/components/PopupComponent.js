@@ -21,7 +21,7 @@ const PopupComponent = ({showPopup, setShowPopup, popupCompany}) => {
     if (e.target.textContent === 'About') {
         setContent(popupCompany.acf.about)
     } else {
-        setContent('testimonials test content')
+        setContent(popupCompany.acf.testimonial)
     }
   }
 
