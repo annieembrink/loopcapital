@@ -17,6 +17,11 @@ const Contact = () => {
 
     return (
         <DefaultLayoutComponent>
+
+            <div className="hero-section">
+                <h1>Let&apos;s start this journey <span className="green-text">together!</span></h1>
+                <p>Lorem ipsum dolor sit</p>
+            </div>
             
             {formSubmitted ? 
             <h1>{clientMessage}</h1>

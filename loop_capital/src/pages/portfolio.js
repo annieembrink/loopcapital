@@ -20,7 +20,11 @@ export default function Portfolio(props) {
   return (
     <>
     <DefaultLayoutComponent>
-    <h1>PORTFOLIO</h1>
+        <div className="hero-section">
+            <h1>Loop Capital invest at an early stage in the companies <span className="green-text">journey</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+        </div>
+    
 
     <div>
       <ul>

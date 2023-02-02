@@ -9,6 +9,7 @@ export default function Home(props) {
   return (
     <>
     <DefaultLayoutComponent>
+
     <div className="hero-section">
       <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
       <p>Lorem ipsum dolor sit</p>
@@ -41,7 +42,7 @@ export default function Home(props) {
       </div>
 
       <div className="margin-bottom">
-        <p id="quote-tag">"</p>
+        <p id="quote-tag">&quot;</p>
           <p id="quote">
           <Icon icon="mdi-light:home" />
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -54,37 +55,48 @@ export default function Home(props) {
 
     </div>
 
-    {/* MOVE THIS TO COMPONENT? */}
-      {props.wpDataJson.map(num => 
-      <div key={num} className="green-border green-border-numbers margin-bottom">
-        <div>
-          <p className="extra-big-font">{num.acf.investors}</p>
-          <p className="p-tag-numbers">investors</p>
-        </div>
-        <div>
-          <p className="extra-big-font">{num.acf.number_of_investments}</p>
-          <p className="p-tag-numbers">numbers of investments</p>
-        </div>
-        <div>
-          <p className="extra-big-font">{num.acf.msek_investments}</p>
-          <p className="p-tag-numbers">(MSEK) investments</p>
-        </div>
-      </div>)}
+    <div className="section-3">
 
-      <div>
-        <h2>How could a <span>journey</span> with Loop Capital look like?</h2>
-        <div className="green-border margin-bottom">here comes the journey-map</div>
-      </div>
+      {/* MOVE THIS TO COMPONENT? */}
+        {props.wpDataJson.map(num => 
+        <div key={num} className="green-border green-border-numbers margin-bottom">
+          <div>
+            <p className="extra-big-font">{num.acf.investors}</p>
+            <p className="p-tag-numbers">investors</p>
+          </div>
+          <div>
+            <p className="extra-big-font">{num.acf.number_of_investments}</p>
+            <p className="p-tag-numbers">numbers of investments</p>
+          </div>
+          <div>
+            <p className="extra-big-font">{num.acf.msek_investments}</p>
+            <p className="p-tag-numbers">(MSEK) investments</p>
+          </div>
+        </div>)}
 
+        <div >
+          <h2>How could a <span>journey</span> with Loop Capital look like?</h2>
+          <div className="green-border margin-bottom">here comes the journey-map</div>
+        </div>
+        
+      </div> 
 
-      <div className="green-border margin-bottom">
-        {/* SPAN NEED CLASS FOR GREEN TEXT */}
-        <h2>
-          Skåne will become Sweden&apos;s leading Tech region and build companies active <span className="green-text">all over the world</span>
-        </h2>
-      </div>
-      
+        <div className="green-border margin-bottom">
+          {/* SPAN NEED CLASS FOR GREEN TEXT */}
+          <h2>
+            Skåne will become Sweden&apos;s leading Tech region and build companies active <span className="green-text">all over the world</span>
+          </h2>
+        </div>
+
       <CarouselAboutComponent/>
+
+      <div className="section-4">
+        <h2>Did we caught your interest?</h2>
+        <p>Lorem ipsum dolor sit amet consectetur!</p>
+        <Link href="/contact">
+        <button>Lorem ipsum</button>
+      </Link>
+      </div>
       
       </DefaultLayoutComponent>
 

@@ -6,9 +6,10 @@
     display: none;
 }
 
-.wrapper-carousel {
+/* THIS CREATED A MARGIN THAT MADE THE FOOTER DISAPEAR AND MADE A MARGIN ON THE RIGHT... */
+/* .wrapper-carousel {
     margin: -16px;
-}
+} */
 
 .carousel-item {
     text-align: center;
