@@ -28,8 +28,6 @@ export default function Portfolio(props) {
 
   return (
     <>
-    <div style={{opacity: showPopup ? '70%' : null, zIndex: showPopup ? '-1' : null}}>
-    {/* <div style={{backgroundColor: showPopup ? 'rgba(255, 0, 0, 0.2)' : null}}> */}
     <DefaultLayoutComponent>
     <h1>PORTFOLIO</h1>
     
@@ -64,14 +62,12 @@ export default function Portfolio(props) {
       </div>)}
       
       </DefaultLayoutComponent>
-      </div>
     </>
   )
 }
 
 // pages/index.js
 export async function getStaticProps({ preview = false }) {
-  // const allPosts = await getAllPostsForHome(preview)
 
   let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio')
   let wpDataJson = await wpData.json()
@@ -79,6 +75,5 @@ export async function getStaticProps({ preview = false }) {
 
   return {
     props: { wpDataJson: wpDataJson },
-    // revalidate: 10,
   }
 }
