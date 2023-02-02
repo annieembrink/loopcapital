@@ -1,4 +1,4 @@
-.flexColumn {
+/* .flexColumn {
     display: flex;
     flex-direction: column;
 }
@@ -15,4 +15,17 @@ input {
 label {
     color: white;
 }
+ */
 
+
+ /* input {
+    max-width: 20%;
+}
+
+p {
+    color: white;
+}
+
+.hello {
+    max-width: 30%;
+} */

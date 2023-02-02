@@ -1,9 +1,363 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
+    padding: 0;
     margin: 0;
-    background-color: #11271D;
     color: #CBD8CE;
+}
+
+body {
+    background-color: #11271D;
+    width: 100vw;
+}
+
+/* MOBILE FIRST */
+
+main {
+    /* margin: 0 16px; */
+    max-width: 100%;
+}
+
+/* ------------------------------------------------ */
+/* TEMPORARY TO GET THE CORRECT VISUAL OF THE BUBBLES */
+/* NAV WILL BE POSITIONED FIXED, CORRECT? */
+/* ------------------------------------------------ */
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 999999;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+/* Hero section */
+
+h1 {
+    font-size: 26px;
+}
+
+/* Company name, We can offer you, Hello Contact, Journey, info  */
+
+h2 {
+    font-size: 22px;
+}
+
+/* Headline under Our vision and ambition, button text */
+h3 {
+    font-size: 14px;
+}
+
+/* Info journey, branch portfolio, company name cards */
+
+h4 {
+    font-size: 12px;
+}
+
+/* BUTTON */
+
+.sm-text {
+    font-size: 12;
+    font-weight: lighter;
+}
+
+button {
+    background-color: #409250;
+    color: #fafafa;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    width: 215px;
+    height: 50px;
+}
+
+/* ANIMATED AND GREEN TEXT */
+
+.animated-text {
+    color: #409250;
+    text-decoration: underline;
+}
+
+.arrow-list-items {
+    font-size: 16px;
+}
+.green-text {
+    color: #409250;
+}
+
+/* NO DOTS ON LISTELEMENTS*/
+li {
+    list-style: none;
+}
+
+/* CLASS FOR FONT-FAMILY */
+
+.roboto-font {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.poppins-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HERO SECTION */ 
+
+.hero-section p {
+    margin: 2rem 0 1rem 0;
+}
+.right-align {
+    text-align: right;
+}
+.margin-bottom {
+    margin-bottom: 4rem;
+}
+
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* BUBBLES */
+
+.hero-section, .section-2, .section-3, .section-4{
+    position: relative;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+ .hero-section::before { 
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    background: #409250;
+    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    border-radius: 50%;
+    top: -5rem;
+    right: -5rem;
+    animation: bubble-moving 10s infinite alternate linear;
+ }   
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 250px;
+    height: 250px;
+    background: #409250;
+    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    border-radius: 50%;
+    bottom: 0;
+    left: -3rem;
+    animation: bubble-moving 10s infinite alternate linear;
+}
+
+.section-2::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 300px;
+    height: 300px;
+    background: #409250;
+    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    border-radius: 50%;
+    top: 15rem;
+    right: -5rem;
+}
+
+.section-3::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 350px;
+    height: 350px;
+    background: #409250;
+    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    border-radius: 50%;
+    bottom: 0;
+    left: -4rem;
+    animation: bubble-moving 10s infinite alternate linear;
+}
+
+/* TEMPORARY UNTIL CONTENT POSITION DONE */
+.section-4 {
+    padding-top: 4rem;
+}
+
+.section-4::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 350px;
+    height: 350px;
+    background: #409250;
+    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    border-radius: 50%;
+    bottom: 0;
+    right: -4rem;
+    animation: bubble-moving 10s infinite alternate linear;
+}
+
+/* ---- ANIMATION ---- */
+
+@keyframes bubble-moving {
+    0% {
+        transform: translate(0,0);
+    }
+    33% {
+        transform: translate(3%, -3%);
+    }
+    66% {
+        transform: translate(-0%, -0%);
+    }
+    100% {
+        transform: translate(-3%, -3%);
+    }
+}
+
+/* LARGE PHONE */
+
+@media screen and (min-device-width: 430px) {
+
+    /* Hero section */
+    h1 {
+        font-size: 44px;
+    }
+
+    /* Company name, We can offer you, Hello Contact, Journey, info  */
+    h2 {
+        font-size: 30px;
+    }
+
+    /* Headline under Our vision and ambition, button text */
+    h3 {
+        font-size: 28px;
+    }
+
+    /* Info journey, branch portfolio, company name cards, branch */
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 14px;
+    }
+
+    /* BUBBLES */
+
+    .hero-section::before, .section-2::before, .section-4::before {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .hero-section::after, .section-3::before {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* TABLET */
+
+@media screen and (min-device-width: 1024px) {
+
+    /* Hero section */
+    h1 {
+        font-size: 50px;
+    }
+
+    /* Company name popup, We can offer you, Hello Contact, Journey, info  */
+    h2 {
+        font-size: 40px;
+    }
+
+    /* Headline under Our vision and ambition, button text */
+    h3 {
+        font-size: 33px;
+    }
+
+    /* Info journey, branch portfolio, company name cards */
+    h4 {
+        font-size: 30px;
+    }
+    /* Branch */
+
+    h5 {
+        font-size: 14px;
+    }
+    /* Company name in portfolio, not popup */
+
+    h6 {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* BUBBLES */
+
+    .hero-section::before, .section-2::before, .section-4::before {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .hero-section::after, .section-3::before {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+/* DESKTOP */
+
+@media screen and (min-device-width: 1440px) {
+    /* Hero section */
+    h1 {
+        font-size: 60px;
+    }
+    /* Company name, We can offer you, Hello Contact, Journey, info  */
+    h2 {
+        font-size: 40px;
+    }
+    /* Headline under Our vision and ambition, button text */
+    h3 {
+        font-size: 33px;
+    }
+    /* Info journey, branch portfolio, company name cards */
+
+    h4 {
+        font-size: 26px;
+    }
+    h5 {
+        font-size: 22px;
+    }
+    h6 {
+        font-size: 14px;
+    }
+
+    /* BUTTON STYLING DESKTOP */
+
+    button {
+        width: 284px;
+        height: 61px;
+        font-size: 16px;
+    }
+
+    /* BUBBLES */
+
+    .hero-section::before, .section-2::before, .section-4::before {
+        width: 600px;
+        height: 600px;
+    }
+    
+    .hero-section::after, .section-3::before {
+        width: 500px;
+        height: 500px;
+    }
 }
