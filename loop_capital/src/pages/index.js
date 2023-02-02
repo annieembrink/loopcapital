@@ -22,19 +22,19 @@ export default function Home(props) {
         <ul className="arrowList">
             <li>
               <div className="arrow">-</div>
-              <div className="arrowListItems">A creative enviroment</div>
+              <div className="arrow-list-items">A creative enviroment</div>
             </li>
             <li>
               <div className="arrow">-</div>
-              <div className="arrowListItems">Possibility to ask for advice</div>
+              <div className="arrow-list-items">Possibility to ask for advice</div>
             </li>
             <li>
               <div className="arrow">-</div>
-              <div className="arrowListItems">Wide contact network</div>
+              <div className="arrow-list-items">Wide contact network</div>
             </li>
             <li>
               <div className="arrow">-</div>
-              <div className="arrowListItems">Access to capital</div>
+              <div className="arrow-list-items">Access to capital</div>
             </li>
         </ul>
       </div>

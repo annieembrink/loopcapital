@@ -11,12 +11,15 @@
 
 body {
     background-color: #11271D;
+    width: 100vw;
 }
 
 /* MOBILE FIRST */
 
 main {
-    margin: 16px;
+    margin: 0 16px;
+    max-width: 100%;
+    
 }
 p {
     font-size: 16px;
@@ -65,7 +68,7 @@ button {
     text-decoration: underline;
 }
 
-.arrowListItems {
+.arrow-list-items {
     font-size: 16px;
 }
 
@@ -77,11 +80,11 @@ li {
 /* HERO SECTION */ 
 .hero-section {
     height: 100vh;
-    /* width: 100%; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
+    position: relative; 
 }
 .hero-section p {
     margin: 2rem 0 1rem 0;
@@ -95,17 +98,24 @@ li {
 
 /* BUBBLES */
 
-.hero-section::before {
+ .hero-section::before {
+    box-sizing:unset;
     content: '';
     position: absolute;
     width: 300px;
     height: 300px;
+    max-width: 300px;
+    max-height: 300px;
     background-color: #409250;
     border-radius: 50%;
-    top: -7rem;
-    right: 0;
-    /* animation: bubble-moving 10s infinite alternate linear; */
-}
+    top: 0;
+    right: -7rem;
+    transform: translate(150px, -70px);
+     right: 0; 
+    animation: bubble-moving 10s infinite alternate linear; 
+ }   
+
+ 
 
 /* .hero-section::after {
     content: '';
@@ -177,7 +187,7 @@ li {
     h5 {
         font-size: 14px;
     }
-    .arrowListItems {
+    .arrow-list-items {
         font-size: 18px;
     }
 }
@@ -203,7 +213,7 @@ li {
     h6 {
         font-size: 18px;
     }
-    .arrowListItems {
+    .arrow-list-items {
         font-size: 20px;
     }
 }
@@ -231,7 +241,7 @@ li {
     h6 {
         font-size: 14px;
     }
-    .arrowListItems {
+    .arrow-list-items {
         font-size: 20px;
     }
 
