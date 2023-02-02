@@ -3,6 +3,8 @@ import '@/styles/globals.css'
 import '@/styles/home/home.css'
 // import '@/styles/styles.css'
 
+import { Icon } from '@iconify/react';
+
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
