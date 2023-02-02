@@ -7,7 +7,6 @@ export default function Home(props) {
   return (
     <>
     <DefaultLayoutComponent>
-    
     <div className="hero-section">
       <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
       <p>Lorem ipsum dolor sit</p>
@@ -19,22 +18,23 @@ export default function Home(props) {
     <div id="align-row" className="section-2">
       <div className="green-border margin-bottom">
         <h2 className="underline-animation">We can offer you</h2>
-        <ul className="arrowList">
+        <ul className="arrow-list">
             <li>
               <div className="arrow">-</div>
-              <div className="arrowListItems">A creative enviroment</div>
+              <div className="arrow-list-items">A creative enviroment</div>
             </li>
             <li>
               <div className="arrow">-</div>
-              <div className="arrowListItems">Possibility to ask for advice</div>
+              <div className="arrow-list-items">Possibility to ask for advice</div>
             </li>
             <li>
               <div className="arrow">-</div>
-              <div className="arrowListItems">Wide contact network</div>
+              <div className="arrow-list-items">Wide contact network</div>
             </li>
             <li>
               <div className="arrow">-</div>
-              <div className="arrowListItems">Access to capital</div>
+              <div className="arrow-list-items">Access to capital</div>
+
             </li>
         </ul>
       </div>
@@ -53,7 +53,6 @@ export default function Home(props) {
     </div>
 
     {/* MOVE THIS TO COMPONENT? */}
-
       {props.wpDataJson.map(num => 
       <div key={num} className="green-border green-border-numbers margin-bottom">
         <div>
@@ -79,10 +78,9 @@ export default function Home(props) {
       <div className="green-border margin-bottom">
         {/* SPAN NEED CLASS FOR GREEN TEXT */}
         <h2>
-          Skåne will become Sweden&apos;s leading Tech region and build companies active <span>all over the world</span>
+          Skåne will become Sweden&apos;s leading Tech region and build companies active <span className="green-text">all over the world</span>
         </h2>
       </div>
-
       
       <CarouselAboutComponent/>
       
