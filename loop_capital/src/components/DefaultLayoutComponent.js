@@ -1,10 +1,10 @@
-import NavBarComponent from "./NavBarComponent";
+import HeaderComponent from "./HeaderComponent";
 import FooterComponent from "./FooterComponent";
 
 const DefaultLayoutComponent = ({ children }) => {
     return (
         <>
-            <NavBarComponent/>
+            <HeaderComponent/>
             <main>{children}</main>
             <FooterComponent/>
         </>
