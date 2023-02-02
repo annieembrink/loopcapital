@@ -34,7 +34,6 @@ export default function Home(props) {
             <li>
               <div className="arrow">-</div>
               <div className="arrow-list-items">Access to capital</div>
-
             </li>
         </ul>
       </div>
