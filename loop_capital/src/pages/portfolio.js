@@ -34,7 +34,7 @@ export default function Portfolio(props) {
     <h1>PORTFOLIO</h1>
     
     {showPopup ? 
-    <PopupComponent setShowPopup={setShowPopup} popupCompany={popupCompany}/>  
+    <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany}/>  
     : null}
         <div className="hero-section">
             <h1>Loop Capital invest at an early stage in the companies <span className="green-text">journey</span></h1>
