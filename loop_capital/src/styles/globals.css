@@ -48,13 +48,13 @@ h2 {
 }
 
 /* Headline under Our vision and ambition, button text */
-h3 {
+h3, .h3 {
     font-size: 14px;
 }
 
 /* Info journey, branch portfolio, company name cards */
 
-h4 {
+h4, .h4 {
     font-size: 12px;
 }
 
@@ -74,6 +74,27 @@ button {
     width: 215px;
     height: 50px;
 }
+
+/* UL NO PADDING */
+ul {
+    padding-left: 0;
+}
+
+#filter-list{
+    display: flex;
+    overflow-x: scroll;
+}
+#filter-list li {
+    margin-right: 1rem;
+}
+
+.card-body {
+    padding: 0.5rem 0 0 0;
+}
+.card-body .h3 {
+    margin-bottom: 0;
+}
+
 
 /* ANIMATED AND GREEN TEXT */
 
@@ -102,6 +123,14 @@ li {
 
 .poppins-font {
     font-family: 'Poppins', sans-serif;
+}
+
+/* NO BACKGROUND ON CARDS  */
+.no-background{
+    background: none;
+}
+.no-background img {
+    border-radius: 0;
 }
 
 /* HERO SECTION */ 
