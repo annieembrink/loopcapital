@@ -6,7 +6,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: #CBD8CE;
 }
 
 body {
@@ -19,6 +18,7 @@ body {
 main {
     /* margin: 0 16px; */
     max-width: 100%;
+    color: #CBD8CE;
 }
 
 /* ------------------------------------------------ */
@@ -35,12 +35,15 @@ nav {
 p {
     font-size: 16px;
     margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Hero section */
 
 h1 {
     font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 /* Company name, We can offer you, Hello Contact, Journey, info  */
@@ -63,10 +66,14 @@ h4,
     font-size: 12px;
 }
 
+
+h5 {
+    font-size: 18px;
+}
 /* ICONS */
 /* WHY DOES THE COLOR NOT WORKING?? NOT EVEN IF IM CHANGE THE COLOR IN ICONIFY */
 .icon {
-    font-size: 30px;
+    font-size: 25px;
     color: #409250;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
@@ -135,6 +142,14 @@ li {
 
 /* CLASS FOR LIGHT AND BOLD */
 
+.light-font {
+    font-weight: 300;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
 /* THIS SHOULD BE ON A DIFFERENT CSS FILE IN PORTFOLIO */
 /* NO BACKGROUND ON CARDS  */
 .no-background {
@@ -148,7 +163,7 @@ li {
 /* HERO SECTION */
 
 .hero-section p {
-    margin: 2rem 0 1rem 0;
+    margin: 10px 0 40px 0px;
 }
 
 .margin-bottom {
@@ -407,6 +422,10 @@ li {
         font-size: 16px;
     }
 
+
+    .icon {
+        font-size: 30px;
+    }
     /* BUBBLES */
 
     .hero-section::before,
