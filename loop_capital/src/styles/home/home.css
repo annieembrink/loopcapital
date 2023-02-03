@@ -93,6 +93,7 @@
 
 .arrow-list-items {
     font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Doesn't get the correct font? is imported in global.css*/
@@ -102,10 +103,25 @@
     font-family: 'PT Sans Caption', sans-serif;
     font-size: 100px;
     text-align: center;
+    color: #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
 
 #quote {
     margin: 1rem 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.sm-text {
+    font-size: 12;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right-align {
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* INVESTMENTS NUMBERS */
@@ -125,29 +141,22 @@
 .green-border {
     border: 3px solid #409250;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
-    /* padding: 16px; */
     padding: 2rem 0;
-    /* margin: 60px 0 60px 0; */
     border-radius: 20px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .green-border-numbers {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center; */
-    /* COLOR - should be on h-tag? */
     color: #409250;
 }
 
 .green-border-numbers div {
     margin: 1rem;
 }
+
+/* ANIMATION? */
 
 .underline-animation {
     display: inline-block;

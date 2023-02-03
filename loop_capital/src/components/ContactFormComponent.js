@@ -21,9 +21,9 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
     const handleFileChange = (e) => {
         console.log(e.target.files)
         if (e.target.files) {
-          setFile(e.target.files[0]);
+            setFile(e.target.files[0]);
         }
-      };
+    };
 
     const postForm = (e) => {
         e.preventDefault()
@@ -81,68 +81,68 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
     return (
 
         <>
-        <h1>{helloMessage}</h1>
+            <h1>{helloMessage}</h1>
 
-        <Form className='flexColumn' onSubmit={(e) => postForm(e)}>
-           
-            <button type='button' onClick={() => setShowForm(false)}>Close</button>
+            <Form className='flexColumn' onSubmit={(e) => postForm(e)}>
 
-            {currentInput === 0 && (
-                <Form.Group>
-                    <Form.Label htmlFor="nameInput">What is your first name?</Form.Label>
-                    <Form.Control type="text" name="nameInput" id="nameInput" value={name} onChange={(e) => setName(e.target.value)} />
-                    <button type='button' onClick={() => onNextClick('name', 1)} >NEXT</button>
-                </Form.Group>
-            )}
+                <button type='button' onClick={() => setShowForm(false)}>Close</button>
 
-
-            {currentInput === 1 && (
-                <Form.Group>
-                    <Form.Label htmlFor="emailInput">Your email:</Form.Label>
-                    <Form.Control type="email" name="emailInput" id="emailInput" value={email} onChange={(e) => setEmail(e.target.value)} />
-                    <button type='button' onClick={() => onNextClick('email', 2)}>NEXT</button>
-                    
-                    <button type='button' onClick={() => onBackClick(0)}>Back</button>
-                </Form.Group>
-            )}
+                {currentInput === 0 && (
+                    <Form.Group>
+                        <Form.Label htmlFor="nameInput">What is your first name?</Form.Label>
+                        <Form.Control type="text" name="nameInput" id="nameInput" value={name} onChange={(e) => setName(e.target.value)} />
+                        <button type='button' onClick={() => onNextClick('name', 1)} >NEXT</button>
+                    </Form.Group>
+                )}
 
 
-            {currentInput === 2 && (
-                <Form.Group>
-                    <Form.Label htmlFor="subjectInput">Subject:</Form.Label>
-                    <Form.Control type="text" name="subjectInput" id="subjectInput" value={subject} onChange={(e) => setSubject(e.target.value)} />
-                    <button type='button' onClick={() => onNextClick('subject', 3)}>NEXT</button>
-                    
-                    <button type='button' onClick={() => onBackClick(1)}>Back</button>
-                </Form.Group>
-            )}
+                {currentInput === 1 && (
+                    <Form.Group>
+                        <Form.Label htmlFor="emailInput">Your email:</Form.Label>
+                        <Form.Control type="email" name="emailInput" id="emailInput" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <button type='button' onClick={() => onNextClick('email', 2)}>NEXT</button>
+
+                        <button type='button' onClick={() => onBackClick(0)}>Back</button>
+                    </Form.Group>
+                )}
 
 
-            {currentInput === 3 && (
-                <Form.Group>
-                    <Form.Label htmlFor="messageInput">Message:</Form.Label>
-                    <Form.Control type="text" name="messageInput" id="messageInput" value={message} onChange={(e) => setMessage(e.target.value)} />
-                    <button type='button' onClick={() => onNextClick('message', 4)}>NEXT</button>
+                {currentInput === 2 && (
+                    <Form.Group>
+                        <Form.Label htmlFor="subjectInput">Subject:</Form.Label>
+                        <Form.Control type="text" name="subjectInput" id="subjectInput" value={subject} onChange={(e) => setSubject(e.target.value)} />
+                        <button type='button' onClick={() => onNextClick('subject', 3)}>NEXT</button>
 
-                    <button type='button' onClick={() => onBackClick(2)}>Back</button>
-                </Form.Group>
-            )}
+                        <button type='button' onClick={() => onBackClick(1)}>Back</button>
+                    </Form.Group>
+                )}
 
-            {currentInput === 4 && (
-            <Form.Group>
-                <Form.Label>Want to add a file?</Form.Label>
-                <Form.Control type='file' onChange={handleFileChange}></Form.Control>
-                <div>{file && `${file.name} - ${file.type}`}</div>
-                
-                <button type='submit'>SUBMIT</button>
 
-                <button type='button' onClick={() => onBackClick(3)}>Back</button>
-            </Form.Group>
-            )}
+                {currentInput === 3 && (
+                    <Form.Group>
+                        <Form.Label htmlFor="messageInput">Message:</Form.Label>
+                        <Form.Control type="text" name="messageInput" id="messageInput" value={message} onChange={(e) => setMessage(e.target.value)} />
+                        <button type='button' onClick={() => onNextClick('message', 4)}>NEXT</button>
 
-        </Form>
+                        <button type='button' onClick={() => onBackClick(2)}>Back</button>
+                    </Form.Group>
+                )}
 
-        <p>{validationError}</p>
+                {currentInput === 4 && (
+                    <Form.Group>
+                        <Form.Label>Want to add a file?</Form.Label>
+                        <Form.Control type='file' onChange={handleFileChange}></Form.Control>
+                        <div>{file && `${file.name} - ${file.type}`}</div>
+
+                        <button type='submit'>SUBMIT</button>
+
+                        <button type='button' onClick={() => onBackClick(3)}>Back</button>
+                    </Form.Group>
+                )}
+
+            </Form>
+
+            <p>{validationError}</p>
         </>
 
     );

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const Footer = () => {
-    return ( 
+    return (
         <div>
             {/* Change the dig to Image tag with logo */}
             <div>LOGO</div>
@@ -9,7 +9,7 @@ const Footer = () => {
             <Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages">Linkedin</Link>
             <p>Rättigheter tillhör Tech Loop Capital AB - 559243 - 7791</p>
         </div>
-     );
+    );
 }
- 
+
 export default Footer;

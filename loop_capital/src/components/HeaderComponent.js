@@ -1,13 +1,13 @@
 import NavBarComponent from "./NavBarComponent";
 
 const HeaderComponent = () => {
-    return ( 
+    return (
         <>
-        <div className="logo_container">LOGO</div>
-        <NavBarComponent/>
-        
-        </> 
-        );
+            <div className="logo_container">LOGO</div>
+            <NavBarComponent />
+
+        </>
+    );
 }
- 
+
 export default HeaderComponent;
