@@ -48,6 +48,22 @@ export default function Portfolio(props) {
           <h1>Loop Capital invest at an early stage in the companies <span className="green-text">journey</span></h1>
           <p>Lorem ipsum dolor sit amet consectetur</p>
         </div>
+    
+
+    <div>
+      <ul>
+        <li onClick={(e) => showAll(e)}>All investments</li>
+        {arrOfBranches.map(branch => <li onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
+      </ul>
+    </div>
+
+      {chosenCompanies.map(company => 
+      <div key={company}>
+        <h3>{company.acf.company_name}</h3>
+        <div onClick={(e) => companyPopup(e, company)} style={{
+            backgroundImage: `url(${company.acf.image_of_the_company})`,
+            width: '200px',
+            height: '200px',
 
         <div className="section-2">
           <div>
