@@ -56,20 +56,11 @@ export default function Portfolio(props) {
         {arrOfBranches.map(branch => <li onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
       </ul>
     </div>
-
-      {chosenCompanies.map(company => 
-      <div key={company}>
-        <h3>{company.acf.company_name}</h3>
-        <div onClick={(e) => companyPopup(e, company)} style={{
-            backgroundImage: `url(${company.acf.image_of_the_company})`,
-            width: '200px',
-            height: '200px',
-
         <div className="section-2">
           <div>
             <ul id="filter-list" className="roboto-font">
               <li onClick={(e) => showAll(e)}>All investments</li>
-              {arrOfBranches.map(branch => <li onClick={(e) => filter(e)}>{branch}</li>)}
+              {arrOfBranches.map(branch => <li onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
             </ul>
           </div>
 
@@ -79,7 +70,7 @@ export default function Portfolio(props) {
           <Row xs={2} md={3} lg={4} className="g-4">
             {chosenCompanies.map(company =>
               <Col>
-                <Card className="no-background">
+                <Card className="no-background" onClick={(e) => companyPopup(e, company)}>
                   <Card.Img variant="top" src={company.acf.image_of_the_company} />
                   <Card.Body className="card-body">
                     <Card.Title className="h3">{company.title.rendered}</Card.Title>
@@ -89,20 +80,9 @@ export default function Portfolio(props) {
               </Col>
             )}
           </Row>
+
         </div>
         
-        {/* {chosenCompanies.map(company =>
-          <div key={company}>
-            <h3>{company.acf.company_name}</h3>
-            <div onClick={(e) => companyPopup(e, company)} style={{
-              backgroundImage: `url(${company.acf.image_of_the_company})`,
-              width: '200px',
-              height: '200px',
-            }}></div>
-            <h7>{company.acf.branch}</h7>
-            <p>{company.acf.about}</p>
-          </div>)} */}
-
       </DefaultLayoutComponent>
     </>
   )
