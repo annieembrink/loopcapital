@@ -20,11 +20,11 @@ export default function Portfolio(props) {
     setChosenCompanies(props.wpDataJson)
   }
 
-  const companyPopup = (e, company) => {
-    console.log('testing popup', company)
-    setShowPopup(true)
-    setPopupCompany(company)
-  }
+
+  let set = new Set();
+  let uniqueBranchesSet = props.wpDataJson.map(c => set.add(c.acf.branch))[0]
+  let arrOfBranches = Array.from(set)
+
 
   return (
     <>
@@ -43,9 +43,7 @@ export default function Portfolio(props) {
     <div>
       <ul>
         <li onClick={(e) => showAll(e)}>All investments</li>
-        <li onClick={(e) => filter(e)}>AI</li>
-        <li onClick={(e) => filter(e)}>Fintech</li>
-        <li onClick={(e) => filter(e)}>Other</li>
+        {arrOfBranches.map(branch => <li onClick={(e) => filter(e)}>{branch}</li>)}
       </ul>
     </div>
 
