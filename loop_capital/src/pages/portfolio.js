@@ -20,11 +20,15 @@ export default function Portfolio(props) {
     setChosenCompanies(props.wpDataJson)
   }
 
+  const companyPopup = (e, company) => {
+    console.log('testing popup', company)
+    setShowPopup(true)
+    setPopupCompany(company)
+  }
 
   let set = new Set();
   let uniqueBranchesSet = props.wpDataJson.map(c => set.add(c.acf.branch))[0]
   let arrOfBranches = Array.from(set)
-
 
   return (
     <>
