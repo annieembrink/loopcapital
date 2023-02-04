@@ -12,44 +12,48 @@ export default function Home(props) {
 
         <div className="hero-section">
           <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
-          <h5>Get access to 48 investors with a lot of experience and network.</h5>
+          <p className="light-font">Get access to 48 investors with a lot of experience and network.</p>
           <Link href="/contact">
             <button>Make Contact</button>
           </Link>
         </div>
 
         <div id="align-row" className="section-2">
-          <div className="green-border margin-bottom">
-            <h3 className="underline-animation roboto-font">We can offer you</h3>
-            <ul className="arrow-list">
+          <div className="wrapper-offer-you green-border margin-bottom">
+            <h2 className="underline-animation roboto-font">We can offer you</h2>
+            <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />A creative enviroment</p>
+            <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />Possibility to ask for advice</p>
+            <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />Wide contact network</p>
+            <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />Access to capital</p>
+            {/* <ul className="arrow-list">
               <li>
-                <div className="arrow">-</div>
+                <p><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></p>
                 <div className="arrow-list-items">A creative enviroment</div>
               </li>
               <li>
-                <div className="arrow">-</div>
+                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
                 <div className="arrow-list-items">Possibility to ask for advice</div>
               </li>
               <li>
-                <div className="arrow">-</div>
+                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
                 <div className="arrow-list-items">Wide contact network</div>
               </li>
               <li>
-                <div className="arrow">-</div>
+                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
                 <div className="arrow-list-items">Access to capital</div>
               </li>
-            </ul>
+            </ul> */}
           </div>
 
-          <div className="margin-bottom">
-            <p id="quote-tag">&quot;</p>
+          <div className="wrapper-quote   margin-bottom">
+            <p id="quote-tag"><Icon icon="mingcute:quote-left-fill" color="#409250"/></p>
             <p id="quote">
               We are looking for early stage startups in the Skåne region with a lot of passion and with a scaleable tech idea. The total investment round are usually between 2-6 mSEK a pre-seed round. The first steps have been taken, the idea have been verified and a founding team are in place
               Together we build a global game changer! And that are exactly how we work. We are doing this together in the same boat. You run and we support!
             </p>
             {/* Right align text */}
             <p className="right-align">David Nilsson-Sträng</p>
-            <p className="right-align sm-text">Position</p>
+            <p className="right-align sm-text">Co-founder</p>
           </div>
 
         </div>

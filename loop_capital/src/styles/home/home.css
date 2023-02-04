@@ -76,7 +76,7 @@
 /* ADDED BASIC CSS FOR VISUAL */
 
 /* Bootstrap gives padding-left of 2rem, dont want it */
-.arrow-list {
+/* .arrow-list {
     padding-left: 0;
     margin-top: 1rem;
 }
@@ -94,10 +94,21 @@
 .arrow-list-items {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 /* Doesn't get the correct font? is imported in global.css*/
 /* , tested with another one, same problem  */
+
+
+.wrapper-offer-you { 
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 5px 40px 5px;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    }
 
 #quote-tag {
     font-family: 'PT Sans Caption', sans-serif;
@@ -141,11 +152,7 @@
 .green-border {
     border: 3px solid #409250;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
-    padding: 2rem 0;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .green-border-numbers {
@@ -154,14 +161,19 @@
 
 .green-border-numbers div {
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 /* ANIMATION? */
 
 .underline-animation {
     display: inline-block;
-    position: relative;   
+    position: relative;
 }
+
 .underline-animation::after {
     content: '';
     position: absolute;
@@ -184,6 +196,7 @@
 #quote {
     margin: 1rem 0;
 }
+
 /* LARGE PHONE */
 
 @media screen and (min-device-width: 430px) {
@@ -260,13 +273,13 @@
     }
 
     /* WE CAN OFFER YOU */
-
+/* 
     .arrow-list-items {
         font-size: 20px;
-    }
+    } */
 
     #quote-tag {
-        font-size: 200px;
+        font-size: 100px;
     }
 }
 
@@ -318,9 +331,9 @@
         font-size: 52px;
     }
 
-    .green-border-numbers div {
-        display: flex;
-        flex-direction: column;
+    .green-border-numbers {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         align-items: center;
         text-align: center;
     }
@@ -331,7 +344,24 @@
 
     /* WE CAN OFFER YOU */
 
+    .wrapper-offer-you { 
+        padding: 50px;
+        }
+
+        .bigger-p {
+            font-size: 18px;
+        }
+
+        .h5 {
+            font-size: 18px;
+        }
+
+        #quote-tag {
+            font-size: 200px;
+        }
+    
+/* 
     .arrow-list-items {
         font-size: 20px;
-    }
+    } */
 }
