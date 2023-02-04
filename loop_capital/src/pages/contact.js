@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 
@@ -28,7 +28,7 @@ const Contact = () => {
             :
             <>
             {showForm ?
-                <ContactFormComponent setShowForm={setShowForm} setClientMessage={setClientMessage} setFormSubmitted={setFormSubmitted} helloMessage={helloMessage}/>
+                <ContactFormComponent setShowForm={setShowForm} helloMessage={helloMessage} setHelloMessage={setHelloMessage} setFormSubmitted={setFormSubmitted} setClientMessage={setClientMessage}/>
                 :
                 <div>
                     <div className='hello'>

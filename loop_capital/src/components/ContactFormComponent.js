@@ -1,46 +1,71 @@
 import { useState } from 'react';
-import Form from 'react-bootstrap/Form';
+import EntrepreneurFormComponent from './EntrepreneurFormComponent';
+import InvestorFormComponent from './InvestorFormComponent';
 
-const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted, helloMessage }) => {
+const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setFormSubmitted, setClientMessage }) => {
 
     const [name, setName] = useState('');
+    const [startup, setStartup] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
     const [file, setFile] = useState(null)
     const [validationError, setValidationError] = useState('')
     const [currentInput, setCurrentInput] = useState(0)
-
     const fd = new FormData()
-    fd.append('your-name', name)
-    fd.append('your-email', email)
-    fd.append('your-subject', subject)
-    fd.append('your-message', message)
-    fd.append('your-file', file)
 
+    const createFormData = (string) => {
+    
+        if(string === 'entrepreneur') {
+            fd.append('your-name', name)
+            fd.append('your-email', email)
+            fd.append('your-subject', subject)
+            fd.append('your-message', message)
+            fd.append('your-file', file)
+        } else {
+            fd.append('your-name', name)
+            fd.append('your-email', email)
+        }
+
+    }
+    
     const handleFileChange = (e) => {
         console.log(e.target.files)
         if (e.target.files) {
-            setFile(e.target.files[0]);
+        setFile(e.target.files[0]);
         }
     };
 
-    const postForm = (e) => {
+    const postForm = (e, string) => {
         e.preventDefault()
         console.log('running postForm')
 
-        setClientMessage('Successfully sent form!')
         setShowForm(false)
         setFormSubmitted(true)
+        createFormData(string)
 
+        if(string === 'entrepreneur') {
+        console.log('entrepreneur')
         fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
             method: 'POST',
             body: fd
         })
+        } else {
+        console.log('investor')
+        // VALIDATE EMAIL
+            fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/137/feedback', {
+                method: 'POST',
+                body: fd
+            })
+        }
+        setClientMessage('Successfully sent form!')
+        console.log('fd', fd)
     }
 
     const onNextClick = (input, nr) => {
+        console.log('on next', input)
         if (input === 'email') {
+            console.log('enters here?')
             validateEmail(email, nr)
         } else if (input === 'name') {
             validateText(name, nr)
@@ -48,7 +73,9 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
             validateText(subject, nr)
         } else if (input === 'message') {
             validateText(message, nr)
-        }
+        } else if (input === 'startup') {
+            validateText(startup, nr)
+        } 
     }
 
     const onBackClick = (nr) => {
@@ -56,8 +83,15 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
         setValidationError('')
     }
 
+    const onClose = () => {
+        setShowForm(false)
+        setCurrentInput(0)
+        setHelloMessage('')
+    }
+
     const validateEmail = (email, nr) => {
         const result = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+        console.log('result', result)
         if (!result) {
             setValidationError('Not a valid email')
         } else {
@@ -67,7 +101,7 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
     }
 
     const validateText = (text, nr) => {
-        console.log('validate text')
+        console.log('validate text', text, nr)
         if (text.length === 0) {
             setValidationError('Text too short')
         } else if (text.length > 5) {
@@ -78,73 +112,43 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
         }
     }
 
+    const childProps = {
+        name,
+        setName,
+        startup,
+        setStartup,
+        email,
+        setEmail,
+        subject,
+        setSubject,
+        message,
+        setMessage,
+        file,
+        setFile,
+        currentInput,
+        setCurrentInput,
+        createFormData,
+        handleFileChange,
+        postForm,
+        onNextClick,
+        onBackClick,
+        onClose,
+        validateEmail,
+        validateText
+    }
+
     return (
 
         <>
-            <h1>{helloMessage}</h1>
-
-            <Form className='flexColumn' onSubmit={(e) => postForm(e)}>
-
-                <button type='button' onClick={() => setShowForm(false)}>Close</button>
-
-                {currentInput === 0 && (
-                    <Form.Group>
-                        <Form.Label htmlFor="nameInput">What is your first name?</Form.Label>
-                        <Form.Control type="text" name="nameInput" id="nameInput" value={name} onChange={(e) => setName(e.target.value)} />
-                        <button type='button' onClick={() => onNextClick('name', 1)} >NEXT</button>
-                    </Form.Group>
-                )}
-
-
-                {currentInput === 1 && (
-                    <Form.Group>
-                        <Form.Label htmlFor="emailInput">Your email:</Form.Label>
-                        <Form.Control type="email" name="emailInput" id="emailInput" value={email} onChange={(e) => setEmail(e.target.value)} />
-                        <button type='button' onClick={() => onNextClick('email', 2)}>NEXT</button>
-
-                        <button type='button' onClick={() => onBackClick(0)}>Back</button>
-                    </Form.Group>
-                )}
-
-
-                {currentInput === 2 && (
-                    <Form.Group>
-                        <Form.Label htmlFor="subjectInput">Subject:</Form.Label>
-                        <Form.Control type="text" name="subjectInput" id="subjectInput" value={subject} onChange={(e) => setSubject(e.target.value)} />
-                        <button type='button' onClick={() => onNextClick('subject', 3)}>NEXT</button>
-
-                        <button type='button' onClick={() => onBackClick(1)}>Back</button>
-                    </Form.Group>
-                )}
-
-
-                {currentInput === 3 && (
-                    <Form.Group>
-                        <Form.Label htmlFor="messageInput">Message:</Form.Label>
-                        <Form.Control type="text" name="messageInput" id="messageInput" value={message} onChange={(e) => setMessage(e.target.value)} />
-                        <button type='button' onClick={() => onNextClick('message', 4)}>NEXT</button>
-
-                        <button type='button' onClick={() => onBackClick(2)}>Back</button>
-                    </Form.Group>
-                )}
-
-                {currentInput === 4 && (
-                    <Form.Group>
-                        <Form.Label>Want to add a file?</Form.Label>
-                        <Form.Control type='file' onChange={handleFileChange}></Form.Control>
-                        <div>{file && `${file.name} - ${file.type}`}</div>
-
-                        <button type='submit'>SUBMIT</button>
-
-                        <button type='button' onClick={() => onBackClick(3)}>Back</button>
-                    </Form.Group>
-                )}
-
-            </Form>
-
-            <p>{validationError}</p>
+        <h1>{helloMessage}</h1>
+       
+       {helloMessage === 'Hello Entrepreneur' ? 
+       <EntrepreneurFormComponent {...childProps}/> 
+       :
+       <InvestorFormComponent {...childProps}/>
+       }
+        <p>{validationError}</p>
         </>
-
     );
 }
 

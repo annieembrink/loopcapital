@@ -51,10 +51,10 @@ export default function Portfolio(props) {
     
 
     <div>
-      <ul>
+      {/* <ul>
         <li onClick={(e) => showAll(e)}>All investments</li>
         {arrOfBranches.map(branch => <li onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
-      </ul>
+      </ul> */}
     </div>
         <div className="section-2">
           <div>
