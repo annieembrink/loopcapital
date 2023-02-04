@@ -1,0 +1,32 @@
+
+/* STYLING FOR DESKTOP */
+@media screen and (min-device-width: 1024px) { 
+    .footer {
+        display: grid;
+        grid-template-rows: 4fr 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 298.15px;
+        background: linear-gradient(180deg, rgba(64, 145, 80, 0.15) 0%, rgba(64, 145, 80, 0) 100%);    
+    }
+
+    .contentfooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contentfooter a {
+        margin-top: 15px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+    }
+
+    .small {
+        font-size: 10px;
+    }
+}
