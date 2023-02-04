@@ -1,33 +1,18 @@
-import { useState } from 'react';
-import EntrepreneurFormComponent from './EntrepreneurFormComponent';
-import InvestorFormComponent from './InvestorFormComponent';
-
-const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setFormSubmitted, setClientMessage }) => {
-
-    const [name, setName] = useState('');
-    const [startup, setStartup] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
-    const [file, setFile] = useState(null)
-    const [validationError, setValidationError] = useState('')
-    const [currentInput, setCurrentInput] = useState(0)
+    const createFormData = (string) => {
     const fd = new FormData()
 
-    const createFormData = (string) => {
-    
-        if(string === 'entrepreneur') {
-            fd.append('your-name', name)
-            fd.append('your-email', email)
-            fd.append('your-subject', subject)
-            fd.append('your-message', message)
-            fd.append('your-file', file)
-        } else {
-            fd.append('your-name', name)
-            fd.append('your-email', email)
-        }
+    if(string === 'entrepreneur') {
+        fd.append('your-name', name)
+        fd.append('your-email', email)
+        fd.append('your-subject', subject)
+        fd.append('your-message', message)
+        fd.append('your-file', file)
+    } else {
+        fd.append('your-name', name)
+        fd.append('your-email', email)
     }
-    
+    }
+
     const handleFileChange = (e) => {
         console.log(e.target.files)
         if (e.target.files) {
@@ -39,11 +24,11 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
         e.preventDefault()
         console.log('running postForm')
 
+        createFormData(string)
         setShowForm(false)
         setFormSubmitted(true)
-        createFormData(string)
 
-        if(string === 'entreprenuer') {
+        if(string === 'entrepreneur') {
         console.log('entrepreneur')
         fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
             method: 'POST',
@@ -105,44 +90,6 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
         }
     }
 
-    const childProps = {
-        name,
-        setName,
-        startup,
-        setStartup,
-        email,
-        setEmail,
-        subject,
-        setSubject,
-        message,
-        setMessage,
-        file,
-        setFile,
-        currentInput,
-        setCurrentInput,
-        createFormData,
-        handleFileChange,
-        postForm,
-        onNextClick,
-        onBackClick,
-        onClose,
-        validateEmail,
-        validateText
-    }
 
-    return (
-
-        <>
-        <h1>{helloMessage}</h1>
-       
-       {helloMessage === 'Hello Entrepreneur' ? 
-       <EntrepreneurFormComponent {...childProps}/> 
-       :
-       <InvestorFormComponent {...childProps}/>
-       }
-        <p>{validationError}</p>
-        </>
-    );
-}
-
-export default ContactFormComponent;
+ 
+export {validateText, validateEmail, onClose, onBackClick, onNextClick, postForm, handleFileChange};

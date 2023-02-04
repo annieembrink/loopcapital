@@ -6,7 +6,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: #CBD8CE;
 }
 
 body {
@@ -19,11 +18,13 @@ body {
 main {
     /* margin: 0 16px; */
     max-width: 100%;
+    color: #CBD8CE;
 }
 
 /* ------------------------------------------------ */
 /* TEMPORARY TO GET THE CORRECT VISUAL OF THE BUBBLES */
 /* NAV WILL BE POSITIONED FIXED, CORRECT? */
+/* SUSANNE IS NOT GOING TO SE THIS BECAUSE SHE DOES THE STYLING IN A SEPERAT FILE */
 /* ------------------------------------------------ */
 nav {
     position: fixed;
@@ -34,11 +35,15 @@ nav {
 p {
     font-size: 16px;
     margin-bottom: 0;
+    font-family: 'Poppins', sans-serif;
 }
+
 /* Hero section */
 
 h1 {
     font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
 
 /* Company name, We can offer you, Hello Contact, Journey, info  */
@@ -48,22 +53,32 @@ h2 {
 }
 
 /* Headline under Our vision and ambition, button text */
-h3, .h3 {
+h3,
+.h3 {
     font-size: 14px;
 }
 
 /* Info journey, branch portfolio, company name cards */
 
-h4, .h4 {
+/* WHY DOES THIS HAVE A CLASS ALSO? */
+h4,
+.h4 {
     font-size: 12px;
 }
 
-/* BUTTON */
 
-.sm-text {
-    font-size: 12;
-    font-weight: lighter;
+h5 {
+    font-size: 18px;
 }
+/* ICONS */
+/* WHY DOES THE COLOR NOT WORKING?? NOT EVEN IF IM CHANGE THE COLOR IN ICONIFY */
+.icon {
+    font-size: 25px;
+    color: #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
+}
+
+/* BUTTON STYLING */
 
 button {
     background-color: #409250;
@@ -80,10 +95,12 @@ ul {
     padding-left: 0;
 }
 
-#filter-list{
+/* FILTER, this is not going to be here, this should be on "portfolio" */
+#filter-list {
     display: flex;
     overflow-x: scroll;
 }
+
 #filter-list li {
     margin-right: 1rem;
 }
@@ -91,6 +108,7 @@ ul {
 .card-body {
     padding: 0.5rem 0 0 0;
 }
+
 .card-body .h3 {
     margin-bottom: 0;
 }
@@ -103,9 +121,6 @@ ul {
     text-decoration: underline;
 }
 
-.arrow-list-items {
-    font-size: 16px;
-}
 .green-text {
     color: #409250;
 }
@@ -125,22 +140,32 @@ li {
     font-family: 'Poppins', sans-serif;
 }
 
+/* CLASS FOR LIGHT AND BOLD */
+
+.light-font {
+    font-weight: 300;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+/* THIS SHOULD BE ON A DIFFERENT CSS FILE IN PORTFOLIO */
 /* NO BACKGROUND ON CARDS  */
-.no-background{
+.no-background {
     background: none;
 }
+
 .no-background img {
     border-radius: 0;
 }
 
-/* HERO SECTION */ 
+/* HERO SECTION */
 
 .hero-section p {
-    margin: 2rem 0 1rem 0;
+    margin: 10px 0 40px 0px;
 }
-.right-align {
-    text-align: right;
-}
+
 .margin-bottom {
     margin-bottom: 4rem;
 }
@@ -155,25 +180,28 @@ li {
 
 /* BUBBLES */
 
-.hero-section, .section-2, .section-3, .section-4{
+.hero-section,
+.section-2,
+.section-3,
+.section-4 {
     position: relative;
     overflow: hidden;
     padding: 0 1rem;
 }
 
- .hero-section::before { 
+.hero-section::before {
     content: '';
     position: absolute;
     z-index: -1;
     width: 300px;
     height: 300px;
     background: #409250;
-    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
     border-radius: 50%;
     top: -5rem;
     right: -5rem;
     animation: bubble-moving 10s infinite alternate linear;
- }   
+}
 
 .hero-section::after {
     content: '';
@@ -182,7 +210,7 @@ li {
     width: 250px;
     height: 250px;
     background: #409250;
-    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
     border-radius: 50%;
     bottom: 0;
     left: -3rem;
@@ -196,7 +224,7 @@ li {
     width: 300px;
     height: 300px;
     background: #409250;
-    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
     border-radius: 50%;
     top: 15rem;
     right: -5rem;
@@ -209,7 +237,7 @@ li {
     width: 350px;
     height: 350px;
     background: #409250;
-    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
     border-radius: 50%;
     bottom: 0;
     left: -4rem;
@@ -228,7 +256,7 @@ li {
     width: 350px;
     height: 350px;
     background: #409250;
-    background: linear-gradient(45deg, rgba(64,146,80,0) 0%, rgba(64,146,80,0.1) 50%, rgba(64,146,80,0) 100%);
+    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
     border-radius: 50%;
     bottom: 0;
     right: -4rem;
@@ -239,14 +267,17 @@ li {
 
 @keyframes bubble-moving {
     0% {
-        transform: translate(0,0);
+        transform: translate(0, 0);
     }
+
     33% {
         transform: translate(3%, -3%);
     }
+
     66% {
         transform: translate(-0%, -0%);
     }
+
     100% {
         transform: translate(-3%, -3%);
     }
@@ -282,12 +313,15 @@ li {
 
     /* BUBBLES */
 
-    .hero-section::before, .section-2::before, .section-4::before {
+    .hero-section::before,
+    .section-2::before,
+    .section-4::before {
         width: 350px;
         height: 350px;
     }
-    
-    .hero-section::after, .section-3::before {
+
+    .hero-section::after,
+    .section-3::before {
         width: 300px;
         height: 300px;
     }
@@ -316,27 +350,31 @@ li {
     h4 {
         font-size: 30px;
     }
+
     /* Branch */
 
     h5 {
         font-size: 14px;
     }
+
     /* Company name in portfolio, not popup */
 
     h6 {
         font-size: 18px;
-        font-weight: 600;
         font-family: 'Poppins', sans-serif;
     }
 
     /* BUBBLES */
 
-    .hero-section::before, .section-2::before, .section-4::before {
+    .hero-section::before,
+    .section-2::before,
+    .section-4::before {
         width: 400px;
         height: 400px;
     }
-    
-    .hero-section::after, .section-3::before {
+
+    .hero-section::after,
+    .section-3::before {
         width: 500px;
         height: 500px;
     }
@@ -346,28 +384,34 @@ li {
 /* DESKTOP */
 
 @media screen and (min-device-width: 1440px) {
+
     /* Hero section */
     h1 {
         font-size: 60px;
     }
+
     /* Company name, We can offer you, Hello Contact, Journey, info  */
     h2 {
         font-size: 40px;
     }
+
     /* Headline under Our vision and ambition, button text */
     h3 {
         font-size: 33px;
     }
+
     /* Info journey, branch portfolio, company name cards */
 
     h4 {
         font-size: 26px;
     }
+
     h5 {
         font-size: 22px;
     }
+
     h6 {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     /* BUTTON STYLING DESKTOP */
@@ -378,14 +422,21 @@ li {
         font-size: 16px;
     }
 
+
+    .icon {
+        font-size: 30px;
+    }
     /* BUBBLES */
 
-    .hero-section::before, .section-2::before, .section-4::before {
+    .hero-section::before,
+    .section-2::before,
+    .section-4::before {
         width: 600px;
         height: 600px;
     }
-    
-    .hero-section::after, .section-3::before {
+
+    .hero-section::after,
+    .section-3::before {
         width: 500px;
         height: 500px;
     }
