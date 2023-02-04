@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted, helloMessage }) => {
 
     const [name, setName] = useState('');
+    const [startup, setStartup] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
@@ -56,6 +57,11 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
         setValidationError('')
     }
 
+    const onClose = () => {
+        setShowForm(false)
+        setCurrentInput(0)
+    }
+
     const validateEmail = (email, nr) => {
         const result = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
         if (!result) {
@@ -83,15 +89,24 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
         <>
         <h1>{helloMessage}</h1>
 
+        {/* Entrepreneur */}
+
         <Form className='flexColumn' onSubmit={(e) => postForm(e)}>
            
-            <button type='button' onClick={() => setShowForm(false)}>Close</button>
+            <button type='button' onClick={() => onClose()}>Close</button>
 
             {currentInput === 0 && (
                 <Form.Group>
-                    <Form.Label htmlFor="nameInput">What is your first name?</Form.Label>
+                    <Form.Label htmlFor="nameInput">What is your name?</Form.Label>
                     <Form.Control type="text" name="nameInput" id="nameInput" value={name} onChange={(e) => setName(e.target.value)} />
                     <button type='button' onClick={() => onNextClick('name', 1)} >NEXT</button>
+                </Form.Group>
+            )}
+            {currentInput === 0 && (
+                <Form.Group>
+                    <Form.Label htmlFor="startupInput">What is the name of the startup?</Form.Label>
+                    <Form.Control type="text" name="startupInput" id="startupInput" value={startup} onChange={(e) => setStartup(e.target.value)} />
+                    <button type='button' onClick={() => onNextClick('startup', 2)} >NEXT</button>
                 </Form.Group>
             )}
 
@@ -138,6 +153,33 @@ const ContactFormComponent = ({ setShowForm, setClientMessage, setFormSubmitted,
 
                 <button type='button' onClick={() => onBackClick(3)}>Back</button>
             </Form.Group>
+            )}
+
+        </Form>
+
+        {/* Investor */}
+
+        <Form className='flexColumn' onSubmit={(e) => postForm(e)}>
+           
+            <button type='button' onClick={() => onClose()}>Close</button>
+
+            {currentInput === 0 && (
+                <Form.Group>
+                    <Form.Label htmlFor="nameInput">What is your name?</Form.Label>
+                    <Form.Control type="text" name="nameInput" id="nameInput" value={name} onChange={(e) => setName(e.target.value)} />
+                    <button type='button' onClick={() => onNextClick('name', 1)} >NEXT</button>
+                </Form.Group>
+            )}
+
+
+            {currentInput === 1 && (
+                <Form.Group>
+                    <Form.Label htmlFor="emailInput">Your email:</Form.Label>
+                    <Form.Control type="email" name="emailInput" id="emailInput" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <button type='button' onClick={() => onNextClick('email', 2)}>NEXT</button>
+                    
+                    <button type='button' onClick={() => onBackClick(0)}>Back</button>
+                </Form.Group>
             )}
 
         </Form>
