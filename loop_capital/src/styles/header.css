@@ -1,0 +1,36 @@
+/* Storlek på logga? */
+
+
+/* STYLING FOR DESKTOP */
+@media screen and (min-device-width: 1024px) { 
+.navbar {
+    /* Hur mycket margin?? */
+    margin: 50px 100px
+}
+
+.navbar a {
+    color: #FAFAFA;;
+}
+.end {
+    text-align: end;
+    justify-content: end;
+    gap: 70px;
+}
+
+
+
+}
+
+/* STYLING FOR MOBILE */
+@media screen and (max-device-width: 992px) {
+    .navbar {
+        /* Hur mycket margin?? */
+        margin: 0 16px
+    }
+ }
+
+ /* STYLING FOR ALL DEVICES */
+ .navbar-toggler {
+    border: none;
+    width: 34px;
+}
