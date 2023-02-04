@@ -26,6 +26,7 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
             fd.append('your-name', name)
             fd.append('your-email', email)
         }
+
     }
     
     const handleFileChange = (e) => {
@@ -43,7 +44,7 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
         setFormSubmitted(true)
         createFormData(string)
 
-        if(string === 'entreprenuer') {
+        if(string === 'entrepreneur') {
         console.log('entrepreneur')
         fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
             method: 'POST',
@@ -58,10 +59,13 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
             })
         }
         setClientMessage('Successfully sent form!')
+        console.log('fd', fd)
     }
 
     const onNextClick = (input, nr) => {
+        console.log('on next', input)
         if (input === 'email') {
+            console.log('enters here?')
             validateEmail(email, nr)
         } else if (input === 'name') {
             validateText(name, nr)
@@ -69,7 +73,9 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
             validateText(subject, nr)
         } else if (input === 'message') {
             validateText(message, nr)
-        }
+        } else if (input === 'startup') {
+            validateText(startup, nr)
+        } 
     }
 
     const onBackClick = (nr) => {
@@ -85,6 +91,7 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
 
     const validateEmail = (email, nr) => {
         const result = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+        console.log('result', result)
         if (!result) {
             setValidationError('Not a valid email')
         } else {
@@ -94,7 +101,7 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
     }
 
     const validateText = (text, nr) => {
-        console.log('validate text')
+        console.log('validate text', text, nr)
         if (text.length === 0) {
             setValidationError('Text too short')
         } else if (text.length > 5) {
