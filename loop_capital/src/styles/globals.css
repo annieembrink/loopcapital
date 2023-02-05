@@ -88,6 +88,7 @@ button {
     border: none;
     width: 215px;
     height: 50px;
+    font-family: 'Roboto Mono';
 }
 
 /* UL NO PADDING */
@@ -164,6 +165,7 @@ li {
 
 .hero-section p {
     margin: 10px 0 40px 0px;
+    font-family: 'Roboto Mono';
 }
 
 .margin-bottom {
@@ -325,6 +327,11 @@ li {
         width: 300px;
         height: 300px;
     }
+
+    .hero-section p {
+        font-size: 18px;
+    }
+    
 }
 
 /* TABLET */
@@ -378,6 +385,11 @@ li {
         width: 500px;
         height: 500px;
     }
+
+    .hero-section p {
+        font-size: 22px;
+    }
+    
 }
 
 
@@ -439,5 +451,9 @@ li {
     .section-3::before {
         width: 500px;
         height: 500px;
+    }
+
+    .hero-section p {
+        font-size: 22px;
     }
 }

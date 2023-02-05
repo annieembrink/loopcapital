@@ -46,16 +46,17 @@ export default function Portfolio(props) {
           : null}
         <div className="hero-section">
           <h1>Loop Capital invest at an early stage in the companies <span className="green-text">journey</span></h1>
-          <p>Lorem ipsum dolor sit amet consectetur</p>
+          <p>Your startup are scaleable within Tech and a big love for data driven innovation.
+            <br /> Still early in the journey - but high ambitions!</p>
         </div>
-    
 
-    <div>
-      {/* <ul>
+
+        <div>
+          {/* <ul>
         <li onClick={(e) => showAll(e)}>All investments</li>
         {arrOfBranches.map(branch => <li onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
       </ul> */}
-    </div>
+        </div>
         <div className="section-2">
           <div>
             <ul id="filter-list" className="roboto-font">
@@ -82,7 +83,7 @@ export default function Portfolio(props) {
           </Row>
 
         </div>
-        
+
       </DefaultLayoutComponent>
     </>
   )
