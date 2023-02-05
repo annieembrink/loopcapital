@@ -32,7 +32,7 @@ const Contact = () => {
             {showForm ?
                 <ContactFormComponent setShowForm={setShowForm} helloMessage={helloMessage} setHelloMessage={setHelloMessage} setFormSubmitted={setFormSubmitted} setClientMessage={setClientMessage}/>
                 :
-                <div>
+                <div className='wrapper-contact'>
                     <div className="filter-contact-mobile">
                     <p>Contact us!</p>
                     <p>Entrepreneur</p> <p>Investor</p>

@@ -1,3 +1,8 @@
+.wrapper-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .hello-contact {
     background-color: #CBD8CE;
     color: #11271D;
