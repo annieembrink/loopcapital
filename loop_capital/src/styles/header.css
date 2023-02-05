@@ -23,15 +23,37 @@
         gap: 70px;
     }
 
-
+    .mobilemenu_icon {
+        display: none;
+    }
 
 }
 
 
-/* STYLING FOR MOBILE */
-@media screen and (max-device-width: 992px) {
+/* STYLING FOR TABLET AND SMALLER */
+@media screen and (max-device-width: 1024px) {
     .navbar {
         margin: 30px 16px
+    }
+
+.mobilemenu {
+    background-color: inherit;
+        height: 100vh;
+        width: 100vw;
+
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .mobilemenu_link {
+        gap: 91px;
+    }
+
+    .mobilemenu_icon {
+        color: rgba(255, 255, 255, 0.5);
     }
 }
 
