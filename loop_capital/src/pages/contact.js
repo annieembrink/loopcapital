@@ -2,6 +2,8 @@
 import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
+import { Icon } from '@iconify/react';
+
 
 const Contact = () => {
 
@@ -20,7 +22,7 @@ const Contact = () => {
 
             <div className="hero-section">
                 <h1>Let&apos;s start this journey <span className="green-text">together!</span></h1>
-                <p>Lorem ipsum dolor sit</p>
+                <p className='p-hero'>Just fill in the form or send us an email!</p>
             </div>
             
             {formSubmitted ? 
@@ -30,15 +32,19 @@ const Contact = () => {
             {showForm ?
                 <ContactFormComponent setShowForm={setShowForm} helloMessage={helloMessage} setHelloMessage={setHelloMessage} setFormSubmitted={setFormSubmitted} setClientMessage={setClientMessage}/>
                 :
-                <div>
-                    <div className='hello'>
-                        <h1>Hello Entrepreneur!</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus ab iusto reiciendis maxime ipsam sint magni alias ut sapiente. Corporis, cum. Fuga mollitia voluptatum officiis harum, minus sequi! Architecto.</p>
+                <div className='wrapper-contact'>
+                    <div className="filter-contact-mobile">
+                    <p>Contact us!</p>
+                    <p>Entrepreneur</p> <p>Investor</p>
+                    </div>
+                    <div className='hello-contact roboto-font'>
+                        <h2>Hello <span className='green-text'>Entrepreneur!</span></h2>
+                        <p className='roboto-font'>Are you an entrepreneur who is at the start of your big journey and need help to reach your full potential?</p>
                         <button onClick={() => buttonOnClick('Hello Entrepreneur')}>Let&apos;s get in touch!</button>
                     </div>
-                    <div className='hello'>
-                        <h1>Hello Investor!</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus ab iusto reiciendis maxime ipsam sint magni alias ut sapiente. Corporis, cum. Fuga mollitia voluptatum officiis harum, minus sequi! Architecto.</p>
+                    <div className='hello-contact poppins-font'>
+                        <h2>Hello <span className='green-text'>Investor!</span></h2>
+                        <p>Are you an investor that wants to be apart of the journey to make Skåne the leading Tech region?</p>
                         <button onClick={() => buttonOnClick('Hello Investor')}>Contact us!</button>
                     </div>
                 </div>
