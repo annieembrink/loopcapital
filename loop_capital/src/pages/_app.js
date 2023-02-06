@@ -6,7 +6,6 @@ import '@/styles/header.css';
 
 import { useEffect } from "react";
 
-// import { Icon } from '@iconify/react';
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {

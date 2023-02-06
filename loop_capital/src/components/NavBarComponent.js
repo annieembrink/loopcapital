@@ -3,12 +3,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-import Image from 'next/image';
-import { Icon } from '@iconify/react';
-
-import { useRouter } from 'next/router';
-// import Link from "next/link";
-// import "bootstrap/dist/js/bootstrap.bundle.min";
+import Image from 'next/image'
+import * as Icon from 'react-bootstrap-icons';
+import Link from "next/link";
 
 
 function NavBarComponent() {
@@ -36,15 +33,11 @@ const currentRoute = router.pathname;
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3 offcanvas_container_link">
-                
                   <Nav.Link href="/" className={currentRoute === "/" ? "active"  : ""}>Home</Nav.Link>
                   <Nav.Link href="/portfolio" className={currentRoute === "/portfolio" ? "active"  : ""}>Portfolio</Nav.Link>
                   <Nav.Link href="/contact" className={currentRoute === "/contact" ? "active"  : ""}>Contact</Nav.Link>
-                  <Nav.Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages"><Icon icon="akar-icons:linkedin-box-fill" width="25" className="mobilemenu_icon"/></Nav.Link>
-
-                  
+                  <Nav.Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages"><Icon.Linkedin className="mobilemenu_icon"/></Nav.Link>
                 </Nav>
-               
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
