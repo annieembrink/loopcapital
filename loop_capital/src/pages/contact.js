@@ -1,31 +1,27 @@
 import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
-import ActiveLinkComponent from '@/components/ActiveLinkComponent';
 
 const Contact = () => {
 
     const [showForm, setShowForm] = useState(false);
-    const [formSubmitted, setFormSubmitted] = useState(false)
-    const [showDiv, setShowDiv] = useState(true)
-    const [activeLink, setActiveLink] = useState('Entrepreneur')
-    const [clientMessage, setClientMessage] = useState('')
-    const [helloMessage, setHelloMessage] = useState('')
-
-
-    let text; 
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [showDiv, setShowDiv] = useState(true);
+    const [activeLink, setActiveLink] = useState('Entrepreneur');
+    const [clientMessage, setClientMessage] = useState('');
+    const [helloMessage, setHelloMessage] = useState('');
 
     const buttonOnClick = (message) => {
         setShowForm(true);
         setHelloMessage(message);
-    }
+    };
 
     const showDivOnClick = (e) => {
         if (e.target.textContent !== activeLink) {
-            setShowDiv(!showDiv)
-            setActiveLink(e.target.textContent)
-        }
-    }
+            setShowDiv(!showDiv);
+            setActiveLink(e.target.textContent);
+        };
+    };
 
     const childProps = {
         setShowForm,
@@ -56,8 +52,6 @@ const Contact = () => {
                     <p>Contact us!</p>
                     <p style={{textDecoration: activeLink === 'Entrepreneur' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Entrepreneur</p>
                     <p style={{textDecoration: activeLink === 'Investor' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Investor</p>
-                    {/* <ActiveLinkComponent text='Entrepreneur' showDiv={showDiv}/>
-                    <ActiveLinkComponent text='Investor' showDiv={showDiv}/> */}
                 </div>
 
                 <div hidden={!showDiv} className='hello-contact roboto-font'>

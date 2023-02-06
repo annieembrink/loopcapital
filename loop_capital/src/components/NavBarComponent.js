@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import * as Icon from 'react-bootstrap-icons';
 import Link from "next/link";
 
