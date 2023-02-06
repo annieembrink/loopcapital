@@ -60,14 +60,9 @@ const ContactFormComponent = (props) => {
         startup: startup
     };
     
-    const onNextClick = (input, nr) => {
-        const validateFunc = input === 'email' ? validateEmail : validateText;
-        validateFunc(validateMap[input], nr);
-    };
-
-    // const onBackClick = (nr) => {
-    //     setCurrentInput(nr);
-    //     setValidationError('');
+    // const onNextClick = (input, nr) => {
+    //     const validateFunc = input === 'email' ? validateEmail : validateText;
+    //     validateFunc(validateMap[input], nr);
     // };
 
     const onClose = () => {
@@ -116,10 +111,10 @@ const ContactFormComponent = (props) => {
         createFormData,
         handleFileChange,
         postForm,
-        onNextClick,
         onClose,
         validateEmail,
-        validateText
+        validateText,
+        validateMap
     }
 
     return (
