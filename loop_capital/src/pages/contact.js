@@ -1,20 +1,19 @@
-
 import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
-import { Icon } from '@iconify/react';
+// import { Icon } from '@iconify/react';
 
 
 const Contact = () => {
 
     const [showForm, setShowForm] = useState(false);
-    const [formSubmitted, setFormSubmitted] = useState(false)
-    const [clientMessage, setClientMessage] = useState('')
-    const [helloMessage, setHelloMessage] = useState('')
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [clientMessage, setClientMessage] = useState('');
+    const [helloMessage, setHelloMessage] = useState('');
 
     const buttonOnClick = (message) => {
-        setShowForm(true)
-        setHelloMessage(message)
+        setShowForm(true);
+        setHelloMessage(message);
     }
 
     return (
