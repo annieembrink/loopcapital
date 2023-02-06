@@ -2,7 +2,6 @@ import Modal from 'react-bootstrap/Modal';
 import Image from 'next/image';
 import { useState } from 'react';
 import ActiveLinkComponent from './ActiveLinkComponent';
-import styles from '../styles/portfolio/PopupComponent.module.css';
 
 const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
 

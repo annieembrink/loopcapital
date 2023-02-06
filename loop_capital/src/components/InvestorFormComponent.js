@@ -15,7 +15,6 @@ const InvestorFormComponent = (props) => {
             </Form.Group>
         )}
 
-
         {props.currentInput === 1 && (
             <Form.Group>
                 <Form.Label htmlFor="emailInput">Your email:</Form.Label>

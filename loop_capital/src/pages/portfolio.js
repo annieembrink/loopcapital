@@ -1,8 +1,6 @@
-// import CompanyCardComponent from "@/components/CompanyCardComponent";
-// COMPONENTS
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import PopupComponent from "@/components/PopupComponent";
-// BOOTSTRAP
+
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -15,22 +13,21 @@ export default function Portfolio(props) {
   const [popupCompany, setPopupCompany] = useState({});
 
   const filter = (e) => {
-    e.preventDefault();
     const filteredData = props.wpDataJson.filter(company => company.acf.branch === e.target.innerText);
     setChosenCompanies(filteredData);
   }
 
-  const showAll = (e) => {
+  const showAll = () => {
     setChosenCompanies(props.wpDataJson);
   }
 
-  const companyPopup = (e, company) => {
+  const companyPopup = (company) => {
     setShowPopup(true);
     setPopupCompany(company);
   }
 
   let set = new Set();
-  let uniqueBranchesSet = props.wpDataJson.map(c => set.add(c.acf.branch))[0];
+  props.wpDataJson.map(c => set.add(c.acf.branch))[0];
   let arrOfBranches = Array.from(set);
 
   return (
@@ -49,7 +46,7 @@ export default function Portfolio(props) {
         <div className="section-2">
           <div>
             <ul id="filter-list" className="roboto-font">
-              <li onClick={(e) => showAll(e)}>All investments</li>
+              <li onClick={showAll}>All investments</li>
               {arrOfBranches.map(branch => <li onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
             </ul>
           </div>
@@ -60,7 +57,7 @@ export default function Portfolio(props) {
           <Row xs={2} md={3} lg={4} className="g-4">
             {chosenCompanies.map(company =>
               <Col key={company.title.rendered}>
-                <Card className="no-background" onClick={(e) => companyPopup(e, company)}>
+                <Card className="no-background" onClick={() => companyPopup(company)}>
                   <Card.Img variant="top" src={company.acf.image_of_the_company} />
                   <Card.Body className="card-body">
                     <Card.Title className="h3">{company.title.rendered}</Card.Title>

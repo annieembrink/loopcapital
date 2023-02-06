@@ -2,11 +2,6 @@ import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 
-// import { Icon } from '@iconify/react';
-
-import ActiveLinkComponent from '@/components/ActiveLinkComponent';
-import { Icon } from '@iconify/react';
-
 const Contact = () => {
 
     const [showForm, setShowForm] = useState(false);
@@ -15,8 +10,6 @@ const Contact = () => {
     const [activeLink, setActiveLink] = useState('Entrepreneur');
     const [clientMessage, setClientMessage] = useState('');
     const [helloMessage, setHelloMessage] = useState('');
-
-    let text; 
 
     const buttonOnClick = (message) => {
         setShowForm(true);
@@ -59,8 +52,6 @@ const Contact = () => {
                     <p>Contact us!</p>
                     <p style={{textDecoration: activeLink === 'Entrepreneur' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Entrepreneur</p>
                     <p style={{textDecoration: activeLink === 'Investor' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Investor</p>
-                    {/* <ActiveLinkComponent text='Entrepreneur' showDiv={showDiv}/>
-                    <ActiveLinkComponent text='Investor' showDiv={showDiv}/> */}
                 </div>
 
                 <div hidden={!showDiv} className='hello-contact roboto-font'>
