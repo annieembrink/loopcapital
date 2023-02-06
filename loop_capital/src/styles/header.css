@@ -15,10 +15,11 @@
     .navbar a {
         color: #FAFAFA;
         font-family: 'Roboto Mono';
+        
     }
 
     .offcanvas_container_link {
-        gap: 70px;
+        gap:70px;
     }
 
     /* .end {
@@ -99,11 +100,3 @@
 color: #409250 !important;
 font-weight: bold;
 }
-
-/* .navbar-dark {
-    color: white !important;
-} */
-
-/* .header {
-    background-color: none !important;
-} */

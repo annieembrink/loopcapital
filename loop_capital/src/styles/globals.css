@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #11271D;
+    background-color: #11271D !important;
     width: 100vw;
 }
 
