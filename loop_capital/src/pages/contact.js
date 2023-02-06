@@ -7,31 +7,28 @@ import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import ActiveLinkComponent from '@/components/ActiveLinkComponent';
 import { Icon } from '@iconify/react';
 
-
-
 const Contact = () => {
 
     const [showForm, setShowForm] = useState(false);
-    const [formSubmitted, setFormSubmitted] = useState(false)
-    const [showDiv, setShowDiv] = useState(true)
-    const [activeLink, setActiveLink] = useState('Entrepreneur')
-    const [clientMessage, setClientMessage] = useState('')
-    const [helloMessage, setHelloMessage] = useState('')
-
+    const [formSubmitted, setFormSubmitted] = useState(false);
+    const [showDiv, setShowDiv] = useState(true);
+    const [activeLink, setActiveLink] = useState('Entrepreneur');
+    const [clientMessage, setClientMessage] = useState('');
+    const [helloMessage, setHelloMessage] = useState('');
 
     let text; 
 
     const buttonOnClick = (message) => {
         setShowForm(true);
         setHelloMessage(message);
-    }
+    };
 
     const showDivOnClick = (e) => {
         if (e.target.textContent !== activeLink) {
-            setShowDiv(!showDiv)
-            setActiveLink(e.target.textContent)
-        }
-    }
+            setShowDiv(!showDiv);
+            setActiveLink(e.target.textContent);
+        };
+    };
 
     const childProps = {
         setShowForm,

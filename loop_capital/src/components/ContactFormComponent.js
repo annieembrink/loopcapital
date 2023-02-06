@@ -9,40 +9,38 @@ const ContactFormComponent = (props) => {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
-    const [file, setFile] = useState(null)
-    const [validationError, setValidationError] = useState('')
-    const [currentInput, setCurrentInput] = useState(0)
-    const fd = new FormData()
+    const [file, setFile] = useState(null);
+    const [validationError, setValidationError] = useState('');
+    const [currentInput, setCurrentInput] = useState(0);
+
+    const fd = new FormData();
 
     const createFormData = (string) => {
     
         if(string === 'entrepreneur') {
-            fd.append('your-name', name)
-            fd.append('your-email', email)
-            fd.append('your-subject', subject)
-            fd.append('your-message', message)
-            fd.append('your-file', file)
+            fd.append('your-name', name);
+            fd.append('your-email', email);
+            fd.append('your-subject', subject);
+            fd.append('your-message', message);
+            fd.append('your-file', file);
         } else {
-            fd.append('your-name', name)
-            fd.append('your-email', email)
-        }
-
-    }
+            fd.append('your-name', name);
+            fd.append('your-email', email);
+        };
+    };
     
     const handleFileChange = (e) => {
-        console.log(e.target.files)
+        console.log(e.target.files);
         if (e.target.files) {
         setFile(e.target.files[0]);
         }
     };
 
     const postForm = (e, string) => {
-        e.preventDefault()
-        console.log('running postForm')
-
-        props.setShowForm(false)
-        props.setFormSubmitted(true)
-        createFormData(string)
+        e.preventDefault();
+        props.setShowForm(false);
+        props.setFormSubmitted(true);
+        createFormData(string);
 
         if(string === 'entrepreneur') {
         fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
@@ -55,57 +53,53 @@ const ContactFormComponent = (props) => {
                 method: 'POST',
                 body: fd
             })
-        }
-        props.setClientMessage('Successfully sent form!')
+        };
+        props.setClientMessage('Successfully sent form!');
     }
 
     const onNextClick = (input, nr) => {
-        console.log('on next', input)
         if (input === 'email') {
-            console.log('enters here?')
-            validateEmail(email, nr)
+            validateEmail(email, nr);
         } else if (input === 'name') {
-            validateText(name, nr)
+            validateText(name, nr);
         } else if (input === 'subject') {
-            validateText(subject, nr)
+            validateText(subject, nr);
         } else if (input === 'message') {
-            validateText(message, nr)
+            validateText(message, nr);
         } else if (input === 'startup') {
-            validateText(startup, nr)
+            validateText(startup, nr);
         } 
     }
 
     const onBackClick = (nr) => {
-        setCurrentInput(nr)
-        setValidationError('')
+        setCurrentInput(nr);
+        setValidationError('');
     }
 
     const onClose = () => {
-        props.setShowForm(false)
-        setCurrentInput(0)
-        props.setHelloMessage('')
+        props.setShowForm(false);
+        setCurrentInput(0);
+        props.setHelloMessage('');
     }
 
     const validateEmail = (email, nr) => {
-        const result = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
-        console.log('result', result)
+        const result = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
         if (!result) {
-            setValidationError('Not a valid email')
+            setValidationError('Not a valid email');
         } else {
-            setCurrentInput(nr)
-            setValidationError('')
+            setCurrentInput(nr);
+            setValidationError('');
         }
     }
 
     const validateText = (text, nr) => {
-        console.log('validate text', text, nr)
         if (text.length === 0) {
-            setValidationError('Text too short')
-        } else if (text.length > 5) {
-            setValidationError('Text too long')
+            setValidationError('Text too short');
+        } else if (text.length > 500) {
+            setValidationError('Text too long');
         } else {
-            setValidationError('')
-            setCurrentInput(nr)
+            setValidationError('');
+            setCurrentInput(nr);
         }
     }
 
