@@ -17,6 +17,7 @@ const currentRoute = router.pathname;
   
   return (
     <>
+
       {['lg'].map((expand) => (
         <Navbar key={expand} bg="none" expand={expand} variant="dark" className="mb-3" fixed="top">
           <Container fluid>

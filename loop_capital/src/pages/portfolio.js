@@ -3,23 +3,23 @@
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import PopupComponent from "@/components/PopupComponent";
 // BOOTSTRAP
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-import { useState } from 'react'
+import { useState } from 'react';
 
 export default function Portfolio(props) {
-  console.log('PORTFOLIO props', props);
+  //console.log('PORTFOLIO props', props);
 
-  const [chosenCompanies, setChosenCompanies] = useState(props.wpDataJson)
-  const [showPopup, setShowPopup] = useState(false)
-  const [popupCompany, setPopupCompany] = useState({})
+  const [chosenCompanies, setChosenCompanies] = useState(props.wpDataJson);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupCompany, setPopupCompany] = useState({});
 
   const filter = (e) => {
     e.preventDefault()
     const filteredData = props.wpDataJson.filter(company => company.acf.branch === e.target.innerText)
-    console.log('filteredData', filteredData)
+    //console.log('filteredData', filteredData)
     setChosenCompanies(filteredData)
   }
 
@@ -28,7 +28,7 @@ export default function Portfolio(props) {
   }
 
   const companyPopup = (e, company) => {
-    console.log('testing popup', company)
+    //console.log('testing popup', company)
     setShowPopup(true)
     setPopupCompany(company)
   }
@@ -70,7 +70,7 @@ export default function Portfolio(props) {
 
           <Row xs={2} md={3} lg={4} className="g-4">
             {chosenCompanies.map(company =>
-              <Col>
+              <Col key={company.title.rendered}>
                 <Card className="no-background" onClick={(e) => companyPopup(e, company)}>
                   <Card.Img variant="top" src={company.acf.image_of_the_company} />
                   <Card.Body className="card-body">
@@ -94,7 +94,7 @@ export async function getStaticProps({ preview = false }) {
 
   let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio')
   let wpDataJson = await wpData.json()
-  console.log('wpData', wpDataJson)
+  //console.log('wpData', wpDataJson)
 
   return {
     props: { wpDataJson: wpDataJson },

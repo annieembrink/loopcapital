@@ -1,11 +1,12 @@
-import CarouselAboutComponent from "@/components/CarouselAboutComponent"
-import DefaultLayoutComponent from "@/components/DefaultLayoutComponent"
-import Link from "next/link"
+import CarouselAboutComponent from "@/components/CarouselAboutComponent";
+import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
+import SwingCounterComponent from "@/components/SwingCounterComponent";
+import Link from "next/link";
 import { Icon } from '@iconify/react';
 
 
 export default function Home(props) {
-  console.log('props', props)
+  // console.log('props', props)
   return (
     <>
       <DefaultLayoutComponent>
@@ -61,22 +62,8 @@ export default function Home(props) {
         <div className="section-3">
 
           {/* MOVE THIS TO COMPONENT? */}
-          {props.wpDataJson.map(num =>
-            <div key={num} className="green-border green-border-numbers margin-bottom">
-              <div>
-                <p className="extra-big-font">{num.acf.investors} <Icon icon="carbon:portfolio" className="icon" /></p>
-                <p className="p-tag-numbers">investors</p>
-              </div>
-              <div>
-                <p className="extra-big-font">{num.acf.number_of_investments} <Icon icon="bi:people-fill" className="icon"/></p>
-                <p className="p-tag-numbers">numbers of investments</p>
-              </div>
-              <div>
-                <p className="extra-big-font">{num.acf.msek_investments} <Icon icon="wpf:coins" className="icon"/></p>
-                <p className="p-tag-numbers">(MSEK) investments</p>
-              </div>
-            </div>)}
-
+          <SwingCounterComponent props={props}/>
+        
           <div >
             <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
             <div className="green-border margin-bottom">here comes the journey-map</div>
