@@ -30,24 +30,32 @@ const Contact = () => {
             :
             <>
             {showForm ?
-                <ContactFormComponent setShowForm={setShowForm} helloMessage={helloMessage} setHelloMessage={setHelloMessage} setFormSubmitted={setFormSubmitted} setClientMessage={setClientMessage}/>
+                <ContactFormComponent 
+                setShowForm={setShowForm} 
+                helloMessage={helloMessage} 
+                setHelloMessage={setHelloMessage} 
+                setFormSubmitted={setFormSubmitted} 
+                setClientMessage={setClientMessage}/>
                 :
-                <div className='wrapper-contact'>
-                    <div className="filter-contact-mobile">
+
+            <div className='wrapper-contact'>
+                <div className="filter-contact-mobile">
                     <p>Contact us!</p>
                     <p>Entrepreneur</p> <p>Investor</p>
-                    </div>
-                    <div className='hello-contact roboto-font'>
+                </div>
+
+                <div className='hello-contact roboto-font'>
                         <h2>Hello <span className='green-text'>Entrepreneur!</span></h2>
                         <p className='roboto-font'>Are you an entrepreneur who is at the start of your big journey and need help to reach your full potential?</p>
                         <button onClick={() => buttonOnClick('Hello Entrepreneur')}>Let&apos;s get in touch!</button>
-                    </div>
-                    <div className='hello-contact poppins-font'>
+                </div>
+
+                <div className='hello-contact poppins-font'>
                         <h2>Hello <span className='green-text'>Investor!</span></h2>
                         <p>Are you an investor that wants to be apart of the journey to make Skåne the leading Tech region?</p>
                         <button onClick={() => buttonOnClick('Hello Investor')}>Contact us!</button>
-                    </div>
                 </div>
+            </div>
             }
             </>
             }
