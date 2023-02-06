@@ -65,10 +65,10 @@ const ContactFormComponent = (props) => {
         validateFunc(validateMap[input], nr);
     };
 
-    const onBackClick = (nr) => {
-        setCurrentInput(nr);
-        setValidationError('');
-    };
+    // const onBackClick = (nr) => {
+    //     setCurrentInput(nr);
+    //     setValidationError('');
+    // };
 
     const onClose = () => {
         props.setShowForm(false);
@@ -112,11 +112,11 @@ const ContactFormComponent = (props) => {
         setFile,
         currentInput,
         setCurrentInput,
+        setValidationError,
         createFormData,
         handleFileChange,
         postForm,
         onNextClick,
-        onBackClick,
         onClose,
         validateEmail,
         validateText
