@@ -37,9 +37,10 @@
     }
 
 .mobilemenu {
-    background-color: inherit;
+    background-color: #11271D;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
+        margin: 0;
 
         text-align: center;
         display: flex;
