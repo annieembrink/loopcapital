@@ -90,7 +90,6 @@ function NavBarComponent() {
               className="me-end my-2 my-lg-0 end mobilemenu_link"
               // style={{ height: '100vw', width: '100vh' }}
               navbarScroll
-              closeButton
             >
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/portfolio">Portfolio</Nav.Link>

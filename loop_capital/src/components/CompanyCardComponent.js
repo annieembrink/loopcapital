@@ -1,11 +1,11 @@
 import Card from 'react-bootstrap/Card'
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
+// import Row from 'react-bootstrap/Row';
 
 const CompanyCardComponent = () => {
     return (
         <>
-            <Row xs={1} md={2} className="g-4">
+            {/* <Row xs={1} md={2} className="g-4">
                 {Array.from({ length: 4 }).map((_, idx) => (
                     <Col>
                         <Card>
@@ -21,7 +21,7 @@ const CompanyCardComponent = () => {
                         </Card>
                     </Col>
                 ))}
-            </Row>
+            </Row> */}
         </>
     );
 }
