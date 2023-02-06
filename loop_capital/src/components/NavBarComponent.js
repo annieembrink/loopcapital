@@ -1,22 +1,108 @@
-const NavBarComponent = () => {
-    return ( 
-        <>
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/portfolio">Portfolio</a>
-                </li>
-                
-                <li>
-                    <a href="/contact">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        </>
-     );
+// import Button from 'react-bootstrap/Button';
+// import Container from 'react-bootstrap/Container';
+// import Form from 'react-bootstrap/Form';
+// import Nav from 'react-bootstrap/Nav';
+// import Navbar from 'react-bootstrap/Navbar';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
+// import Offcanvas from 'react-bootstrap/Offcanvas';
+
+// function NavBarComponent() {
+//   return (
+//     <>
+      
+//         <Navbar key='lg' bg="light" expand='lg' className="mb-3">
+//           <Container fluid>
+//             <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+//             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-$'lg'`} />
+//             <Navbar.Offcanvas
+//               id={`offcanvasNavbar-expand-$'lg'`}
+//               aria-labelledby={`offcanvasNavbarLabel-expand-$'lg'`}
+//               placement="end"
+//             >
+//               <Offcanvas.Header closeButton>
+//                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-$'lg'`}>
+//                   Offcanvas
+//                 </Offcanvas.Title>
+//               </Offcanvas.Header>
+//               <Offcanvas.Body>
+//                 <Nav className="justify-content-end flex-grow-1 pe-3">
+//                   <Nav.Link href="#action1">Home</Nav.Link>
+//                   <Nav.Link href="#action2">Link</Nav.Link>
+//                   <NavDropdown
+//                     title="Dropdown"
+//                     id={`offcanvasNavbarDropdown-expand-$'lg'`}
+//                   >
+//                     <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+//                     <NavDropdown.Item href="#action4">
+//                       Another action
+//                     </NavDropdown.Item>
+//                     <NavDropdown.Divider />
+//                     <NavDropdown.Item href="#action5">
+//                       Something else here
+//                     </NavDropdown.Item>
+//                   </NavDropdown>
+//                 </Nav>
+//                 <Form className="d-flex">
+//                   <Form.Control
+//                     type="search"
+//                     placeholder="Search"
+//                     className="me-2"
+//                     aria-label="Search"
+//                   />
+//                   <Button variant="outline-success">Search</Button>
+//                 </Form>
+//               </Offcanvas.Body>
+//             </Navbar.Offcanvas>
+//           </Container>
+//         </Navbar>
+      
+//     </>
+//   );
+// }
+
+// export default NavBarComponent;
+
+
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+
+import Image from 'next/image'
+import { Icon } from '@iconify/react';
+import Link from "next/link";
+
+
+function NavBarComponent() {
+  return (
+    <>
+      <Navbar bg="none" expand="lg" fixed="top" variant="dark">
+        <Container fluid>
+          <Navbar.Brand href="/">
+            <Image width={70} height={70} src='/images/loop_capital.png' className='logo-header' alt='loopcapital' />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse  id="navbarScroll" className="end mobilemenu">
+            <Nav
+              className="me-end my-2 my-lg-0 end mobilemenu_link"
+              // style={{ height: '100vw', width: '100vh' }}
+              navbarScroll
+            >
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/portfolio">Portfolio</Nav.Link>
+              <Nav.Link href="/contact">Contact</Nav.Link>
+              <Nav.Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages"><Icon icon="akar-icons:linkedin-box-fill" width="25" className="mobilemenu_icon"/></Nav.Link>
+
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+    </>
+  );
 }
- 
+
 export default NavBarComponent;

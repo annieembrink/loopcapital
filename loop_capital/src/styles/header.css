@@ -1,0 +1,64 @@
+/* Storlek på logga? */
+
+/* Don't forget to add styling for large phone and tablet, different font-size etc. */
+/* Now it's a glitch on 1005 */
+
+
+/* STYLING FOR DESKTOP */
+@media screen and (min-device-width: 1024px) {
+    .navbar {
+        /* Hur mycket margin?? */
+        margin: 20px 16px
+    }
+
+    /* I ADDED FONT-FAMILY ROBOTO MONO */
+    .navbar a {
+        color: #FAFAFA;
+        font-family: 'Roboto Mono';
+    }
+
+    .end {
+        text-align: end;
+        justify-content: end;
+        gap: 70px;
+    }
+
+    .mobilemenu_icon {
+        display: none;
+    }
+
+}
+
+
+/* STYLING FOR TABLET AND SMALLER */
+@media screen and (max-device-width: 1024px) {
+    .navbar {
+        margin: 30px 16px
+    }
+
+.mobilemenu {
+    background-color: inherit;
+        height: 100vh;
+        width: 100vw;
+
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .mobilemenu_link {
+        gap: 91px;
+    }
+
+    .mobilemenu_icon {
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* STYLING FOR ALL DEVICES */
+.navbar-toggler {
+    border: none;
+    width: 34px;
+}
