@@ -5,7 +5,7 @@
 
 
 /* STYLING FOR DESKTOP */
-@media screen and (min-device-width: 1024px) {
+@media screen and (min-device-width: 992px) {
     .navbar {
         /* Hur mycket margin?? */
         margin: 20px 16px
@@ -17,11 +17,15 @@
         font-family: 'Roboto Mono';
     }
 
-    .end {
+    .offcanvas_container_link {
+        gap: 70px;
+    }
+
+    /* .end {
         text-align: end;
         justify-content: end;
         gap: 70px;
-    }
+    } */
 
     .mobilemenu_icon {
         display: none;
@@ -31,12 +35,12 @@
 
 
 /* STYLING FOR TABLET AND SMALLER */
-@media screen and (max-device-width: 1024px) {
+@media screen and (max-device-width: 992px) {
     .navbar {
         margin: 30px 16px
     }
 
-.mobilemenu {
+/* .mobilemenu {
     background-color: inherit;
         height: 100vh;
         width: 100vw;
@@ -46,14 +50,43 @@
         align-items: center;
         justify-content: center;
         
-    }
+    } */
 
-    .mobilemenu_link {
+    /* .mobilemenu_link {
         gap: 91px;
-    }
+    } */
 
     .mobilemenu_icon {
         color: rgba(255, 255, 255, 0.5);
+    }
+
+    .offcanvas_container {
+        width: 100vw !important;
+        background-color: #11271D;
+       
+        
+    }
+
+    .offcanvas_header {
+        margin: 20px 16px;
+    }
+ 
+    .offcanvas_container_link {
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 91px;
+        color: white;
+    }
+
+
+    .hamburger_icon span {
+        /* FUNKAR INTE */
+        color: white !important;
+        background-color: red;
+
     }
 }
 
@@ -61,4 +94,9 @@
 .navbar-toggler {
     border: none;
     width: 34px;
+}
+
+.active { 
+color: #409250 !important;
+font-weight: bold;
 }
