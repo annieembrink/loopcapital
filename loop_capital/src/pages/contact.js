@@ -1,19 +1,44 @@
 import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
+
 // import { Icon } from '@iconify/react';
+
+import ActiveLinkComponent from '@/components/ActiveLinkComponent';
+import { Icon } from '@iconify/react';
+
 
 
 const Contact = () => {
 
     const [showForm, setShowForm] = useState(false);
-    const [formSubmitted, setFormSubmitted] = useState(false);
-    const [clientMessage, setClientMessage] = useState('');
-    const [helloMessage, setHelloMessage] = useState('');
+    const [formSubmitted, setFormSubmitted] = useState(false)
+    const [showDiv, setShowDiv] = useState(true)
+    const [activeLink, setActiveLink] = useState('Entrepreneur')
+    const [clientMessage, setClientMessage] = useState('')
+    const [helloMessage, setHelloMessage] = useState('')
+
+
+    let text; 
 
     const buttonOnClick = (message) => {
         setShowForm(true);
         setHelloMessage(message);
+    }
+
+    const showDivOnClick = (e) => {
+        if (e.target.textContent !== activeLink) {
+            setShowDiv(!showDiv)
+            setActiveLink(e.target.textContent)
+        }
+    }
+
+    const childProps = {
+        setShowForm,
+        helloMessage,
+        setHelloMessage,
+        setFormSubmitted,
+        setClientMessage
     }
 
     return (
@@ -29,24 +54,30 @@ const Contact = () => {
             :
             <>
             {showForm ?
-                <ContactFormComponent setShowForm={setShowForm} helloMessage={helloMessage} setHelloMessage={setHelloMessage} setFormSubmitted={setFormSubmitted} setClientMessage={setClientMessage}/>
+                <ContactFormComponent {...childProps}/>
                 :
-                <div className='wrapper-contact'>
-                    <div className="filter-contact-mobile">
+
+            <div className='wrapper-contact'>
+                <div className="filter-contact-mobile">
                     <p>Contact us!</p>
-                    <p>Entrepreneur</p> <p>Investor</p>
-                    </div>
-                    <div className='hello-contact roboto-font'>
+                    <p style={{textDecoration: activeLink === 'Entrepreneur' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Entrepreneur</p>
+                    <p style={{textDecoration: activeLink === 'Investor' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Investor</p>
+                    {/* <ActiveLinkComponent text='Entrepreneur' showDiv={showDiv}/>
+                    <ActiveLinkComponent text='Investor' showDiv={showDiv}/> */}
+                </div>
+
+                <div hidden={!showDiv} className='hello-contact roboto-font'>
                         <h2>Hello <span className='green-text'>Entrepreneur!</span></h2>
                         <p className='roboto-font'>Are you an entrepreneur who is at the start of your big journey and need help to reach your full potential?</p>
                         <button onClick={() => buttonOnClick('Hello Entrepreneur')}>Let&apos;s get in touch!</button>
-                    </div>
-                    <div className='hello-contact poppins-font'>
+                </div>
+
+                <div hidden={showDiv} className='hello-contact poppins-font'>
                         <h2>Hello <span className='green-text'>Investor!</span></h2>
                         <p>Are you an investor that wants to be apart of the journey to make Skåne the leading Tech region?</p>
                         <button onClick={() => buttonOnClick('Hello Investor')}>Contact us!</button>
-                    </div>
                 </div>
+            </div>
             }
             </>
             }

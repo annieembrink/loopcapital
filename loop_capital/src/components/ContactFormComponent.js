@@ -2,7 +2,7 @@ import { useState } from 'react';
 import EntrepreneurFormComponent from './EntrepreneurFormComponent';
 import InvestorFormComponent from './InvestorFormComponent';
 
-const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setFormSubmitted, setClientMessage }) => {
+const ContactFormComponent = (props) => {
 
     const [name, setName] = useState('');
     const [startup, setStartup] = useState('');
@@ -40,26 +40,23 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
         e.preventDefault()
         console.log('running postForm')
 
-        setShowForm(false)
-        setFormSubmitted(true)
+        props.setShowForm(false)
+        props.setFormSubmitted(true)
         createFormData(string)
 
         if(string === 'entrepreneur') {
-        console.log('entrepreneur')
         fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
             method: 'POST',
             body: fd
         })
         } else {
-        console.log('investor')
         // VALIDATE EMAIL
             fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/137/feedback', {
                 method: 'POST',
                 body: fd
             })
         }
-        setClientMessage('Successfully sent form!')
-        console.log('fd', fd)
+        props.setClientMessage('Successfully sent form!')
     }
 
     const onNextClick = (input, nr) => {
@@ -84,9 +81,9 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
     }
 
     const onClose = () => {
-        setShowForm(false)
+        props.setShowForm(false)
         setCurrentInput(0)
-        setHelloMessage('')
+        props.setHelloMessage('')
     }
 
     const validateEmail = (email, nr) => {
@@ -140,9 +137,9 @@ const ContactFormComponent = ({ setShowForm, helloMessage, setHelloMessage, setF
     return (
 
         <>
-        <h1>{helloMessage}</h1>
+        <h1>{props.helloMessage}</h1>
        
-       {helloMessage === 'Hello Entrepreneur' ? 
+       {props.helloMessage === 'Hello Entrepreneur' ? 
        <EntrepreneurFormComponent {...childProps}/> 
        :
        <InvestorFormComponent {...childProps}/>
