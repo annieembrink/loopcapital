@@ -6,7 +6,6 @@ const HeaderComponent = () => {
     return (
         <div className="header">
             <NavBarComponent />
-
         </div>
     );
 }
