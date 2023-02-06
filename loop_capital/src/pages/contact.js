@@ -1,13 +1,7 @@
 import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
-
-// import { Icon } from '@iconify/react';
-
 import ActiveLinkComponent from '@/components/ActiveLinkComponent';
-import { Icon } from '@iconify/react';
-
-
 
 const Contact = () => {
 
