@@ -1,7 +1,7 @@
-import CarouselAboutComponent from "@/components/CarouselAboutComponent"
-import DefaultLayoutComponent from "@/components/DefaultLayoutComponent"
+import CarouselAboutComponent from "@/components/CarouselAboutComponent";
+import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import SwingCounterComponent from "@/components/SwingCounterComponent";
-import Link from "next/link"
+import Link from "next/link";
 import { Icon } from '@iconify/react';
 
 

@@ -1,9 +1,12 @@
-
 import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
+
+// import { Icon } from '@iconify/react';
+
 import ActiveLinkComponent from '@/components/ActiveLinkComponent';
 import { Icon } from '@iconify/react';
+
 
 
 const Contact = () => {
@@ -15,11 +18,12 @@ const Contact = () => {
     const [clientMessage, setClientMessage] = useState('')
     const [helloMessage, setHelloMessage] = useState('')
 
+
     let text; 
 
     const buttonOnClick = (message) => {
-        setShowForm(true)
-        setHelloMessage(message)
+        setShowForm(true);
+        setHelloMessage(message);
     }
 
     const showDivOnClick = (e) => {
