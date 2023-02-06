@@ -13,7 +13,6 @@ const SwingCounterComponent = (props) => {
         number_of_investments,
         msek_investments
     ]
-// console.log("allNumbers", allNumbers);
 
     // console.log("investors", investors);
     // console.log("number_of_investments", number_of_investments);

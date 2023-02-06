@@ -70,7 +70,7 @@ export default function Portfolio(props) {
 
           <Row xs={2} md={3} lg={4} className="g-4">
             {chosenCompanies.map(company =>
-              <Col>
+              <Col key={company.title.rendered}>
                 <Card className="no-background" onClick={(e) => companyPopup(e, company)}>
                   <Card.Img variant="top" src={company.acf.image_of_the_company} />
                   <Card.Body className="card-body">
