@@ -1,5 +1,9 @@
+.contact {
+    display: none;
+}
 @media screen and (min-device-width: 1024px) { 
     .contact { 
+        display: block;
         z-index: 999999;
         position: fixed;
         right: -1rem;

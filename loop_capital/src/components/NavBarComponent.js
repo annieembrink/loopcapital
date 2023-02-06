@@ -72,7 +72,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
 import Image from 'next/image'
-import { Icon } from '@iconify/react';
+import * as Icon from 'react-bootstrap-icons';
 import Link from "next/link";
 
 
@@ -94,7 +94,7 @@ function NavBarComponent() {
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/portfolio">Portfolio</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages"><Icon icon="akar-icons:linkedin-box-fill" width="25" className="mobilemenu_icon"/></Nav.Link>
+              <Nav.Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages"><Icon.Linkedin className="mobilemenu_icon"/></Nav.Link>
 
             </Nav>
           </Navbar.Collapse>
