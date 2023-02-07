@@ -13,24 +13,24 @@ export default function Home(props) {
     <>
       <DefaultLayoutComponent>
 
-        <div className="hero-section">
-          <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
-          <p className="light-font">Get access to 48 investors with a lot of experience and network.</p>
+        <div className="hero-section" >
+          <h1 data-aos="fade-right" data-aos-duration="600">Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
+          <p className="light-font" data-aos="fade-right" data-aos-duration="800">Get access to 48 investors with a lot of experience and network.</p>
           <Link href="/contact">
-            <Button>Make Contact</Button>
+            <Button data-aos="fade-right" data-aos-duration="1000">Make Contact</Button>
           </Link>
         </div>
 
         <div className="two-containers">
           <div className="wrapper-offer-you green-border">
             <h2 className="underline-animation roboto-font">We can offer you</h2>
-            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>A creative enviroment</p>
-            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Possibility to ask for advice</p>
-            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Wide contact network</p>
-            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Access to capital</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="400"><Icon.ArrowRight className="green-text bootstrap-icon"/>A creative enviroment</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="600"><Icon.ArrowRight className="green-text bootstrap-icon"/>Possibility to ask for advice</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="800"><Icon.ArrowRight className="green-text bootstrap-icon"/>Wide contact network</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="1000"><Icon.ArrowRight className="green-text bootstrap-icon"/>Access to capital</p>
           </div>
 
-          <div className="wrapper-quote  margin-bottom">
+          <div className="wrapper-quote margin-bottom">
           <Icon.Quote className="green-text" id="quote-tag"/>
             <p className="quote">
               We are looking for early stage startups in the Skåne region with a lot of passion and with a scaleable tech idea. The total investment round are usually between 2-6 mSEK a pre-seed round. The first steps have been taken, the idea have been verified and a founding team are in place</p>
@@ -48,7 +48,13 @@ export default function Home(props) {
         
           <div >
             <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
-            <div className="green-border margin-bottom">here comes the journey-map</div>
+            <div className="green-border margin-bottom">
+              <h1 data-aos="fade-right" data-aos-duration="400">1</h1>
+              <h1 data-aos="fade-right" data-aos-duration="700">2</h1>
+              <h1 data-aos="fade-right" data-aos-duration="1000">3</h1>
+              <h1 data-aos="fade-right" data-aos-duration="1300">4</h1>
+            </div>
+            
           </div>
 
           <div className="green-border margin-bottom">
@@ -89,7 +95,3 @@ export async function getStaticProps({ preview = false }) {
     // revalidate: 10,
   }
 }
-
-
-
-

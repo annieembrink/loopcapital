@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const FixedContactComponent = () => {
     return (
-        <div className={styles.contact}>
+        <div className={styles.contact} >
             <Link href="/contact">Get in contact!</Link>
         </div>
     );
