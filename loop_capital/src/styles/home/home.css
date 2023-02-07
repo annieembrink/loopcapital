@@ -6,11 +6,6 @@
     display: none;
 }
 
-/* THIS CREATED A MARGIN THAT MADE THE FOOTER DISAPEAR AND MADE A MARGIN ON THE RIGHT... */
-/* .wrapper-carousel {
-    margin: -16px;
-} */
-
 .carousel-item {
     text-align: center;
     align-items: center;
@@ -71,73 +66,6 @@
     display: none;
 }
 
-
-/* WE OFFER YOU AND QUOTE */
-/* ADDED BASIC CSS FOR VISUAL */
-
-/* Bootstrap gives padding-left of 2rem, dont want it */
-/* .arrow-list {
-    padding-left: 0;
-    margin-top: 1rem;
-}
-
-.arrow-list li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.arrow-list .arrow {
-    padding-right: 1rem;
-}
-
-.arrow-list-items {
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-} */
-
-/* Doesn't get the correct font? is imported in global.css*/
-/* , tested with another one, same problem  */
-
-
-.wrapper-offer-you { 
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-    font-family: 'Poppins', sans-serif;
-    padding: 40px 5px 40px 5px;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
-    }
-.wrapper-offer-you .bootstrap-icon {
-    margin-right: 0.8rem;
-}
-
-#quote-tag {
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 100px;
-    text-align: center;
-    color: #409250;
-    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
-}
-
-#quote {
-    margin: 1rem 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.sm-text {
-    font-size: 12;
-    font-weight: lighter;
-    font-family: 'Poppins', sans-serif;
-}
-
-.right-align {
-    text-align: right;
-    font-family: 'Poppins', sans-serif;
-}
-
 /* INVESTMENTS NUMBERS */
 
 .extra-big-font {
@@ -163,16 +91,18 @@
 }
 
 .green-border-numbers div {
-    margin: 1rem;
+    margin: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .numbers-icon {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
+
 .numbers-icon .bootstrap-icon {
     margin-left: 0.2rem;
 }
@@ -197,16 +127,59 @@
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
 
-/* Doesn't get the correct font? is imported in global.css */
-#quote-tag {
-    font-family: 'Port Lligat Slab', serif;
-    font-size: 100px;
-    text-align: center;
+
+/* QUOTE AND WE OFFER YOU */
+
+.wrapper-quote {
+    display: grid;
+    /* max-width: 60%; */
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
-#quote {
-    margin: 1rem 0;
+
+#quote-tag {
+    display: flex;
+    margin: auto;
+    font-size: 100px;
+    color: #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
+
+.quote {
+    margin: 16px 0;
+    line-height: 20px;
+}
+
+
+.wrapper-offer-you {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 5px 40px 5px;
+    /* max-width: 35%; */
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-offer-you .bootstrap-icon {
+    margin-right: 0.8rem;
+}
+
+.sm-text {
+    font-size: 12;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right-align {
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 /* LARGE PHONE */
 
@@ -283,12 +256,6 @@
         padding: 80px;
     }
 
-    /* WE CAN OFFER YOU */
-/* 
-    .arrow-list-items {
-        font-size: 20px;
-    } */
-
     #quote-tag {
         font-size: 100px;
     }
@@ -301,13 +268,6 @@
     #align-row {
         display: flex;
         flex-direction: row-reverse;
-    }
-
-    /* -------------- */
-    /* -------------------NEEDS CHANGE HERE */
-    /* -------------- */
-    #align-row div {
-        width: 50%;
     }
 
     /* CAROUSEL */
@@ -355,24 +315,51 @@
 
     /* WE CAN OFFER YOU */
 
-    .wrapper-offer-you { 
-        padding: 50px;
-        }
-
-        .bigger-p {
-            font-size: 18px;
-        }
-
-        .h5 {
-            font-size: 18px;
-        }
-
-        #quote-tag {
-            font-size: 200px;
-        }
+    .wrapper-offer-you {
+        padding: 40px;
+        margin: 0 0px 80px 100px;
+    }
     
-/* 
-    .arrow-list-items {
-        font-size: 20px;
-    } */
+
+    .wrapper-offer-you .green-border {
+        padding: 50px;
+    }
+
+    .wrapper-offer-you h2 {
+        margin-bottom: 40px;
+    }
+
+    .wrapper-offer-you p {
+        margin-left: 50px;
+    }
+
+    .bigger-p {
+        font-size: 18px;
+    }
+
+    .h5 {
+        font-size: 18px;
+    }
+
+    /* QUOTE */
+
+    #quote-tag {
+        font-size: 100px;
+    }
+
+    #quote {
+        padding-bottom: 20px;
+    }
+
+    #title {
+        font-size: 14px;
+    }
+
+    .wrapper-offer-you {
+        width: 50%;
+    }
+
+    .wrapper-quote {
+        width: 50%;
+    }
 }

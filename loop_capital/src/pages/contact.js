@@ -3,6 +3,9 @@ import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import Accordion from 'react-bootstrap/Accordion';
 
+import Button from 'react-bootstrap/Button';
+
+
 const Contact = () => {
 
     const [showForm, setShowForm] = useState(false);
@@ -58,13 +61,13 @@ const Contact = () => {
                 <div className={`hello-contact roboto-font ${!showDiv ? 'hidden-on-mobile' : null}`}>
                         <h2>Hello <span className='green-text'>Entrepreneur!</span></h2>
                         <p className='roboto-font'>Are you an entrepreneur who is at the start of your big journey and need help to reach your full potential?</p>
-                        <button onClick={() => buttonOnClick('Hello Entrepreneur')}>Let&apos;s get in touch!</button>
+                        <Button onClick={() => buttonOnClick('Hello Entrepreneur')}>Let&apos;s get in touch!</Button>
                 </div>
                 
                 <div className={`hello-contact poppins-font ${showDiv ? 'hidden-on-mobile' : null}`}>
                         <h2>Hello <span className='green-text'>Investor!</span></h2>
                         <p>Are you an investor that wants to be apart of the journey to make Skåne the leading Tech region?</p>
-                        <button onClick={() => buttonOnClick('Hello Investor')}>Contact us!</button>
+                        <Button onClick={() => buttonOnClick('Hello Investor')}>Contact us!</Button>
                 </div>
                 
             </div>
