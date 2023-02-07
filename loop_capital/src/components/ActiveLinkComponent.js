@@ -1,11 +1,11 @@
 const ActiveLinkComponent = (props) => {
 
     const chooseLink = (e) => {
-        props.setChosenLink(e.target.textContent)
+        props.setChosenLink(e.target.textContent);
         if (e.target.textContent === 'About') {
-          props.setContent(props.popupCompany.acf.about)
+          props.setContent(props.popupCompany.acf.about);
         } else {
-          props.setContent(props.popupCompany.acf.testimonial)
+          props.setContent(props.popupCompany.acf.testimonial);
         }
     }
 

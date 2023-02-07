@@ -2,16 +2,15 @@ import Modal from 'react-bootstrap/Modal';
 import Image from 'next/image';
 import { useState } from 'react';
 import ActiveLinkComponent from './ActiveLinkComponent';
-import styles from '../styles/portfolio/PopupComponent.module.css';
 
 const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
 
-  const [content, setContent] = useState(popupCompany.acf.about)
-  const [chosenLink, setChosenLink] = useState('About')
+  const [content, setContent] = useState(popupCompany.acf.about);
+  const [chosenLink, setChosenLink] = useState('About');
   let text; 
 
   const closeButton = () => {
-    setShowPopup(false)
+    setShowPopup(false);
   }
 
   const childProps = {
