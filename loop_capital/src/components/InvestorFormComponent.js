@@ -24,7 +24,6 @@ const InvestorFormComponent = (props) => {
             <Form.Group>
                 <Form.Label htmlFor="nameInput">What is your name?</Form.Label>
                 <Form.Control type="text" name="nameInput" id="nameInput" value={props.name} onChange={(e) => props.setName(e.target.value)} />
-                {/* <button type='button' onClick={() => props.onNextClick('name', 1)} >NEXT</button> */}
                 <ContactFormNextButton {...childProps} string={'name'} nr={1}/>
             </Form.Group>
         )}
