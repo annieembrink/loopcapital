@@ -1,6 +1,7 @@
 import { useState} from 'react';
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
+import Accordion from 'react-bootstrap/Accordion';
 
 const Contact = () => {
 
@@ -53,18 +54,19 @@ const Contact = () => {
                     <p style={{textDecoration: activeLink === 'Entrepreneur' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Entrepreneur</p>
                     <p style={{textDecoration: activeLink === 'Investor' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Investor</p>
                 </div>
-
-                <div hidden={!showDiv} className='hello-contact roboto-font'>
+       
+                <div className={`hello-contact roboto-font ${!showDiv ? 'hidden-on-mobile' : null}`}>
                         <h2>Hello <span className='green-text'>Entrepreneur!</span></h2>
                         <p className='roboto-font'>Are you an entrepreneur who is at the start of your big journey and need help to reach your full potential?</p>
                         <button onClick={() => buttonOnClick('Hello Entrepreneur')}>Let&apos;s get in touch!</button>
                 </div>
-
-                <div hidden={showDiv} className='hello-contact poppins-font'>
+                
+                <div className={`hello-contact poppins-font ${showDiv ? 'hidden-on-mobile' : null}`}>
                         <h2>Hello <span className='green-text'>Investor!</span></h2>
                         <p>Are you an investor that wants to be apart of the journey to make Skåne the leading Tech region?</p>
                         <button onClick={() => buttonOnClick('Hello Investor')}>Contact us!</button>
                 </div>
+                
             </div>
             }
             </>
