@@ -30,7 +30,7 @@
     .mobilemenu_icon {
         display: none;
     }
-    
+
 
 }
 
@@ -41,7 +41,7 @@
         margin: 30px 16px
     }
 
-/* .mobilemenu {
+    /* .mobilemenu {
     background-color: inherit;
         height: 100vh;
         width: 100vw;
@@ -62,16 +62,17 @@
     }
 
     .offcanvas_container {
-        width: 100vw !important;
+        /* width: 100vw !important; */
         background-color: #11271D;
-       
-        
+
+
     }
+    
 
     .offcanvas_header {
         margin: 20px 16px;
     }
- 
+
     .offcanvas_container_link {
         margin-top: 8rem;
         display: flex;
@@ -97,7 +98,7 @@
     width: 34px;
 }
 
-.active { 
-color: #409250 !important;
-font-weight: bold;
+.active {
+    color: #409250 !important;
+    font-weight: bold;
 }
