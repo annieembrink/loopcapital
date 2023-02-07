@@ -1,12 +1,12 @@
-import CarouselAboutComponent from "@/components/CarouselAboutComponent"
-import DefaultLayoutComponent from "@/components/DefaultLayoutComponent"
+import CarouselAboutComponent from "@/components/CarouselAboutComponent";
+import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import SwingCounterComponent from "@/components/SwingCounterComponent";
-import Link from "next/link"
-import { Icon } from '@iconify/react';
+import Link from "next/link";
+import * as Icon from 'react-bootstrap-icons';
+
 
 
 export default function Home(props) {
-  // console.log('props', props)
   return (
     <>
       <DefaultLayoutComponent>
@@ -22,10 +22,10 @@ export default function Home(props) {
         <div id="align-row" className="section-2">
           <div className="wrapper-offer-you green-border">
             <h2 className="underline-animation roboto-font">We can offer you</h2>
-            <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />A creative enviroment</p>
-            <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />Possibility to ask for advice</p>
-            <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />Wide contact network</p>
-            <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />Access to capital</p>
+            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>A creative enviroment</p>
+            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Possibility to ask for advice</p>
+            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Wide contact network</p>
+            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Access to capital</p>
             {/* <ul className="arrow-list">
               <li>
                 <p><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></p>
@@ -47,7 +47,7 @@ export default function Home(props) {
           </div>
 
           <div className="wrapper-quote   margin-bottom">
-            <p id="quote-tag"><Icon icon="mingcute:quote-left-fill" color="#409250"/></p>
+          <Icon.Quote className="green-text" id="quote-tag"/>
             <p id="quote">
               We are looking for early stage startups in the Skåne region with a lot of passion and with a scaleable tech idea. The total investment round are usually between 2-6 mSEK a pre-seed round. The first steps have been taken, the idea have been verified and a founding team are in place
               Together we build a global game changer! And that are exactly how we work. We are doing this together in the same boat. You run and we support!

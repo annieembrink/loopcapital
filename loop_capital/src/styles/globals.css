@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #11271D;
+    background-color: #11271D !important;
     width: 100vw;
 }
 
@@ -265,6 +265,11 @@ li {
     animation: bubble-moving 10s infinite alternate linear;
 }
 
+.bootstrap-icon {
+    width: 1.2rem ;
+    height: 1.2rem ;
+}
+
 /* ---- ANIMATION ---- */
 
 @keyframes bubble-moving {
@@ -388,6 +393,10 @@ li {
 
     .hero-section p {
         font-size: 22px;
+    }
+    .bootstrap-icon {
+        width: 1.5rem ;
+        height: 1.5rem ;
     }
     
 }

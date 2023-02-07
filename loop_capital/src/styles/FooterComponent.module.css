@@ -31,5 +31,7 @@
 
 .iconTransparent {
     color: rgba(255, 255, 255, 0.5);
+    width: 1.5rem;
+    height: 1.5rem;
 }
 

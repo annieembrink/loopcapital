@@ -1,28 +1,24 @@
 import Modal from 'react-bootstrap/Modal';
 import Image from 'next/image';
 import { useState } from 'react';
-import styles from '../styles/portfolio/PopupComponent.module.css';
+import ActiveLinkComponent from './ActiveLinkComponent';
 
 const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
 
-  const [chosenLink, setChosenLink] = useState('About')
-  const [chosenStyle, setChosenStyle] = useState('underline')
-  const [content, setContent] = useState(popupCompany.acf.about)
+  const [content, setContent] = useState(popupCompany.acf.about);
+  const [chosenLink, setChosenLink] = useState('About');
+  let text; 
 
   const closeButton = () => {
-    setShowPopup(false)
+    setShowPopup(false);
   }
 
-  const chooseLink = (e) => {
-    if (e.target.textContent !== chosenLink) {
-      setChosenLink(e.target.textContent)
-    }
-
-    if (e.target.textContent === 'About') {
-      setContent(popupCompany.acf.about)
-    } else {
-      setContent(popupCompany.acf.testimonial)
-    }
+  const childProps = {
+    setContent,
+    popupCompany,
+    setChosenLink,
+    chosenLink, 
+    text
   }
 
   return (
@@ -35,10 +31,10 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
 
         <ul className="nav nav-tabs">
           <li className="nav-item">
-            <a className={`nav-link`} style={{ textDecoration: chosenLink === 'About' ? chosenStyle : null }} onClick={chooseLink}>About</a>
+            <ActiveLinkComponent {...childProps} text='About'/>
           </li>
           <li className="nav-item">
-            <a className={`nav-link`} style={{ textDecoration: chosenLink === 'Testimonials' ? chosenStyle : null }} onClick={chooseLink}>Testimonials</a>
+            <ActiveLinkComponent {...childProps} text='Testimonials'/>
           </li>
         </ul>
 
