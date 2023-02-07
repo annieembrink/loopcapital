@@ -1,36 +1,23 @@
-/* Storlek på logga? */
-
-/* Don't forget to add styling for large phone and tablet, different font-size etc. */
-/* Now it's a glitch on 1005 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
 
 /* STYLING FOR DESKTOP */
 @media screen and (min-device-width: 992px) {
     .navbar {
-        /* Hur mycket margin?? */
-        margin: 20px 16px
+        margin: 20px 16px;
     }
 
-    /* I ADDED FONT-FAMILY ROBOTO MONO */
-    .navbar a {
-        color: #FAFAFA;
-        font-family: 'Roboto Mono';
+    .nav-link {
+        font-size: 16px;
     }
 
     .offcanvas_container_link {
         gap: 70px;
     }
 
-    /* .end {
-        text-align: end;
-        justify-content: end;
-        gap: 70px;
-    } */
-
     .mobilemenu_icon {
         display: none;
     }
-    
 
 }
 
@@ -41,63 +28,74 @@
         margin: 30px 16px
     }
 
-/* .mobilemenu {
-    background-color: inherit;
-        height: 100vh;
-        width: 100vw;
-
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-    } */
-
-    /* .mobilemenu_link {
-        gap: 91px;
-    } */
+    .nav-link {
+        font-size: 18px;
+    }
 
     .mobilemenu_icon {
-        color: rgba(255, 255, 255, 0.5);
+        height: 34px;
+        width: 32px;
     }
 
     .offcanvas_container {
         width: 100vw !important;
         background-color: #11271D;
-       
-        
     }
 
     .offcanvas_header {
         margin: 20px 16px;
     }
- 
+
     .offcanvas_container_link {
-        margin-top: 8rem;
+        /* VILL HA TEXT CENTRERAD */
+        margin-top: 2rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
-        gap: 91px;
+        text-align: center;
+        gap: 30px;
         color: white;
+        text-transform: uppercase;
+
     }
 
+    .offcanvas_container_link .nav-link:first-child {
+        position: absolute;
+        bottom: 50px;
+    }
+
+    .hamburger_icon {
+        border: none;
+        width: 34px;
+    }
 
     .hamburger_icon span {
+        background-color: #409250;
         /* FUNKAR INTE */
         color: white !important;
-        background-color: red;
+    }
 
+    .btn-close {
+        background-color: #409250;
+        /* FUNKAR INTE */
+        color: white !important;
     }
 }
 
 /* STYLING FOR ALL DEVICES */
-.navbar-toggler {
-    border: none;
-    width: 34px;
+
+.nav-link {
+    color: #FAFAFA;
+
+    /* from globals? */
+    font-family: 'Roboto Mono';
+
+    /* FUNKAR INTE */
+    font-weight: lighter;
 }
 
-.active { 
-color: #409250 !important;
-font-weight: bold;
+.active {
+    color: #409250 !important;
+    font-weight: bold;
 }
