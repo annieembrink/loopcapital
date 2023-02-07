@@ -70,6 +70,7 @@ h4,
 h5 {
     font-size: 18px;
 }
+
 /* ICONS */
 /* WHY DOES THE COLOR NOT WORKING?? NOT EVEN IF IM CHANGE THE COLOR IN ICONIFY */
 .icon {
@@ -189,7 +190,7 @@ li {
 .section-4 {
     position: relative;
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 0 16px;
 }
 
 .hero-section::before {
@@ -267,8 +268,8 @@ li {
 }
 
 .bootstrap-icon {
-    width: 1.2rem ;
-    height: 1.2rem ;
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 /* ---- ANIMATION ---- */
@@ -337,7 +338,7 @@ li {
     .hero-section p {
         font-size: 18px;
     }
-    
+
 }
 
 /* TABLET */
@@ -377,6 +378,13 @@ li {
         font-family: 'Poppins', sans-serif;
     }
 
+    .hero-section,
+    .section-2,
+    .section-3,
+    .section-4 {
+        padding: 0 64px;
+    }
+
     /* BUBBLES */
 
     .hero-section::before,
@@ -395,11 +403,12 @@ li {
     .hero-section p {
         font-size: 22px;
     }
+
     .bootstrap-icon {
-        width: 1.5rem ;
-        height: 1.5rem ;
+        width: 1.5rem;
+        height: 1.5rem;
     }
-    
+
 }
 
 
@@ -448,6 +457,7 @@ li {
     .icon {
         font-size: 30px;
     }
+
     /* BUBBLES */
 
     .hero-section::before,

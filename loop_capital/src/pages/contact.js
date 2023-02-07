@@ -50,7 +50,7 @@ const Contact = () => {
                 <ContactFormComponent {...childProps}/>
                 :
 
-            <div className='wrapper-contact'>
+            <div className='wrapper-contact section-2'>
                 <div className="filter-contact-mobile">
                     <p>Contact us!</p>
                     <p style={{textDecoration: activeLink === 'Entrepreneur' ? 'underline' : 'none'}} onClick={(e) => showDivOnClick(e)}>Entrepreneur</p>
