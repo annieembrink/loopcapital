@@ -6,11 +6,6 @@
     display: none;
 }
 
-/* THIS CREATED A MARGIN THAT MADE THE FOOTER DISAPEAR AND MADE A MARGIN ON THE RIGHT... */
-/* .wrapper-carousel {
-    margin: -16px;
-} */
-
 .carousel-item {
     text-align: center;
     align-items: center;
@@ -70,34 +65,6 @@
 .carousel-control-next-icon {
     display: none;
 }
-
-
-/* WE OFFER YOU AND QUOTE */
-/* ADDED BASIC CSS FOR VISUAL */
-
-/* Bootstrap gives padding-left of 2rem, dont want it */
-/* .arrow-list {
-    padding-left: 0;
-    margin-top: 1rem;
-}
-
-.arrow-list li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.arrow-list .arrow {
-    padding-right: 1rem;
-}
-
-.arrow-list-items {
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-} */
-
-/* Doesn't get the correct font? is imported in global.css*/
-/* , tested with another one, same problem  */
 
 
 .wrapper-offer-you { 
@@ -160,7 +127,7 @@
 }
 
 .green-border-numbers div {
-    margin: 1rem;
+    margin: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;

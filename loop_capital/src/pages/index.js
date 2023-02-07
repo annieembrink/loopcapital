@@ -20,7 +20,7 @@ export default function Home(props) {
         </div>
 
         <div id="align-row" className="section-2">
-          <div className="wrapper-offer-you green-border margin-bottom">
+          <div className="wrapper-offer-you green-border">
             <h2 className="underline-animation roboto-font">We can offer you</h2>
             <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />A creative enviroment</p>
             <p className="bigger-p"><Icon icon="ic:baseline-keyboard-arrow-right" color="#409250" width="25" />Possibility to ask for advice</p>
