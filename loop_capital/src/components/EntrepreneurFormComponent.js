@@ -2,9 +2,9 @@ import Form from 'react-bootstrap/Form';
 import ContactFormBackArrow from './ContactFormBackArrow';
 
 const EntrepreneurFormComponent = (props) => {
-    return ( 
+    return (
         <Form className='flexColumn' onSubmit={(e) => props.postForm(e, 'entrepreneur')}>
-           
+
             <p onClick={props.onClose}>Close</p>
 
             {props.currentInput === 0 && (
@@ -21,8 +21,8 @@ const EntrepreneurFormComponent = (props) => {
                     <button type='button' onClick={() => props.onNextClick('startup', 2)} >NEXT</button>
 
                     {/* <button type='button' onClick={() => props.onBackClick(0)}>Back</button> */}
-                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={0}/>
-                    
+                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={0} />
+
                 </Form.Group>
             )}
 
@@ -32,9 +32,9 @@ const EntrepreneurFormComponent = (props) => {
                     <Form.Label htmlFor="emailInput">Your email:</Form.Label>
                     <Form.Control type="email" name="emailInput" id="emailInput" value={props.email} onChange={(e) => props.setEmail(e.target.value)} />
                     <button type='button' onClick={() => props.onNextClick('email', 3)}>NEXT</button>
-                    
+
                     {/* <button type='button' onClick={() => props.onBackClick(1)}>Back</button> */}
-                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={1}/>
+                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={1} />
 
                 </Form.Group>
             )}
@@ -45,9 +45,9 @@ const EntrepreneurFormComponent = (props) => {
                     <Form.Label htmlFor="subjectInput">What problem do you solve?</Form.Label>
                     <Form.Control type="text" name="subjectInput" id="subjectInput" value={props.subject} onChange={(e) => props.setSubject(e.target.value)} />
                     <button type='button' onClick={() => props.onNextClick('subject', 4)}>NEXT</button>
-                    
+
                     {/* <button type='button' onClick={() => props.onBackClick(2)}>Back</button> */}
-                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={2}/>
+                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={2} />
 
                 </Form.Group>
             )}
@@ -60,27 +60,27 @@ const EntrepreneurFormComponent = (props) => {
                     <button type='button' onClick={() => props.onNextClick('message', 5)}>NEXT</button>
 
                     {/* <button type='button' onClick={() => props.onBackClick(3)}>Back</button> */}
-                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={3}/>
+                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={3} />
 
                 </Form.Group>
             )}
 
             {props.currentInput === 5 && (
-            <Form.Group>
-                <Form.Label>Upload pitch if you have any</Form.Label>
-                <Form.Control type='file' onChange={props.handleFileChange}></Form.Control>
-                <div>{props.file && `${props.file.name} - ${props.file.type}`}</div>
-                
-                <button type='submit'>SUBMIT</button>
+                <Form.Group>
+                    <Form.Label>Upload pitch if you have any</Form.Label>
+                    <Form.Control type='file' onChange={props.handleFileChange}></Form.Control>
+                    <div>{props.file && `${props.file.name} - ${props.file.type}`}</div>
 
-                {/* <button type='button' onClick={() => props.onBackClick(4)}>Back</button> */}
-                <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4}/>
+                    <button type='submit'>SUBMIT</button>
 
-            </Form.Group>
+                    {/* <button type='button' onClick={() => props.onBackClick(4)}>Back</button> */}
+                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4} />
+
+                </Form.Group>
             )}
 
         </Form>
-     );
+    );
 }
- 
+
 export default EntrepreneurFormComponent;

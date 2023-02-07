@@ -24,10 +24,10 @@ const ContactFormComponent = (props) => {
             fd.append('your-file', file);
         }
     };
-    
+
     const handleFileChange = (e) => {
         if (e.target.files) {
-        setFile(e.target.files[0]);
+            setFile(e.target.files[0]);
         }
     };
 
@@ -37,13 +37,13 @@ const ContactFormComponent = (props) => {
         props.setFormSubmitted(true);
         createFormData(string);
 
-        if(string === 'entrepreneur') {
-        fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
-            method: 'POST',
-            body: fd
-        })
+        if (string === 'entrepreneur') {
+            fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/17/feedback', {
+                method: 'POST',
+                body: fd
+            })
         } else {
-        // VALIDATE EMAIL
+            // VALIDATE EMAIL
             fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/137/feedback', {
                 method: 'POST',
                 body: fd
@@ -59,7 +59,7 @@ const ContactFormComponent = (props) => {
         message: message,
         startup: startup
     };
-    
+
     const onNextClick = (input, nr) => {
         const validateFunc = input === 'email' ? validateEmail : validateText;
         validateFunc(validateMap[input], nr);
@@ -125,14 +125,14 @@ const ContactFormComponent = (props) => {
     return (
 
         <>
-        <h1>{props.helloMessage}</h1>
-       
-       {props.helloMessage === 'Hello Entrepreneur' ? 
-       <EntrepreneurFormComponent {...childProps}/> 
-       :
-       <InvestorFormComponent {...childProps}/>
-       }
-        <p>{validationError}</p>
+            <h1>{props.helloMessage}</h1>
+
+            {props.helloMessage === 'Hello Entrepreneur' ?
+                <EntrepreneurFormComponent {...childProps} />
+                :
+                <InvestorFormComponent {...childProps} />
+            }
+            <p>{validationError}</p>
         </>
     );
 }

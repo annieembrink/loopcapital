@@ -4,6 +4,8 @@ import SwingCounterComponent from "@/components/SwingCounterComponent";
 import Link from "next/link";
 import * as Icon from 'react-bootstrap-icons';
 
+import Button from 'react-bootstrap/Button';
+
 
 
 export default function Home(props) {
@@ -15,7 +17,7 @@ export default function Home(props) {
           <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
           <p className="light-font">Get access to 48 investors with a lot of experience and network.</p>
           <Link href="/contact">
-            <button>Make Contact</button>
+            <Button>Make Contact</Button>
           </Link>
         </div>
 
@@ -26,27 +28,9 @@ export default function Home(props) {
             <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Possibility to ask for advice</p>
             <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Wide contact network</p>
             <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Access to capital</p>
-            {/* <ul className="arrow-list">
-              <li>
-                <p><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></p>
-                <div className="arrow-list-items">A creative enviroment</div>
-              </li>
-              <li>
-                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
-                <div className="arrow-list-items">Possibility to ask for advice</div>
-              </li>
-              <li>
-                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
-                <div className="arrow-list-items">Wide contact network</div>
-              </li>
-              <li>
-                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
-                <div className="arrow-list-items">Access to capital</div>
-              </li>
-            </ul> */}
           </div>
 
-          <div className="wrapper-quote   margin-bottom">
+          <div className="wrapper-quote  margin-bottom">
           <Icon.Quote className="green-text" id="quote-tag"/>
             <p id="quote">
               We are looking for early stage startups in the Skåne region with a lot of passion and with a scaleable tech idea. The total investment round are usually between 2-6 mSEK a pre-seed round. The first steps have been taken, the idea have been verified and a founding team are in place
@@ -84,7 +68,7 @@ export default function Home(props) {
           <h2>Did we caught your interest?</h2>
           <h6>Welcome to Loop Capital!</h6>
           <Link href="/contact">
-            <button>Make Contact</button>
+            <Button>Make Contact</Button>
           </Link>
         </div>
 
