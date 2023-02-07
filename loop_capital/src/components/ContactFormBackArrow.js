@@ -7,9 +7,9 @@ const ContactFormBackArrow = ({ nr, setCurrentInput, setValidationError }) => {
         setValidationError('');
     };
 
-    return (
-        <p onClick={() => onBackClick(nr)}><Icon.ArrowReturnLeft className="green-text bootstrap-icon" />Back</p>
-    );
+    return ( 
+        <p onClick={() => onBackClick(nr)}><Icon.ArrowReturnLeft className="green-text bootstrap-icon" onClick={() => onBackClick(nr)}/>Back</p>
+     );
 }
 
 export default ContactFormBackArrow;
