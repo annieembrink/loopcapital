@@ -25,7 +25,7 @@ const InvestorFormComponent = (props) => {
                 
                 {/* <button type='button' onClick={() => props.onBackClick(0)}>Back</button> */}
                 {/* <p><Icon.ArrowReturnLeft className="green-text bootstrap-icon" onClick={() => props.onBackClick(0)}/>Back</p> */}
-                <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={0}/>
+                git branch<ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={0}/>
 
             </Form.Group>
         )}
