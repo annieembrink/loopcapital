@@ -31,7 +31,7 @@ const CarouselAboutComponent = () => {
                         </p>
                 </Carousel.Item>
             </Carousel>
-            <Image width={500} height={500} src='/images/prisma.jpg' className='img-carousel' alt='Prismahuset'/>
+            <Image width={400} height={400} src='/images/prisma.jpg' className='img-carousel' alt='Prismahuset'/>
             </div>
         </> 
     );
