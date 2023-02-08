@@ -1,9 +1,14 @@
+// COMPONENT IMPORTS
 import CarouselAboutComponent from "@/components/CarouselAboutComponent";
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import SwingCounterComponent from "@/components/SwingCounterComponent";
+import FixedContactComponent from "@/components//FixedContactComponent";
+
+// REACT/NEXT IMPORTS
 import Link from "next/link";
 import * as Icon from 'react-bootstrap-icons';
 
+// BOOTSTRAP IMPORTS
 import Button from 'react-bootstrap/Button';
 
 
@@ -12,7 +17,7 @@ export default function Home(props) {
   return (
     <>
       <DefaultLayoutComponent>
-
+      <FixedContactComponent/>
         <div className="hero-section" >
           <h1 data-aos="fade-right" data-aos-duration="600">Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
           <p className="light-font" data-aos="fade-right" data-aos-duration="800">Get access to 48 investors with a lot of experience and network.</p>
