@@ -124,8 +124,9 @@ ul {
 
 .animated-text {
     color: #409250;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
+
 
 .green-text {
     color: #409250;
