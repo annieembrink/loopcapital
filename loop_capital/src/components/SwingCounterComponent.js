@@ -1,5 +1,4 @@
-
-import { Icon } from '@iconify/react';
+import * as Icon from 'react-bootstrap-icons';
 import React, { useEffect, useState } from 'react';
 
 const SwingCounterComponent = (props) => {
@@ -13,10 +12,6 @@ const SwingCounterComponent = (props) => {
         number_of_investments,
         msek_investments
     ]
-
-    // console.log("investors", investors);
-    // console.log("number_of_investments", number_of_investments);
-    // console.log("msek_investments", msek_investments);
 
   const [counterValues, setCounterValues] = useState([investors / 4, 1, 1]);
 
@@ -52,15 +47,15 @@ const SwingCounterComponent = (props) => {
       {props.props.wpDataJson.map((num, index) =>
         <div key={num} className="green-border green-border-numbers margin-bottom">
           <div>
-            <p className="extra-big-font counter">{counterValues[index * 3]} <Icon icon="carbon:portfolio" className="icon" /></p>
+            <span className="numbers-icon"><p className="extra-big-font counter">{counterValues[index * 3]}</p><Icon.Briefcase className="bootstrap-icon"/></span>
             <p className="p-tag-numbers">investors</p>
           </div>
           <div>
-            <p className="extra-big-font counter">{counterValues[index * 3 + 1]} <Icon icon="bi:people-fill" className="icon"/></p>
+            <span className="numbers-icon"><p className="extra-big-font counter">{counterValues[index * 3 + 1]}</p><Icon.People className="bootstrap-icon"/></span>
             <p className="p-tag-numbers">numbers of investments</p>
           </div>
           <div>
-            <p className="extra-big-font counter">{counterValues[index * 3 + 2]} <Icon icon="wpf:coins" className="icon"/></p>
+          <span className="numbers-icon"><p className="extra-big-font counter">{counterValues[index * 3 + 2]}</p><Icon.PiggyBank className="bootstrap-icon"/></span>
             <p className="p-tag-numbers">(MSEK) investments</p>
           </div>
         </div>)}

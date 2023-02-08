@@ -3,12 +3,10 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-import Image from 'next/image';
-import { Icon } from '@iconify/react';
-
-import { useRouter } from 'next/router';
-// import Link from "next/link";
-// import "bootstrap/dist/js/bootstrap.bundle.min";
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import * as Icon from 'react-bootstrap-icons';
+import Link from "next/link";
 
 function NavBarComponent() {
 
@@ -19,7 +17,7 @@ function NavBarComponent() {
     <>
 
       {['lg'].map((expand) => (
-        <Navbar key={expand} bg="none" expand={expand} variant="dark" className="mb-3" fixed="top">
+        <Navbar key={expand} bg="none" expand={expand} variant="dark" className="mb-3" fixed="top" data-bs-theme="dark">
           <Container fluid>
             <Navbar.Brand href="/"><Image width={70} height={70} src='/images/loop_capital.png' className='logo-header' alt='loopcapital' /></Navbar.Brand>
             <Navbar.Toggle className="hamburger_icon" aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -29,22 +27,19 @@ function NavBarComponent() {
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
             >
-              <Offcanvas.Header closeButton className="offcanvas_header">
+              <Offcanvas.Header closeButton  className="offcanvas_header"  >
                 <Offcanvas.Title href="/" id={`offcanvasNavbarLabel-expand-${expand}`}>
                 <Image width={70} height={70} src='/images/loop_capital.png' className='logo-header' alt='loopcapital' />
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3 offcanvas_container_link">
-                
-                  <Nav.Link href="/" className={currentRoute === "/" ? "active"  : ""}>Home</Nav.Link>
+                <Nav.Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages"><Icon.Linkedin className="mobilemenu_icon"/></Nav.Link>
+
+                  <Nav.Link href="/" className={currentRoute === "/" ? "active"  : ""} >Home</Nav.Link>
                   <Nav.Link href="/portfolio" className={currentRoute === "/portfolio" ? "active"  : ""}>Portfolio</Nav.Link>
                   <Nav.Link href="/contact" className={currentRoute === "/contact" ? "active"  : ""}>Contact</Nav.Link>
-                  <Nav.Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages"><Icon icon="akar-icons:linkedin-box-fill" width="25" className="mobilemenu_icon"/></Nav.Link>
-
-                  
                 </Nav>
-            
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

@@ -13,28 +13,33 @@ body {
     width: 100vw;
 }
 
-/* MOBILE FIRST */
+/* MOBILE FIRST - MAIN*/
 
 main {
-    /* margin: 0 16px; */
+    margin: 0 16px;
     max-width: 100%;
     color: #CBD8CE;
 }
 
-/* ------------------------------------------------ */
-/* TEMPORARY TO GET THE CORRECT VISUAL OF THE BUBBLES */
-/* NAV WILL BE POSITIONED FIXED, CORRECT? */
-/* SUSANNE IS NOT GOING TO SE THIS BECAUSE SHE DOES THE STYLING IN A SEPERAT FILE */
-/* ------------------------------------------------ */
-nav {
-    position: fixed;
-    top: 0;
-    z-index: 999999;
+/* GRID CONTAINER SYSTEM */
+
+.one-container {
+    display: grid;
+    grid-template-rows: 1fr;
 }
+
+
+.two-containers {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+/* P, H */
 
 p {
     font-size: 16px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -70,31 +75,89 @@ h4,
 h5 {
     font-size: 18px;
 }
+
 /* ICONS */
-/* WHY DOES THE COLOR NOT WORKING?? NOT EVEN IF IM CHANGE THE COLOR IN ICONIFY */
+
 .icon {
     font-size: 25px;
     color: #409250;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
 
+
+/* ICONS BOOTSTRAP */
+
+.bootstrap-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
 /* BUTTON STYLING */
 
-button {
+.btn-primary {
     background-color: #409250;
+    border: none;
     color: #fafafa;
     text-transform: uppercase;
-    border-radius: 10px;
-    border: none;
     width: 215px;
     height: 50px;
+    border-radius: 10px;
     font-family: 'Roboto Mono';
 }
+
 
 /* UL NO PADDING */
 ul {
     padding-left: 0;
 }
+
+/* GREEN-BORDER */
+
+.green-border {
+    border: 3px solid #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
+    border-radius: 20px;
+    height: 60%;
+}
+
+.padding-text {
+    padding: 60px 20px 60px 20px;
+}
+
+/* ALIGN TEXT */
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+/* ALIGNT LEFT IN DIV */
+
+.align-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+
+.align-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* WHITE SPACE  */
+
+.margin-whitespace {
+    margin: 200px 0 200px 0;
+}
+
 
 /* FILTER, this is not going to be here, this should be on "portfolio" */
 #filter-list {
@@ -119,8 +182,9 @@ ul {
 
 .animated-text {
     color: #409250;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
+
 
 .green-text {
     color: #409250;
@@ -168,122 +232,20 @@ li {
     font-family: 'Roboto Mono';
 }
 
-.margin-bottom {
-    margin-bottom: 64px;
-}
-
 .hero-section {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* BUBBLES */
+/* MARGIN BOTTOM */
 
-.hero-section,
-.section-2,
-.section-3,
-.section-4 {
-    position: relative;
-    overflow: hidden;
-    padding: 0 1rem;
+.margin-bottom {
+    margin-bottom: 64px;
 }
 
-.hero-section::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 300px;
-    height: 300px;
-    background: #409250;
-    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
-    border-radius: 50%;
-    top: -5rem;
-    right: -5rem;
-    animation: bubble-moving 10s infinite alternate linear;
-}
-
-.hero-section::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 250px;
-    height: 250px;
-    background: #409250;
-    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
-    border-radius: 50%;
-    bottom: 0;
-    left: -3rem;
-    animation: bubble-moving 10s infinite alternate linear;
-}
-
-.section-2::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 300px;
-    height: 300px;
-    background: #409250;
-    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
-    border-radius: 50%;
-    top: 15rem;
-    right: -5rem;
-}
-
-.section-3::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 350px;
-    height: 350px;
-    background: #409250;
-    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
-    border-radius: 50%;
-    bottom: 0;
-    left: -4rem;
-    animation: bubble-moving 10s infinite alternate linear;
-}
-
-/* TEMPORARY UNTIL CONTENT POSITION DONE */
-.section-4 {
-    padding-top: 4rem;
-}
-
-.section-4::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 350px;
-    height: 350px;
-    background: #409250;
-    background: linear-gradient(45deg, rgba(64, 146, 80, 0) 0%, rgba(64, 146, 80, 0.1) 50%, rgba(64, 146, 80, 0) 100%);
-    border-radius: 50%;
-    bottom: 0;
-    right: -4rem;
-    animation: bubble-moving 10s infinite alternate linear;
-}
-
-/* ---- ANIMATION ---- */
-
-@keyframes bubble-moving {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    33% {
-        transform: translate(3%, -3%);
-    }
-
-    66% {
-        transform: translate(-0%, -0%);
-    }
-
-    100% {
-        transform: translate(-3%, -3%);
-    }
-}
 
 /* LARGE PHONE */
 
@@ -313,25 +275,10 @@ li {
         font-size: 14px;
     }
 
-    /* BUBBLES */
-
-    .hero-section::before,
-    .section-2::before,
-    .section-4::before {
-        width: 350px;
-        height: 350px;
-    }
-
-    .hero-section::after,
-    .section-3::before {
-        width: 300px;
-        height: 300px;
-    }
-
     .hero-section p {
         font-size: 18px;
     }
-    
+
 }
 
 /* TABLET */
@@ -371,31 +318,36 @@ li {
         font-family: 'Poppins', sans-serif;
     }
 
-    /* BUBBLES */
+    /* HERO SECTION */
 
-    .hero-section::before,
-    .section-2::before,
-    .section-4::before {
-        width: 400px;
-        height: 400px;
-    }
-
-    .hero-section::after,
-    .section-3::before {
-        width: 500px;
-        height: 500px;
-    }
 
     .hero-section p {
         font-size: 22px;
     }
-    
+
+    .bootstrap-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .align-item-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 
 /* DESKTOP */
 
 @media screen and (min-device-width: 1440px) {
+
+    
+    main {
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
 
     /* Hero section */
     h1 {
@@ -426,6 +378,15 @@ li {
         font-size: 18px;
     }
 
+
+    /* GRID SYSTEM */
+
+    .two-containers {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+    }
+
     /* BUTTON STYLING DESKTOP */
 
     button {
@@ -434,26 +395,19 @@ li {
         font-size: 16px;
     }
 
+    /* ICONS */
 
     .icon {
         font-size: 30px;
     }
-    /* BUBBLES */
 
-    .hero-section::before,
-    .section-2::before,
-    .section-4::before {
-        width: 600px;
-        height: 600px;
-    }
-
-    .hero-section::after,
-    .section-3::before {
-        width: 500px;
-        height: 500px;
-    }
+    /* HERO SECTION */
 
     .hero-section p {
         font-size: 22px;
+    }
+
+    .green-border {
+        padding: 60px;
     }
 }

@@ -15,6 +15,10 @@
     font-weight: bold;
 }
 
+.hidden-on-mobile {
+    display: none;
+}
+
 
 /* TABLET */
 
@@ -22,7 +26,9 @@
     .filter-contact-mobile {
         display: none;
     }
-    
+    .hidden-on-mobile {
+        display: block;
+    }
 }
 
 
@@ -31,5 +37,8 @@
 @media screen and (min-device-width: 1440px) {
     .filter-contact-mobile {
         display: none;
+    }
+    .hidden-on-mobile {
+        display: block;
     }
 }
