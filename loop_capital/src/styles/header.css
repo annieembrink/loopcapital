@@ -38,9 +38,10 @@
     }
 
     .offcanvas_container {
-        width: 100vw !important;
+        /* width: 100vw !important; */
         background-color: #11271D;
     }
+    
 
     .offcanvas_header {
         margin: 20px 16px;

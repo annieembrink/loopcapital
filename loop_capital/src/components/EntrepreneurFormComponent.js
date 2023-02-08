@@ -17,7 +17,7 @@ const EntrepreneurFormComponent = (props) => {
 
     return ( 
         <Form className='flexColumn' onSubmit={(e) => props.postForm(e, 'entrepreneur')}>
-           
+
             <p onClick={props.onClose}>Close</p>
 
             {props.currentInput === 0 && (
@@ -68,20 +68,21 @@ const EntrepreneurFormComponent = (props) => {
             )}
 
             {props.currentInput === 5 && (
-            <Form.Group>
-                <Form.Label>Upload pitch if you have any</Form.Label>
-                <Form.Control type='file' onChange={props.handleFileChange}></Form.Control>
-                <div>{props.file && `${props.file.name} - ${props.file.type}`}</div>
-                
-                <button type='submit'>SUBMIT</button>
+                <Form.Group>
+                    <Form.Label>Upload pitch if you have any</Form.Label>
+                    <Form.Control type='file' onChange={props.handleFileChange}></Form.Control>
+                    <div>{props.file && `${props.file.name} - ${props.file.type}`}</div>
 
                 <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4}/>
 
-            </Form.Group>
+                    {/* <button type='button' onClick={() => props.onBackClick(4)}>Back</button> */}
+                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4} />
+
+                </Form.Group>
             )}
 
         </Form>
-     );
+    );
 }
- 
+
 export default EntrepreneurFormComponent;

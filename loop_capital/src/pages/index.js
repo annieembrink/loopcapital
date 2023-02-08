@@ -4,85 +4,75 @@ import SwingCounterComponent from "@/components/SwingCounterComponent";
 import Link from "next/link";
 import * as Icon from 'react-bootstrap-icons';
 
+import Button from 'react-bootstrap/Button';
+
+
+
 export default function Home(props) {
   return (
     <>
       <DefaultLayoutComponent>
 
-        <div className="hero-section">
-          <h1>Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
-          <p className="light-font">Get access to 48 investors with a lot of experience and network.</p>
+        <div className="hero-section" >
+          <h1 data-aos="fade-right" data-aos-duration="600">Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
+          <p className="light-font" data-aos="fade-right" data-aos-duration="800">Get access to 48 investors with a lot of experience and network.</p>
           <Link href="/contact">
-            <button>Make Contact</button>
+            <Button data-aos="fade-right" data-aos-duration="1000">Make Contact</Button>
           </Link>
         </div>
 
-        <div id="align-row" className="section-2">
-          <div className="wrapper-offer-you green-border margin-bottom">
+        <div className="two-containers">
+          <div className="wrapper-offer-you green-border">
             <h2 className="underline-animation roboto-font">We can offer you</h2>
-            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>A creative enviroment</p>
-            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Possibility to ask for advice</p>
-            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Wide contact network</p>
-            <p className="bigger-p"><Icon.ArrowRight className="green-text bootstrap-icon"/>Access to capital</p>
-            {/* <ul className="arrow-list">
-              <li>
-                <p><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></p>
-                <div className="arrow-list-items">A creative enviroment</div>
-              </li>
-              <li>
-                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
-                <div className="arrow-list-items">Possibility to ask for advice</div>
-              </li>
-              <li>
-                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
-                <div className="arrow-list-items">Wide contact network</div>
-              </li>
-              <li>
-                <div className="arrow"><Icon icon="ic:round-keyboard-arrow-right" color="#409250" width="25" /></div>
-                <div className="arrow-list-items">Access to capital</div>
-              </li>
-            </ul> */}
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="400"><Icon.ArrowRight className="green-text bootstrap-icon"/>A creative enviroment</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="600"><Icon.ArrowRight className="green-text bootstrap-icon"/>Possibility to ask for advice</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="800"><Icon.ArrowRight className="green-text bootstrap-icon"/>Wide contact network</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="1000"><Icon.ArrowRight className="green-text bootstrap-icon"/>Access to capital</p>
           </div>
 
-          <div className="wrapper-quote   margin-bottom">
+          <div className="wrapper-quote margin-bottom">
           <Icon.Quote className="green-text" id="quote-tag"/>
-            <p id="quote">
-              We are looking for early stage startups in the Skåne region with a lot of passion and with a scaleable tech idea. The total investment round are usually between 2-6 mSEK a pre-seed round. The first steps have been taken, the idea have been verified and a founding team are in place
-              Together we build a global game changer! And that are exactly how we work. We are doing this together in the same boat. You run and we support!
-            </p>
+            <p className="quote">
+              We are looking for early stage startups in the Skåne region with a lot of passion and with a scaleable tech idea. The total investment round are usually between 2-6 mSEK a pre-seed round. The first steps have been taken, the idea have been verified and a founding team are in place</p>
+              <p>Together we build a global game changer! And that are exactly how we work. We are doing this together in the same boat. You run and we support!</p>
             {/* Right align text */}
-            <p className="right-align">David Nilsson-Sträng</p>
-            <p className="right-align sm-text">Co-founder</p>
+            <p className="right-align">David Nilsson-Sträng <br /><span id="title">Co-founder</span></p>
           </div>
 
         </div>
 
-        <div className="section-3">
+        <div>
 
           {/* MOVE THIS TO COMPONENT? */}
           <SwingCounterComponent props={props}/>
         
           <div >
             <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
-            <div className="green-border margin-bottom">here comes the journey-map</div>
+            <div className="green-border margin-bottom">
+              <h1 data-aos="fade-right" data-aos-duration="400">1</h1>
+              <h1 data-aos="fade-right" data-aos-duration="700">2</h1>
+              <h1 data-aos="fade-right" data-aos-duration="1000">3</h1>
+              <h1 data-aos="fade-right" data-aos-duration="1300">4</h1>
+            </div>
+            
           </div>
 
-        </div>
-
-        <div className="green-border margin-bottom">
+          <div className="green-border margin-bottom">
           {/* SPAN NEED CLASS FOR GREEN TEXT */}
           <h2>
             Skåne will become Sweden&apos;s leading Tech region and build companies active <span className="green-text">all over the world</span>
           </h2>
         </div>
 
-        <CarouselAboutComponent />
+        </div>
+
+        {/* <CarouselAboutComponent /> */}
 
         <div className="section-4">
           <h2>Did we catch your interest?</h2>
           <h6>Welcome to Loop Capital!</h6>
           <Link href="/contact">
-            <button>Make Contact</button>
+            <Button>Make Contact</Button>
           </Link>
         </div>
 
@@ -105,7 +95,3 @@ export async function getStaticProps({ preview = false }) {
     // revalidate: 10,
   }
 }
-
-
-
-
