@@ -4,8 +4,6 @@ import SwingCounterComponent from "@/components/SwingCounterComponent";
 import Link from "next/link";
 import * as Icon from 'react-bootstrap-icons';
 
-
-
 export default function Home(props) {
   return (
     <>
@@ -81,7 +79,7 @@ export default function Home(props) {
         <CarouselAboutComponent />
 
         <div className="section-4">
-          <h2>Did we caught your interest?</h2>
+          <h2>Did we catch your interest?</h2>
           <h6>Welcome to Loop Capital!</h6>
           <Link href="/contact">
             <button>Make Contact</button>
