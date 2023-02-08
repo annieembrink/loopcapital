@@ -13,8 +13,8 @@ export default function Home(props) {
     <>
       <DefaultLayoutComponent>
 
-        <div className="hero-section" >
-          <h1 data-aos="fade-right" data-aos-duration="600">Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
+        <div className="hero-section">
+        <h1 data-aos="fade-right" data-aos-duration="600">Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
           <p className="light-font" data-aos="fade-right" data-aos-duration="800">Get access to 48 investors with a lot of experience and network.</p>
           <Link href="/contact">
             <Button data-aos="fade-right" data-aos-duration="1000">Make Contact</Button>

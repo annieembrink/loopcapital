@@ -173,17 +173,19 @@ li {
     font-family: 'Roboto Mono';
 }
 
-.margin-bottom {
-    margin-bottom: 64px;
-}
-
 .hero-section {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+.margin-bottom {
+    margin-bottom: 64px;
+}
+
+
 
 .bootstrap-icon {
     width: 1.2rem;
@@ -238,21 +240,6 @@ li {
         font-size: 14px;
     }
 
-    /* BUBBLES */
-
-    .hero-section::before,
-    .section-2::before,
-    .section-4::before {
-        width: 350px;
-        height: 350px;
-    }
-
-    .hero-section::after,
-    .section-3::before {
-        width: 300px;
-        height: 300px;
-    }
-
     .hero-section p {
         font-size: 18px;
     }
@@ -296,27 +283,8 @@ li {
         font-family: 'Poppins', sans-serif;
     }
 
-    .hero-section,
-    .section-2,
-    .section-3,
-    .section-4 {
-        padding: 0 64px;
-    }
+    /* HERO SECTION */
 
-    /* BUBBLES */
-
-    .hero-section::before,
-    .section-2::before,
-    .section-4::before {
-        width: 400px;
-        height: 400px;
-    }
-
-    .hero-section::after,
-    .section-3::before {
-        width: 500px;
-        height: 500px;
-    }
 
     .hero-section p {
         font-size: 22px;
@@ -387,25 +355,13 @@ li {
         font-size: 16px;
     }
 
+    /* ICONS */
 
     .icon {
         font-size: 30px;
     }
 
-    /* BUBBLES */
-
-    .hero-section::before,
-    .section-2::before,
-    .section-4::before {
-        width: 600px;
-        height: 600px;
-    }
-
-    .hero-section::after,
-    .section-3::before {
-        width: 500px;
-        height: 500px;
-    }
+    /* HERO SECTION */
 
     .hero-section p {
         font-size: 22px;
