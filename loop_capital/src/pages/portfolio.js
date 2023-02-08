@@ -1,10 +1,14 @@
+// COMPONENT IMPORTS
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import PopupComponent from "@/components/PopupComponent";
+import FixedContactComponent from "@/components//FixedContactComponent";
 
+// BOOTSTRAP IMPORTS
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
+// REACT IMPORTS
 import { useState } from 'react';
 
 export default function Portfolio(props) {
@@ -33,17 +37,18 @@ export default function Portfolio(props) {
   return (
     <>
       <DefaultLayoutComponent>
+      <FixedContactComponent/>
 
         {showPopup ?
           <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} />
           : null}
         <div className="hero-section">
-          <h1>Loop Capital invest at an early stage in the companies <span className="green-text">journey</span></h1>
-          <p>Your startup are scaleable within Tech and a big love for data driven innovation.
+          <h1 data-aos="fade-right" data-aos-duration="600">Loop Capital invest at an early stage in the companies <span className="green-text">journey</span></h1>
+          <p data-aos="fade-right" data-aos-duration="800">Your startup are scaleable within Tech and a big love for data driven innovation.
             <br /> Still early in the journey - but high ambitions!</p>
         </div>
 
-        <div className="section-2">
+        <div>
           <div>
             <ul id="filter-list" className="roboto-font">
               <li onClick={showAll}>All investments</li>

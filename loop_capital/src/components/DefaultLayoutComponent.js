@@ -57,7 +57,6 @@ const DefaultLayoutComponent = ({ children }) => {
             </Head>
 
             <HeaderComponent/>
-            <FixedContactComponent/>
             <main>{children}</main>
             <FooterComponent/>
         </>

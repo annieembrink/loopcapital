@@ -39,8 +39,8 @@ const Contact = () => {
         <DefaultLayoutComponent>
 
             <div className="hero-section">
-                <h1>Let&apos;s start this journey <span className="green-text">together!</span></h1>
-                <p className='p-hero'>Just fill in the form or send us an email!</p>
+                <h1 data-aos="fade-right" data-aos-duration="600">Let&apos;s start this journey <span className="green-text">together!</span></h1>
+                <p className='p-hero' data-aos="fade-right" data-aos-duration="800">Just fill in the form or send us an email!</p>
             </div>
             
             {formSubmitted ? 
