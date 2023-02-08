@@ -43,7 +43,16 @@ export default function Portfolio(props) {
           <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} />
           : null}
         <div className="hero-section">
-          <h1 data-aos="fade-right" data-aos-duration="600">Loop Capital invest at an early stage in the companies <span className="green-text">journey</span></h1>
+          <h1 data-aos="fade-right" data-aos-duration="600">Loop Capital invest at an early stage in the companies <span className="animated-text">
+                <span data-aos="fade-right" data-aos-duration="800">j</span>
+                <span data-aos="fade-right" data-aos-duration="1100">o</span>
+                <span data-aos="fade-right" data-aos-duration="1400">u</span>
+                <span data-aos="fade-right" data-aos-duration="1700">r</span>
+                <span data-aos="fade-right" data-aos-duration="2000">n</span>
+                <span data-aos="fade-right" data-aos-duration="2300">e</span>
+                <span data-aos="fade-right" data-aos-duration="2600">y</span>
+              </span>
+            </h1>
           <p data-aos="fade-right" data-aos-duration="800">Your startup are scaleable within Tech and a big love for data driven innovation.
             <br /> Still early in the journey - but high ambitions!</p>
         </div>
