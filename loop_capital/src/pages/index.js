@@ -11,8 +11,6 @@ import * as Icon from 'react-bootstrap-icons';
 // BOOTSTRAP IMPORTS
 import Button from 'react-bootstrap/Button';
 
-
-
 export default function Home(props) {
   return (
     <>
@@ -100,14 +98,18 @@ export default function Home(props) {
 
 // pages/index.js
 export async function getStaticProps({ preview = false }) {
-  // const allPosts = await getAllPostsForHome(preview)
 
-  let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/startpage-numbers')
-  let wpDataJson = await wpData.json()
-  //console.log('wpData', wpDataJson)
-
-  return {
-    props: { wpDataJson: wpDataJson },
-    // revalidate: 10,
+  try {
+    let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/startpage-numbers')
+    let wpDataJson = await wpData.json()
+  
+    return {
+      props: { wpDataJson: wpDataJson }
+    }
+  } catch (error) {
+    console.log(error)
+    return {
+      props: {}
+    }
   }
 }

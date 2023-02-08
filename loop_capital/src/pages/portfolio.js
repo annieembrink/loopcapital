@@ -92,10 +92,17 @@ export default function Portfolio(props) {
 // pages/index.js
 export async function getStaticProps({ preview = false }) {
 
-  let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio');
-  let wpDataJson = await wpData.json();
-
-  return {
-    props: { wpDataJson: wpDataJson }
+  try {
+    let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio');
+    let wpDataJson = await wpData.json();
+  
+    return {
+      props: { wpDataJson: wpDataJson }
+    }
+  } catch (error) {
+    console.error(error);
+    return {
+      props: {}
+    }
   }
 }
