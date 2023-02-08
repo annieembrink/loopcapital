@@ -17,7 +17,8 @@ export default function Home(props) {
   return (
     <>
       <DefaultLayoutComponent>
-      <FixedContactComponent/>
+        <FixedContactComponent />
+        {/* HERO-SECTION */}
         <div className="hero-section" >
           <h1 data-aos="fade-right" data-aos-duration="600">Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text">Investors</span></h1>
           <p className="light-font" data-aos="fade-right" data-aos-duration="800">Get access to 48 investors with a lot of experience and network.</p>
@@ -26,20 +27,24 @@ export default function Home(props) {
           </Link>
         </div>
 
-        <div className="two-containers">
+        {/* WE CAN OFFER YOU */}
+
+        <div className="align-item-center two-containers">
           <div className="wrapper-offer-you green-border">
             <h2 className="underline-animation roboto-font">We can offer you</h2>
-            <p className="bigger-p" data-aos="fade-right" data-aos-duration="400"><Icon.ArrowRight className="green-text bootstrap-icon"/>A creative enviroment</p>
-            <p className="bigger-p" data-aos="fade-right" data-aos-duration="600"><Icon.ArrowRight className="green-text bootstrap-icon"/>Possibility to ask for advice</p>
-            <p className="bigger-p" data-aos="fade-right" data-aos-duration="800"><Icon.ArrowRight className="green-text bootstrap-icon"/>Wide contact network</p>
-            <p className="bigger-p" data-aos="fade-right" data-aos-duration="1000"><Icon.ArrowRight className="green-text bootstrap-icon"/>Access to capital</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="400"><Icon.ArrowRight className="green-text bootstrap-icon" />A creative enviroment</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="600"><Icon.ArrowRight className="green-text bootstrap-icon" />Possibility to ask for advice</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="800"><Icon.ArrowRight className="green-text bootstrap-icon" />Wide contact network</p>
+            <p className="bigger-p" data-aos="fade-right" data-aos-duration="1000"><Icon.ArrowRight className="green-text bootstrap-icon" />Access to capital</p>
           </div>
 
+          {/* QUOTE */}
+
           <div className="wrapper-quote margin-bottom">
-          <Icon.Quote className="green-text" id="quote-tag"/>
+            <Icon.Quote className="green-text" id="quote-tag" />
             <p className="quote">
               We are looking for early stage startups in the Skåne region with a lot of passion and with a scaleable tech idea. The total investment round are usually between 2-6 mSEK a pre-seed round. The first steps have been taken, the idea have been verified and a founding team are in place</p>
-              <p>Together we build a global game changer! And that are exactly how we work. We are doing this together in the same boat. You run and we support!</p>
+            <p>Together we build a global game changer! And that are exactly how we work. We are doing this together in the same boat. You run and we support!</p>
             {/* Right align text */}
             <p className="right-align">David Nilsson-Sträng <br /><span id="title">Co-founder</span></p>
           </div>
@@ -48,38 +53,49 @@ export default function Home(props) {
 
         <div>
 
-          {/* MOVE THIS TO COMPONENT? */}
-          <SwingCounterComponent props={props}/>
-        
-          <div >
+          {/* COMPONENT TO NUMBERS ON COUNT */}
+
+          <SwingCounterComponent props={props} />
+
+          {/* JOURNEY MAP */}
+          <div className="text-align-center">
             <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
-            <div className="green-border margin-bottom">
+            <div className="margin-bottom">
               <h1 data-aos="fade-right" data-aos-duration="400">1</h1>
               <h1 data-aos="fade-right" data-aos-duration="700">2</h1>
               <h1 data-aos="fade-right" data-aos-duration="1000">3</h1>
               <h1 data-aos="fade-right" data-aos-duration="1300">4</h1>
             </div>
-            
+
           </div>
 
-          <div className="green-border margin-bottom">
-          {/* SPAN NEED CLASS FOR GREEN TEXT */}
-          <h2>
-            Skåne will become Sweden&apos;s leading Tech region and build companies active <span className="green-text">all over the world</span>
-          </h2>
-        </div>
+          {/* TEXT WITH BORDER */}
+          <div className="green-border margin-bottom text-align-center padding-text">
+
+            <h2>
+              Skåne will become Sweden&apos;s leading Tech region and build companies active <span className="green-text">all over the world</span>
+            </h2>
+          </div>
 
         </div>
 
+        {/* COMPONENT CAROUSEL */}
         <CarouselAboutComponent />
 
-        <div>
-          <h2>Did we caught your interest?</h2>
-          <h6>Welcome to Loop Capital!</h6>
-          <Link href="/contact">
-            <Button>Make Contact</Button>
-          </Link>
+        {/* DID WE CAUGHT YOUR INTEREST */}
+        <div className="wrapper-interest grid-two margin-whitespace">
+          <div>
+            <h2  className="align-right">Did we caught your interest?</h2>
+            <h6 className="align-center">Welcome to Loop Capital!</h6>
+          </div>
+          <div className="button-contact">
+            <Link href="/contact">
+              <Button>Make Contact</Button>
+            </Link>
+          </div>
         </div>
+
+        {/* COMPONENT DEFAULT LAYOUT */}
 
       </DefaultLayoutComponent>
 
