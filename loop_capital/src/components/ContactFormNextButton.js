@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap";
+
 const ContactFormNextButton = ({string, nr, validateMap, validateEmail, validateText}) => {
 
     const onNextClick = (input, nr) => {
@@ -7,7 +9,7 @@ const ContactFormNextButton = ({string, nr, validateMap, validateEmail, validate
 
     return ( 
 
-        <button type='button' onClick={() => onNextClick(string, nr)}>NEXT</button>
+        <Button type='button' onClick={() => onNextClick(string, nr)}>NEXT</Button>
 
      );
 }

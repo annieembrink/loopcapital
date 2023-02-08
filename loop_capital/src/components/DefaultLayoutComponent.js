@@ -11,7 +11,7 @@ const DefaultLayoutComponent = ({ children }) => {
     const [metaDescription, setMetaDescription] = useState("")
     const [metaImgURl, setMetaImgUrl] = useState("")
 
-    useEffect(() => {
+    const fetchData = () => {
         fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/yoast/v1/get_head?url=https://172-104-145-53.ip.linodeusercontent.com/', {
             method: 'GET',
             headers: {
@@ -29,11 +29,13 @@ const DefaultLayoutComponent = ({ children }) => {
         .catch(error => {
             console.error('Error:', error);
         });
-    }, []);
-    
+    }
 
     useEffect(() => {
-        console.log('metaData', metaData);
+        fetchData()
+    }, []);
+
+    useEffect(() => {
         if (metaData) {
             setMetaTitle(metaData.og_title)
             setMetaDescription(metaData.description)
@@ -41,7 +43,6 @@ const DefaultLayoutComponent = ({ children }) => {
         }
     }, [metaData]);
     
-
     return (
         <>
             <Head>

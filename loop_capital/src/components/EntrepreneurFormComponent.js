@@ -1,4 +1,5 @@
 import Form from 'react-bootstrap/Form';
+import { Button } from 'react-bootstrap';
 import ContactFormBackArrow from './ContactFormBackArrow';
 import ContactFormNextButton from './ContactFormNextButton';
 
@@ -72,12 +73,9 @@ const EntrepreneurFormComponent = (props) => {
                     <Form.Label>Upload pitch if you have any</Form.Label>
                     <Form.Control type='file' onChange={props.handleFileChange}></Form.Control>
                     <div>{props.file && `${props.file.name} - ${props.file.type}`}</div>
-
-                <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4}/>
-
-                    {/* <button type='button' onClick={() => props.onBackClick(4)}>Back</button> */}
-                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4} />
-
+                    
+                    <Button type='submit'>SUBMIT</Button>
+                    <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4}/>
                 </Form.Group>
             )}
 
