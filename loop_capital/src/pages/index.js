@@ -73,8 +73,8 @@ export default function Home(props) {
 
         <CarouselAboutComponent />
 
-        <div>
-          <h2>Did we caught your interest?</h2>
+        <div className="section-4">
+          <h2>Did we catch your interest?</h2>
           <h6>Welcome to Loop Capital!</h6>
           <Link href="/contact">
             <Button>Make Contact</Button>
