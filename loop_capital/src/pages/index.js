@@ -71,7 +71,7 @@ export default function Home(props) {
 
         </div>
 
-        {/* <CarouselAboutComponent /> */}
+        <CarouselAboutComponent />
 
         <div>
           <h2>Did we caught your interest?</h2>
