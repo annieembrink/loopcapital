@@ -16,6 +16,7 @@ export default function Home(props) {
     <>
       <DefaultLayoutComponent>
         <FixedContactComponent />
+        {/* HERO-SECTION */}
         <div className="hero-section" >
           <h1 data-aos="fade-right" data-aos-duration="500">Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text underline-animation">
             <span data-aos="fade-right" data-aos-duration="800">I</span>
@@ -35,7 +36,9 @@ export default function Home(props) {
           </Link>
         </div>
 
-        <div className="two-containers">
+        {/* WE CAN OFFER YOU */}
+
+        <div className="align-item-center two-containers">
           <div className="wrapper-offer-you green-border">
             <h2 className="underline-animation roboto-font">We can offer you</h2>
             <p className="bigger-p" data-aos="fade-right" data-aos-duration="400"><Icon.ArrowRight className="green-text bootstrap-icon" />A creative enviroment</p>
@@ -43,6 +46,8 @@ export default function Home(props) {
             <p className="bigger-p" data-aos="fade-right" data-aos-duration="800"><Icon.ArrowRight className="green-text bootstrap-icon" />Wide contact network</p>
             <p className="bigger-p" data-aos="fade-right" data-aos-duration="1000"><Icon.ArrowRight className="green-text bootstrap-icon" />Access to capital</p>
           </div>
+
+          {/* QUOTE */}
 
           <div className="wrapper-quote margin-bottom">
             <Icon.Quote className="green-text" id="quote-tag" />
@@ -55,14 +60,18 @@ export default function Home(props) {
 
         </div>
 
-        <div>
+          {/* COMPONENT TO NUMBERS ON COUNT */}
 
+          <SwingCounterComponent props={props} />
+
+          {/* JOURNEY MAP */}
+          <div className="text-align-center">
           {/* MOVE THIS TO COMPONENT? */}
           <SwingCounterComponent props={props} />
 
           <div >
             <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
-            <div className="green-border margin-bottom">
+            <div className="margin-bottom">
               <h1 data-aos="fade-right" data-aos-duration="400">1</h1>
               <h1 data-aos="fade-right" data-aos-duration="700">2</h1>
               <h1 data-aos="fade-right" data-aos-duration="1000">3</h1>
@@ -80,6 +89,7 @@ export default function Home(props) {
 
         </div>
 
+        {/* COMPONENT CAROUSEL */}
         <CarouselAboutComponent />
 
         <div id="contact-section">
@@ -95,6 +105,8 @@ export default function Home(props) {
             </svg>
           </div>
         </div>
+
+        {/* COMPONENT DEFAULT LAYOUT */}
 
       </DefaultLayoutComponent>
 

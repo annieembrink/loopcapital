@@ -13,7 +13,7 @@ body {
     width: 100vw;
 }
 
-/* MOBILE FIRST */
+/* MOBILE FIRST - MAIN*/
 
 main {
     margin: 0 16px;
@@ -32,8 +32,10 @@ main {
 .two-containers {
     display: grid;
     grid-template-rows: 1fr 1fr;
+    align-items: center;
 }
 
+/* P, H */
 
 p {
     font-size: 16px;
@@ -75,11 +77,19 @@ h5 {
 }
 
 /* ICONS */
-/* WHY DOES THE COLOR NOT WORKING?? NOT EVEN IF IM CHANGE THE COLOR IN ICONIFY */
+
 .icon {
     font-size: 25px;
     color: #409250;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
+}
+
+
+/* ICONS BOOTSTRAP */
+
+.bootstrap-icon {
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 /* BUTTON STYLING */
@@ -100,6 +110,54 @@ h5 {
 ul {
     padding-left: 0;
 }
+
+/* GREEN-BORDER */
+
+.green-border {
+    border: 3px solid #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
+    border-radius: 20px;
+    height: 60%;
+}
+
+.padding-text {
+    padding: 60px 20px 60px 20px;
+}
+
+/* ALIGN TEXT */
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+/* ALIGNT LEFT IN DIV */
+
+.align-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+}
+
+.align-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* WHITE SPACE  */
+
+.margin-whitespace {
+    margin: 200px 0 200px 0;
+}
+
 
 /* FILTER, this is not going to be here, this should be on "portfolio" */
 #filter-list {
@@ -182,36 +240,12 @@ li {
     justify-content: center;
 }
 
+/* MARGIN BOTTOM */
+
 .margin-bottom {
     margin-bottom: 64px;
 }
 
-
-
-.bootstrap-icon {
-    width: 1.2rem;
-    height: 1.2rem;
-}
-
-/* ---- ANIMATION ---- */
-
-@keyframes bubble-moving {
-    0% {
-        transform: translate(0, 0);
-    }
-
-    33% {
-        transform: translate(3%, -3%);
-    }
-
-    66% {
-        transform: translate(-0%, -0%);
-    }
-
-    100% {
-        transform: translate(-3%, -3%);
-    }
-}
 
 /* LARGE PHONE */
 
@@ -296,6 +330,11 @@ li {
         height: 1.5rem;
     }
 
+    .align-item-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 
@@ -366,5 +405,9 @@ li {
 
     .hero-section p {
         font-size: 22px;
+    }
+
+    .green-border {
+        padding: 60px;
     }
 }
