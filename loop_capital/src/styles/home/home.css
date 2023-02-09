@@ -6,16 +6,11 @@
     display: none;
 }
 
-/* THIS CREATED A MARGIN THAT MADE THE FOOTER DISAPEAR AND MADE A MARGIN ON THE RIGHT... */
-/* .wrapper-carousel {
-    margin: -16px;
-} */
-
 .carousel-item {
     text-align: center;
     align-items: center;
     background-color: #CBD8CE;
-    width: 100vw;
+    width: 100%;
     height: 400px;
 }
 
@@ -71,73 +66,6 @@
     display: none;
 }
 
-
-/* WE OFFER YOU AND QUOTE */
-/* ADDED BASIC CSS FOR VISUAL */
-
-/* Bootstrap gives padding-left of 2rem, dont want it */
-/* .arrow-list {
-    padding-left: 0;
-    margin-top: 1rem;
-}
-
-.arrow-list li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.arrow-list .arrow {
-    padding-right: 1rem;
-}
-
-.arrow-list-items {
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-} */
-
-/* Doesn't get the correct font? is imported in global.css*/
-/* , tested with another one, same problem  */
-
-
-.wrapper-offer-you { 
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
-    font-family: 'Poppins', sans-serif;
-    padding: 40px 5px 40px 5px;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
-    }
-.wrapper-offer-you .bootstrap-icon {
-    margin-right: 0.8rem;
-}
-
-#quote-tag {
-    font-family: 'PT Sans Caption', sans-serif;
-    font-size: 100px;
-    text-align: center;
-    color: #409250;
-    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
-}
-
-#quote {
-    margin: 1rem 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-.sm-text {
-    font-size: 12;
-    font-weight: lighter;
-    font-family: 'Poppins', sans-serif;
-}
-
-.right-align {
-    text-align: right;
-    font-family: 'Poppins', sans-serif;
-}
-
 /* INVESTMENTS NUMBERS */
 
 .extra-big-font {
@@ -152,27 +80,23 @@
     text-shadow: 0px 4px 20px rgba(238, 249, 241, 0.12);
 }
 
-.green-border {
-    border: 3px solid #409250;
-    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
-    border-radius: 20px;
-}
-
 .green-border-numbers {
     color: #409250;
 }
 
 .green-border-numbers div {
-    margin: 1rem;
+    margin: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .numbers-icon {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
+
 .numbers-icon .bootstrap-icon {
     margin-left: 0.2rem;
 }
@@ -189,7 +113,7 @@
     content: '';
     position: absolute;
     width: 100%;
-    height: 3px;
+    height: 4px;
     bottom: -5px;
     left: 0;
     border-radius: 10px;
@@ -197,16 +121,89 @@
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
 
-/* Doesn't get the correct font? is imported in global.css */
-#quote-tag {
-    font-family: 'Port Lligat Slab', serif;
-    font-size: 100px;
-    text-align: center;
+/* QUOTE AND WE OFFER YOU */
+
+.wrapper-quote {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
-#quote {
-    margin: 1rem 0;
+
+#quote-tag {
+    display: flex;
+    margin: auto;
+    font-size: 100px;
+    color: #409250;
+    filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
+
+.quote {
+    margin: 16px 0;
+    line-height: 20px;
+}
+
+
+.wrapper-offer-you {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    padding: 50px 0px 50px 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-offer-you p {
+    margin-top: 20px;
+}
+
+.wrapper-offer-you .bootstrap-icon {
+    margin-right: 0.8rem;
+}
+
+.sm-text {
+    font-size: 12;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right-align {
+    text-align: right;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* INTEREST */
+
+.wrapper-interest {
+    max-width: 100%;
+}
+
+
+.button-contact {
+    display: flex;
+    padding: 10px 0 0 0;
+}
+
+.grid-two {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+/* CONTACT SECTION */
+
+#contact-section {
+    position: relative;
+}
+#arrow-svg {
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    transform: rotate(-15deg);
+}
+
 
 /* LARGE PHONE */
 
@@ -242,13 +239,9 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    .carousel-item {
-        width: 50vw;
-    }
-
     .img-carousel {
         display: block;
-        width: 50vw;
+        width: 100%;
         height: 400px;
     }
 
@@ -283,18 +276,58 @@
         padding: 80px;
     }
 
-    /* WE CAN OFFER YOU */
-/* 
-    .arrow-list-items {
-        font-size: 20px;
-    } */
-
     #quote-tag {
         font-size: 100px;
+        margin-top: 50px;
     }
+
+    .wrapper-offer-you {
+        width: 50%;
+        padding: 60px 5px 60px 5px;
+    }
+
+    .wrapper-offer-you p {
+        margin-top: 20px;
+    }   
+
+    /* INTEREST */
+
+.wrapper-interest {
+    max-width: 100%;
 }
 
+.wrapper-interest h2 {
+    font-size: 30px;
+}
+
+
+.grid-two {
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: center;
+}
+
+.grid-two .interest-div {
+    text-align: right;
+}
+
+.grid-two .button-contact {
+    justify-content: start;
+}
+
+/* .interest-div h6 {
+    text-align: center;
+} */
+
+}
+
+
 /* DESKTOP */
+
+@media screen and (min-device-width: 1320px) {
+    .align-center {
+        margin-left: 100px;
+    }
+}
 
 @media screen and (min-device-width: 1440px) {
 
@@ -303,27 +336,17 @@
         flex-direction: row-reverse;
     }
 
-    /* -------------- */
-    /* -------------------NEEDS CHANGE HERE */
-    /* -------------- */
-    #align-row div {
-        width: 50%;
-    }
-
     /* CAROUSEL */
 
     .wrapper-carousel {
         display: grid;
         grid-template-columns: 1fr 1fr;
-    }
-
-    .carousel-item {
-        width: 50vw;
+        width: 100%;
     }
 
     .img-carousel {
         display: block;
-        width: 50vw;
+        width: 100%;
         height: 400px;
     }
 
@@ -355,24 +378,61 @@
 
     /* WE CAN OFFER YOU */
 
-    .wrapper-offer-you { 
-        padding: 50px;
-        }
-
-        .bigger-p {
-            font-size: 18px;
-        }
-
-        .h5 {
-            font-size: 18px;
-        }
-
-        #quote-tag {
-            font-size: 200px;
-        }
+    .wrapper-offer-you {
+        padding: 40px;
+        margin: 0 0px 80px 100px;
+    }
     
-/* 
-    .arrow-list-items {
-        font-size: 20px;
-    } */
+
+    .wrapper-offer-you .green-border {
+        padding: 50px;
+    }
+
+    .wrapper-offer-you h2 {
+        margin-bottom: 40px;
+    }
+
+    .wrapper-offer-you p {
+        margin-left: 50px;
+    }
+
+    .bigger-p {
+        font-size: 18px;
+    }
+
+    .h5 {
+        font-size: 18px;
+    }
+
+    /* QUOTE */
+
+    #quote-tag {
+        font-size: 100px;
+    }
+
+    #quote {
+        padding-bottom: 20px;
+    }
+
+    #title {
+        font-size: 14px;
+    }
+
+    .wrapper-offer-you {
+        width: 50%;
+        padding: 40px 5px 40px 5px;
+    }
+
+    .wrapper-offer-you p {
+        margin-top: 0;
+    }   
+
+    .wrapper-quote {
+        width: 50%;
+    }
+
+    .align-center {
+        margin-left: 120px;
+    }
+    
 }

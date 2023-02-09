@@ -1,6 +1,6 @@
 import * as Icon from 'react-bootstrap-icons';
 
-const ContactFormBackArrow = ({nr, setCurrentInput, setValidationError}) => {
+const ContactFormBackArrow = ({ nr, setCurrentInput, setValidationError }) => {
 
     const onBackClick = (nr) => {
         setCurrentInput(nr);
@@ -8,8 +8,8 @@ const ContactFormBackArrow = ({nr, setCurrentInput, setValidationError}) => {
     };
 
     return ( 
-        <p onClick={() => onBackClick(nr)}><Icon.ArrowReturnLeft className="green-text bootstrap-icon"/>Back</p>
+        <p onClick={() => onBackClick(nr)}><Icon.ArrowReturnLeft className="green-text bootstrap-icon" onClick={() => onBackClick(nr)}/>Back</p>
      );
 }
- 
+
 export default ContactFormBackArrow;

@@ -14,10 +14,10 @@ const SwingCounterComponent = (props) => {
     ]
 
   const [counterValues, setCounterValues] = useState([investors / 4, 1, 1]);
+  const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
     const counters = Array.from(document.querySelectorAll('.counter'));
-    const counterTargets = counters.map(counter => +counter.textContent);
 
     const updateCounters = () => {
       counters.forEach((counter, index) => {
@@ -26,9 +26,12 @@ const SwingCounterComponent = (props) => {
     };
 
     let currentValues = [...counterValues];
-    const intervalId = setInterval(() => {
-      currentValues = currentValues.map((value, index) => {
-        
+    let intervalId = null;
+
+    const startAnimation = () => {
+      intervalId = setInterval(() => {
+        currentValues = currentValues.map((value, index) => {
+                  
         if (value < allNumbers[index]) {
           return value + 1;
         } else {
@@ -38,9 +41,26 @@ const SwingCounterComponent = (props) => {
       setCounterValues(currentValues);
       updateCounters();
     }, 200);
+  };
 
-    return () => clearInterval(intervalId);
-  }, [counterValues]);
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setIsIntersecting(true);
+      }
+    });
+  });
+  observer.observe(counters[0]);
+
+  if (isIntersecting) {
+    startAnimation();
+  }
+
+  return () => {
+    clearInterval(intervalId);
+    observer.disconnect();
+  };
+}, [counterValues, isIntersecting]);
 
   return (
     <>
@@ -64,33 +84,3 @@ const SwingCounterComponent = (props) => {
 }
 
 export default SwingCounterComponent;
-
-
-
-// const SwingCounterComponent = (index) => {
-//    console.log("SwingCounterComponent props", index.props.wpDataJson);
-//     return (
-//         <>
-//          {index.props.wpDataJson.map(num =>
-//             <div key={num} className="green-border green-border-numbers margin-bottom">
-//               <div>
-//                 <p className="extra-big-font">{num.acf.investors} <Icon icon="carbon:portfolio" className="icon" /></p>
-//                 <p className="p-tag-numbers">investors</p>
-//               </div>
-//               <div>
-//                 <p className="extra-big-font">{num.acf.number_of_investments} <Icon icon="bi:people-fill" className="icon"/></p>
-//                 <p className="p-tag-numbers">numbers of investments</p>
-//               </div>
-//               <div>
-//                 <p className="extra-big-font">{num.acf.msek_investments} <Icon icon="wpf:coins" className="icon"/></p>
-//                 <p className="p-tag-numbers">(MSEK) investments</p>
-//               </div>
-//             </div>)}
-        
-
-//         </>
-//     );
-// }
-
-// export default SwingCounterComponent;
-
