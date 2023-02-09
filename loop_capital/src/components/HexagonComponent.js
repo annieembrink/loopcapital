@@ -1,5 +1,6 @@
 import styles from '../styles/home/HexagonComponent.module.css';
 import SvgHexComponent from './SvgHexComponent';
+import SvgLineComponent from './SvgLineComponent';
 
 const HexagonComponent = () => {
 
@@ -13,6 +14,7 @@ const HexagonComponent = () => {
                 <SvgHexComponent className={`${styles.iconsize} green-text bootstrap-icon`}/>
                 <h1 className={`${styles.absolute}`}>1</h1>
             </div>
+            <SvgLineComponent/>
             <div className={`${styles.contentdiv} ${styles.aligncenter}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
 
