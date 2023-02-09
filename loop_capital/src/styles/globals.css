@@ -285,6 +285,11 @@ li {
 
 @media screen and (min-device-width: 1024px) {
 
+    main {
+        max-width: 904px;
+        margin: 0 auto;
+    }
+
     /* Hero section */
     h1 {
         font-size: 50px;
@@ -342,7 +347,7 @@ li {
 
 @media screen and (min-device-width: 1440px) {
 
-    
+
     main {
         max-width: 1320px;
         margin: 0 auto;
@@ -410,4 +415,115 @@ li {
     .green-border {
         padding: 60px;
     }
+}
+
+
+
+
+
+/*  MENU */
+
+/* STYLING FOR ALL DEVICES */
+
+.nav-link {
+    color: #FAFAFA;
+
+    /* from globals? */
+    font-family: 'Roboto Mono';
+
+    /* FUNKAR INTE */
+    font-weight: 400;
+}
+
+.active {
+    color: #409250 !important;
+    font-weight: 700;
+}
+
+/* STYLING FOR TABLET AND SMALLER */
+
+.navbar {
+    margin: 16px
+}
+
+/* LOOKS BETTER WITH 16px */
+/* .nav-link {
+    font-size: 18px;
+} */
+
+.mobilemenu_icon {
+    height: 34px;
+    width: 32px;
+}
+
+.offcanvas_container {
+    width: 100% !important;
+    background-color: #11271D;
+}
+
+.offcanvas_header {
+    margin: 20px 16px;
+}
+
+.offcanvas_container_link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 30%;
+}
+
+.offcanvas_container_link .nav-link:first-child {
+    position: absolute;
+    bottom: 50px;
+}
+
+.hamburger_icon {
+    border: none;
+    width: 34px;
+}
+
+/* .hamburger_icon:focus {
+       DOESNT BITE
+        outline: none !important;
+} */
+
+
+
+@media screen and (min-device-width: 1024px) {
+
+    .logo-header {
+        width: 70px;
+        height: 70px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .offcanvas_container_link {
+        gap: 70px;
+        text-transform: none;
+        margin-top: 0;
+    }
+
+    .mobilemenu_icon {
+        display: none;
+    }
+}
+
+@media screen and (min-device-width: 1440px) {
+
+    .navbar {
+        max-width: 1320px;
+        margin: 20px auto;
+    }
+
+    .pe-3 {
+        padding-right: 0rem !important;
+    }
+
 }

@@ -1,11 +1,16 @@
+// BOOTSTRAP IMPORTS
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import * as Icon from 'react-bootstrap-icons';
 
+// CSS IMPORTS
+// import styles from '../styles/NavBarComponent.module.css';
+
+// REACT/NEXT IMPORTS
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import * as Icon from 'react-bootstrap-icons';
 import Link from "next/link";
 
 function NavBarComponent() {
@@ -17,9 +22,9 @@ function NavBarComponent() {
     <>
 
       {['lg'].map((expand) => (
-        <Navbar key={expand} bg="none" expand={expand} variant="dark" className="mb-3" fixed="top" data-bs-theme="dark">
+        <Navbar key={expand} bg="none" expand={expand} variant="dark" className="mb-3" fixed="top">
           <Container fluid>
-            <Navbar.Brand href="/"><Image width={70} height={70} src='/images/loop_capital.png' className='logo-header' alt='loopcapital' /></Navbar.Brand>
+            <Navbar.Brand href="/"><Image width={60} height={60} src='/images/loop_capital.png' className='logo-header' alt='loopcapital' /></Navbar.Brand>
             <Navbar.Toggle className="hamburger_icon" aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -27,18 +32,18 @@ function NavBarComponent() {
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
             >
-              <Offcanvas.Header closeButton  className="offcanvas_header"  >
+              <Offcanvas.Header closeButton  className="offcanvas_header"  closeVariant="white">
                 <Offcanvas.Title href="/" id={`offcanvasNavbarLabel-expand-${expand}`}>
-                <Image width={70} height={70} src='/images/loop_capital.png' className='logo-header' alt='loopcapital' />
+                <Image width={60} height={60} src='/images/loop_capital.png' className='logo-header' alt='loopcapital' />
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3 offcanvas_container_link">
                 <Nav.Link href="https://www.linkedin.com/company/loop-capital-ab/?trk=similar-pages"><Icon.Linkedin className="mobilemenu_icon"/></Nav.Link>
 
-                  <Nav.Link href="/" className={currentRoute === "/" ? "active"  : ""} >Home</Nav.Link>
-                  <Nav.Link href="/portfolio" className={currentRoute === "/portfolio" ? "active"  : ""}>Portfolio</Nav.Link>
-                  <Nav.Link href="/contact" className={currentRoute === "/contact" ? "active"  : ""}>Contact</Nav.Link>
+                  <Nav.Link href="/" className={currentRoute !== "/" ? ""  : "active"} >Home</Nav.Link>
+                  <Nav.Link href="/portfolio" className={currentRoute !== "/portfolio" ? ""  : "active"}>Portfolio</Nav.Link>
+                  <Nav.Link href="/contact" className={currentRoute !== "/contact" ? ""  : "active"}>Contact</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
