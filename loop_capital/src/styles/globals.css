@@ -285,6 +285,12 @@ li {
 
 @media screen and (min-device-width: 1024px) {
 
+    main {
+        max-width: 904px;
+        margin: 0 auto;
+    }
+
+
     /* Hero section */
     h1 {
         font-size: 50px;
@@ -335,6 +341,19 @@ li {
         flex-direction: column;
         justify-content: center;
     }
+
+    /* WHITE SPACE  */
+
+.margin-whitespace {
+    margin: 200px 0 100px 0;
+}
+
+/* BUTTON STYLING */
+
+.btn-primary {
+    width: 280px;
+    height: 60px;
+}
 }
 
 
