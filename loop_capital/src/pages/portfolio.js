@@ -9,10 +9,11 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 // REACT IMPORTS
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Portfolio(props) {
   const [chosenCompanies, setChosenCompanies] = useState(props.wpDataJson);
+  const [chosenBranch, setChosenBranch] = useState('All investments');
   const [showPopup, setShowPopup] = useState(false);
   const [popupCompany, setPopupCompany] = useState({});
 
@@ -20,6 +21,14 @@ export default function Portfolio(props) {
     const filteredData = props.wpDataJson.filter(company => company.acf.branch === e.target.innerText);
     setChosenCompanies(filteredData);
   }
+
+  useEffect(() => {
+    if (chosenCompanies !== props.wpDataJson) {
+      setChosenBranch(chosenCompanies[0].acf.branch)
+    } else {
+      setChosenBranch('All investments')
+    }
+  }, [chosenCompanies])
 
   const showAll = () => {
     setChosenCompanies(props.wpDataJson);
@@ -60,8 +69,8 @@ export default function Portfolio(props) {
         <div>
           <div>
             <ul id="filter-list" className="roboto-font">
-              <li onClick={showAll}>All investments</li>
-              {arrOfBranches.map(branch => <li onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
+              <li className={chosenBranch === 'All investments' ? "active" : ""} onClick={showAll}>All investments</li>
+              {arrOfBranches.map(branch => <li className={chosenBranch === branch ? "active" : ""} onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
             </ul>
           </div>
 
