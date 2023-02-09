@@ -3,6 +3,7 @@ import CarouselAboutComponent from "@/components/CarouselAboutComponent";
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import SwingCounterComponent from "@/components/SwingCounterComponent";
 import FixedContactComponent from "@/components//FixedContactComponent";
+import HexagonComponent from "@/components/HexagonComponent";
 
 // REACT/NEXT IMPORTS
 import Link from "next/link";
@@ -62,20 +63,11 @@ export default function Home(props) {
 
         {/* COMPONENT TO NUMBERS ON COUNT */}
 
-        <SwingCounterComponent props={props} />
-
-        {/* JOURNEY MAP */}
-        <div className="text-align-center roboto-font">
-
-          <div >
-            <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
-            <div className="margin-bottom">
-              <h1 data-aos="fade-right" data-aos-duration="400">1</h1>
-              <h1 data-aos="fade-right" data-aos-duration="700">2</h1>
-              <h1 data-aos="fade-right" data-aos-duration="1000">3</h1>
-              <h1 data-aos="fade-right" data-aos-duration="1300">4</h1>
-            </div>
-
+          {/* MOVE THIS TO COMPONENT? */}
+          <div>
+          <div>
+            <SwingCounterComponent props={props}/>
+            <HexagonComponent/>
           </div>
 
           {/* TEXT WITH BORDER */}

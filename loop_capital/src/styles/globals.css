@@ -48,7 +48,7 @@ p {
 h1 {
     font-size: 26px;
     font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 /* Company name, We can offer you, Hello Contact, Journey, info  */
@@ -95,15 +95,15 @@ h5 {
 /* BUTTON STYLING */
 
 .btn-primary {
-    background-color: #409250;
-    border: none;
+    background-color: #409250 !important;
+    border: none !important;
     color: #fafafa;
     text-transform: uppercase;
     width: 150px;
     height: 50px;
     border-radius: 10px;
     font-family: 'Roboto Mono';
-}
+}   
 
 /*  MENU */
 
@@ -126,6 +126,10 @@ h5 {
     margin: 16px
 }
 
+.navbar-toggler:focus, .navbar, .navbar.toggler {
+    box-shadow: none !important;
+}
+
 /* LOOKS BETTER WITH 16px */
 /* .nav-link {
     font-size: 18px;
@@ -138,7 +142,7 @@ h5 {
 
 .offcanvas_container {
     width: 100% !important;
-    background-color: #11271D;
+    background-color: #11271D !important;
 }
 
 .offcanvas_header {
@@ -162,7 +166,7 @@ h5 {
 }
 
 .hamburger_icon {
-    border: none;
+    border: none !important;
     width: 34px;
 }
 
@@ -251,7 +255,6 @@ ul {
     color: #409250;
     /* text-decoration: underline; */
 }
-
 
 .green-text {
     color: #409250;
