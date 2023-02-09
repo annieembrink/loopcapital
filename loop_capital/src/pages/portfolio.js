@@ -49,7 +49,7 @@ export default function Portfolio(props) {
       <FixedContactComponent/>
 
         {showPopup ?
-          <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} />
+          <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} errormsg={props.errormsg}/>
           : null}
         <div className="hero-section">
           <h1 data-aos="fade-right" data-aos-duration="600">Loop Capital invest at an early stage in the companies <span className="animated-text">
@@ -106,12 +106,12 @@ export async function getStaticProps({ preview = false }) {
     let wpDataJson = await wpData.json();
   
     return {
-      props: { wpDataJson: wpDataJson }
+      props: { wpDataJson: wpDataJson, errormsg: "Nothing to read right now, try again later!" }
     }
   } catch (error) {
     console.error(error);
     return {
-      props: {}
+      props: {errormsg: "Nothing to read right now, try again later!"}
     }
   }
 }
