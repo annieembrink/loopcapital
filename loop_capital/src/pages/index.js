@@ -64,13 +64,8 @@ export default function Home(props) {
 
         <SwingCounterComponent props={props} />
 
-<<<<<<< HEAD
-          {/* JOURNEY MAP */}
-          <div className="text-align-center">
-=======
         {/* JOURNEY MAP */}
         <div className="text-align-center roboto-font">
->>>>>>> dev
 
           <div >
             <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
