@@ -76,19 +76,24 @@
     margin-top: 2px;
   } */
 
+
+
+
+
   .flex {
-    width: 60%;
+    width: 80%;
+    min-height: 200px;
     margin: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
   .divsize {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
   }
   .absolute {
     position: absolute;
@@ -96,6 +101,10 @@
   .iconsize {
     width: 100%;
     height: 100%;
+    stroke-width: 0;
+  }
+  .hexdown {
+    top: 50px;
   }
 
 

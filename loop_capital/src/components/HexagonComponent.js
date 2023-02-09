@@ -25,28 +25,31 @@ const HexagonComponent = () => {
 //     }, []);
     
 //     console.log(hexHeight, hexDistance)
+
     return ( 
 
         <div className={`${styles.flex}`}>
+
         <div data-aos="fade-right" data-aos-duration="400" className={`${styles.divsize}`}>
         <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
         <h1 className={`${styles.absolute}`}>1</h1>
         </div>
-        <div data-aos="fade-right" data-aos-duration="700" className={`${styles.divsize}`}>
-        <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
-        <h1 className={`${styles.absolute}`}>2</h1>
 
+        <div data-aos="fade-right" data-aos-duration="700" className={`${styles.divsize} ${styles.hexdown}`}>
+        <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon border-1`}/>
+        <h1 className={`${styles.absolute}`}>2</h1>
         </div>
+
         <div data-aos="fade-right" data-aos-duration="1000" className={`${styles.divsize}`}>
         <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
         <h1 className={`${styles.absolute}`}>3</h1>
-
         </div>
-        <div data-aos="fade-right" data-aos-duration="1300" className={`${styles.divsize}`}>
+
+        <div data-aos="fade-right" data-aos-duration="1300" className={`${styles.divsize} ${styles.hexdown}`}>
         <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
         <h1 className={`${styles.absolute}`}>4</h1>
-
         </div>
+
         </div>
 
     //     <div style={{minHeight: '400px'}}>
