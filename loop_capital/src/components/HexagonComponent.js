@@ -10,11 +10,14 @@ const HexagonComponent = () => {
 
         {/* HEX 1 */}
         <div className={`${styles.onehexcontainer}`}>
-            <div data-aos="fade-right" data-aos-duration="400" className={`${styles.iconh1container}`}>
-                <SvgHexComponent className={`${styles.iconsize} green-text bootstrap-icon`}/>
-                <h1 className={`${styles.absolute}`}>1</h1>
+            <div className={`${styles.relative}`}>
+                <div data-aos="fade-right" data-aos-duration="400" className={`${styles.iconh1container}`}>
+                    <SvgHexComponent/>
+                    <h1 className={`${styles.absolute}`}>1</h1>
+                </div>
+                <SvgLineComponent/>
             </div>
-            <SvgLineComponent/>
+
             <div className={`${styles.contentdiv} ${styles.aligncenter}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
 

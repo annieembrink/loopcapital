@@ -23,6 +23,7 @@
   }
   .contentdiv {
     width: 90%;
+    margin: auto;
     margin-top: 10px;
   }
 
@@ -30,8 +31,18 @@
     position: absolute;
     margin: 0 !important;
   }
+  .relative {
+    position: relative;
+  }
+  .absoluteline {
+   position: absolute;
+   background-color: transparent;
+   top: 50%;
+   left: 100%;
+
+  }
   .hexdown {
-    margin-top: 65px
+    /* margin-top: 65px */
   }
   .aligncenter {
     text-align: center;
