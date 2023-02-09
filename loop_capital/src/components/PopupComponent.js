@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import ActiveLinkComponent from './ActiveLinkComponent';
 
-const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
+const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => {
 
   const [content, setContent] = useState(popupCompany.acf.about);
   const [chosenLink, setChosenLink] = useState('About');
@@ -18,6 +18,7 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
     popupCompany,
     setChosenLink,
     chosenLink, 
+    errormsg,
     text
   }
 
