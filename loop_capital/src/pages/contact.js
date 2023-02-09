@@ -65,8 +65,8 @@ const Contact = () => {
                             <div className='wrapper-contact section-2'>
                                 <div className="filter-contact-mobile">
                                     <p>Contact us!</p>
-                                    <p style={{ textDecoration: activeLink === 'Entrepreneur' ? 'underline' : 'none' }} onClick={(e) => showDivOnClick(e)}>Entrepreneur</p>
-                                    <p style={{ textDecoration: activeLink === 'Investor' ? 'underline' : 'none' }} onClick={(e) => showDivOnClick(e)}>Investor</p>
+                                    <p className={activeLink === 'Entrepreneur' ? "active" : "" } onClick={(e) => showDivOnClick(e)}>Entrepreneur</p>
+                                    <p className={activeLink === 'Investor' ? "active" : "" } onClick={(e) => showDivOnClick(e)}>Investor</p>
                                 </div>
 
                                 <div className={`hello-contact roboto-font grid-row-box ${!showDiv ? 'hidden-on-mobile' : null}`}>
