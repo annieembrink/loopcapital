@@ -1,0 +1,7 @@
+#filter-list {
+    overflow: scroll;
+}
+
+#filter-list li {
+   white-space: nowrap;
+}
