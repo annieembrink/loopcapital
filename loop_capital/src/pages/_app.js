@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/globals.css';
 import '@/styles/home/home.css';
 import '@/styles/contact/contact.css';
-import '@/styles/header.css';
+// import '@/styles/header.css';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
