@@ -79,14 +79,16 @@
 
 
   .hexcomponentcontainer {
-    width: 80%;
-    min-height: 300px;
+    /* width: 100%; */
+    max-width: 800px;
+    min-height: 400px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    overflow: scroll;
   }
   .onehexcontainer {
-    width: 120px;
+    min-width: 140px;
   }
 
   .iconh1container {
@@ -97,12 +99,11 @@
     width: 100%;
   }
   .iconsize {
-    width: 80%;
+    width: 75%;
     height: 100%;
-    outline: none;
   }
   .contentdiv {
-    width: 100%;
+    width: 90%;
     margin-top: 10px;
   }
 
@@ -111,10 +112,60 @@
     margin: 0 !important;
   }
   .hexdown {
-    margin-top: 60px;
+    margin-top: 65px
   }
   .aligncenter {
     text-align: center;
   }
+
+
+    /* LARGE PHONE */
+    /* @media screen and (min-device-width: 430px) {
+      .hexcomponentcontainer {
+        width: 80%;
+        min-height: 300px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }  */
+
+    /* TABLET */
+    @media screen and (min-device-width: 1024px) {
+      .hexcomponentcontainer {
+        width: 80%;
+        min-height: 300px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .iconsize {
+        width: 200px;
+      }
+    } 
+
+    /* DESKTOP */
+    /* @media screen and (min-device-width: 1320px) {
+      .hexcomponentcontainer {
+        width: 80%;
+        min-height: 300px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    } 
+
+    @media screen and (min-device-width: 1440px) {
+      .hexcomponentcontainer {
+        width: 80%;
+        min-height: 300px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }
+    }  */
 
 
