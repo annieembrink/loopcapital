@@ -65,6 +65,7 @@ export default function Home(props) {
 
           {/* MOVE THIS TO COMPONENT? */}
           <div>
+          <div>
             <SwingCounterComponent props={props}/>
             <HexagonComponent/>
           </div>

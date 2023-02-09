@@ -28,26 +28,42 @@ const HexagonComponent = () => {
 
     return ( 
 
-        <div className={`${styles.flex}`}>
+        <div className={`${styles.hexcomponentcontainer}`}>
 
-        <div data-aos="fade-right" data-aos-duration="400" className={`${styles.divsize}`}>
-        <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
-        <h1 className={`${styles.absolute}`}>1</h1>
+        {/* HEX 1 */}
+        <div className={`${styles.onehexcontainer}`}>
+            <div data-aos="fade-right" data-aos-duration="400" className={`${styles.iconh1container}`}>
+                <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
+                <h1 className={`${styles.absolute}`}>1</h1>
+            </div>
+            <div className={`${styles.contentdiv} ${styles.aligncenter}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
 
-        <div data-aos="fade-right" data-aos-duration="700" className={`${styles.divsize} ${styles.hexdown}`}>
-        <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon border-1`}/>
-        <h1 className={`${styles.absolute}`}>2</h1>
+        {/* HEX 2 */}
+        <div className={`${styles.onehexcontainer}`}>
+            <div data-aos="fade-right" data-aos-duration="700" className={`${styles.iconh1container} ${styles.hexdown}`}>
+                <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
+                <h1 className={`${styles.absolute}`}>2</h1>
+            </div>
+            <div className={`${styles.contentdiv} ${styles.aligncenter}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
 
-        <div data-aos="fade-right" data-aos-duration="1000" className={`${styles.divsize}`}>
-        <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
-        <h1 className={`${styles.absolute}`}>3</h1>
+        {/* HEX 3 */}
+        <div className={`${styles.onehexcontainer}`}>
+            <div data-aos="fade-right" data-aos-duration="1000" className={`${styles.iconh1container}`}>
+                <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
+                <h1 className={`${styles.absolute}`}>3</h1>
+            </div>
+            <div className={`${styles.contentdiv} ${styles.aligncenter}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
 
-        <div data-aos="fade-right" data-aos-duration="1300" className={`${styles.divsize} ${styles.hexdown}`}>
-        <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
-        <h1 className={`${styles.absolute}`}>4</h1>
+        {/* HEX 4 */}
+        <div className={`${styles.onehexcontainer}`}>
+            <div data-aos="fade-right" data-aos-duration="1300" className={`${styles.iconh1container} ${styles.hexdown}`}>
+                <Icon.Hexagon className={`${styles.iconsize} green-text bootstrap-icon`}/>
+                <h1 className={`${styles.absolute}`}>4</h1>
+            </div>
+            <div className={`${styles.contentdiv} ${styles.aligncenter}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
         </div>
 
         </div>

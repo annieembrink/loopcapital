@@ -78,33 +78,43 @@
 
 
 
-
-
-  .flex {
+  .hexcomponentcontainer {
     width: 80%;
-    min-height: 200px;
+    min-height: 300px;
     margin: auto;
     display: flex;
     justify-content: space-between;
   }
-  .divsize {
+  .onehexcontainer {
+    width: 120px;
+  }
+
+  .iconh1container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 100px;
-    height: 100px;
-  }
-  .absolute {
-    position: absolute;
+    width: 100%;
   }
   .iconsize {
-    width: 100%;
+    width: 80%;
     height: 100%;
-    stroke-width: 0;
+    outline: none;
+  }
+  .contentdiv {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .absolute {
+    position: absolute;
+    margin: 0 !important;
   }
   .hexdown {
-    top: 50px;
+    margin-top: 60px;
+  }
+  .aligncenter {
+    text-align: center;
   }
 
 
