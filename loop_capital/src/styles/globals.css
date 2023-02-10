@@ -46,7 +46,7 @@ p {
 /* Hero section */
 
 h1 {
-    font-size: 26px;
+    font-size: 33px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold !important;
 }
@@ -317,7 +317,7 @@ li {
 /* MARGIN BOTTOM */
 
 .margin-bottom {
-    margin-bottom: 64px;
+    margin-bottom: 70px;
 }
 
 
@@ -353,7 +353,7 @@ li {
         font-size: 18px;
     }
     .margin-bottom {
-        margin-bottom: 70px;
+        margin-bottom: 80px;
     }
 
 }

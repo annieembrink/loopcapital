@@ -1,13 +1,14 @@
   .hexcomponentcontainer {
     max-width: 800px;
-    min-height: 400px;
-    margin: auto;
+     /* min-height: 400px; */
+    margin: 40px 0 20px 20px;
     display: flex;
     justify-content: space-between;
     overflow: scroll;
   }
   .onehexcontainer {
-    min-width: 140px;
+    width: 200px;
+    margin: 20px;
   }
 
   .iconh1container {
@@ -18,13 +19,14 @@
     width: 100%;
   }
   .iconsize {
-    width: 75%;
-    height: 100%;
+    width: 120px;
+    height: 120px;
   }
+
   .contentdiv {
-    width: 90%;
-    margin: auto;
-    margin-top: 10px;
+    /* width: 90%; */
+    /* margin: auto; */
+    /* margin-top: 10px; */
   }
 
   .absolute {
@@ -37,8 +39,9 @@
   .absoluteline {
    position: absolute;
    background-color: transparent;
-   top: 50%;
-   left: 100%;
+   width: 75%;
+   top: 45%;
+   left: 80%;
 
   }
   .hexdown {
@@ -47,55 +50,98 @@
   .aligncenter {
     text-align: center;
   }
-
+  .pheadline {
+    font-weight: 700;
+  }
+  .description {
+    margin-top: 10px;
+    font-size: 14px;
+  }
 
     /* LARGE PHONE */
-    /* @media screen and (min-device-width: 430px) {
+    @media screen and (min-device-width: 430px) {
       .hexcomponentcontainer {
-        width: 80%;
         min-height: 300px;
-        margin: auto;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-      }
-    }  */
+      } 
+    }  
+
+    @media screen and (min-device-width: 700px) { 
+      .absoluteline {
+        position: absolute;
+        background-color: transparent;
+        width: 77%;
+        top: 45%;
+        left: 79%;
+     
+       }
+    }
+    @media screen and (min-device-width: 730px) { 
+      .absoluteline {
+        position: absolute;
+        background-color: transparent;
+        width: 77%;
+        top: 45%;
+        left: 77%;
+     
+       }
+    }
+    @media screen and (min-device-width: 760px) { 
+      .absoluteline {
+        /* position: absolute;
+        background-color: transparent;
+        width: 78%;
+        top: 45%;
+        left: 75%; */
+
+        display: none;
+     
+       }
+    }
+ 
+
 
     /* TABLET */
-    /* @media screen and (min-device-width: 1024px) {
+     @media screen and (min-device-width: 992px) {
       .hexcomponentcontainer {
-        width: 80%;
+        width: 100%;
         min-height: 300px;
-        margin: auto;
+        margin-top: 40px;
+        margin: 40px auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
       }
       .iconsize {
-        width: 200px;
-      }
-    }  */
-
-    /* DESKTOP */
-    /* @media screen and (min-device-width: 1320px) {
-      .hexcomponentcontainer {
-        width: 80%;
-        min-height: 300px;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        width: 140px;
+        height: 140px;
       }
     } 
 
+    /* DESKTOP */
+
     @media screen and (min-device-width: 1440px) {
-      .hexcomponentcontainer {
+      /* .hexcomponentcontainer {
         width: 80%;
         min-height: 300px;
         margin: auto;
         display: flex;
         justify-content: space-between;
-      }
-    }  */
+      } */
+      .absoluteline {
+        /* position: absolute;
+        background-color: transparent;
+        width: 110%;
+        top: 45%;
+        left: 57%; */
+
+        display: none;
+
+
+     
+       }
+    } 
 
 
