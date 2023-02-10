@@ -31,6 +31,7 @@
 
 .grid-row-contact p {
     font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
 }
 
 .wrapper-hero {
@@ -49,8 +50,10 @@
     justify-content: center;
     align-items: end;
     text-align: center;
-    width: 285px;
-    height: 335px;
+    /* width: 285px; */
+    height: 335px; 
+    width: 100%;
+    padding: 0 16px;
 }
 
 .hello-contact h2 {
@@ -64,10 +67,12 @@
 
 .hello-contact .btn-primary {
     color: #11271D;
-    font-weight: bold;
     margin: 30px 0 30px 0;
-    width: 260px;
-    font-size: 14px;
+    
+    /* font-weight: bold;
+    margin: 30px 0 30px 0;
+    width: 200px;
+    font-size: 14px; */
 }
 
 .hidden-on-mobile {
@@ -78,11 +83,10 @@
 
 @media screen and (min-device-width: 430px) {
 
-    .hello-contact {
-        width: 400px;
-    }
-}
-
+     .hello-contact {
+        max-width: 460px;
+    }  
+} 
 /* TABLET */
 
 @media screen and (min-device-width: 992px) {
@@ -147,7 +151,8 @@
     }
 
     .hello-contact {
-        width: 465px;
+        /* width: 465px; */
+        width: 100%;
     }
 
     .hello-contact h2 {

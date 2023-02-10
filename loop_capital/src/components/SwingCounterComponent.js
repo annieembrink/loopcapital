@@ -68,7 +68,7 @@ const SwingCounterComponent = (props) => {
         <div key={num} className="green-border green-border-numbers margin-bottom">
           <div>
             <span className="numbers-icon"><p className="extra-big-font counter">{counterValues[index * 3]}</p><Icon.Briefcase className="bootstrap-icon"/></span>
-            <p className="p-tag-numbers">numbers of investors</p>
+            <p className="p-tag-numbers">investors</p>
           </div>
           <div>
             <span className="numbers-icon"><p className="extra-big-font counter">{counterValues[index * 3 + 1]}</p><Icon.People className="bootstrap-icon"/></span>
