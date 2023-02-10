@@ -234,25 +234,6 @@ ul {
 } */
 
 
-/* FILTER, this is not going to be here, this should be on "portfolio" */
-#filter-list {
-    display: flex;
-    overflow-x: scroll;
-}
-
-#filter-list li {
-    margin-right: 1rem;
-}
-
-.card-body {
-    padding: 0.5rem 0 0 0;
-}
-
-.card-body .h3 {
-    margin-bottom: 0;
-}
-
-
 /* ANIMATED AND GREEN TEXT */
 
 .animated-text {
@@ -287,16 +268,6 @@ li {
 
 .bold-font {
     font-weight: bold;
-}
-
-/* THIS SHOULD BE ON A DIFFERENT CSS FILE IN PORTFOLIO */
-/* NO BACKGROUND ON CARDS  */
-.no-background {
-    background: none;
-}
-
-.no-background img {
-    border-radius: 0;
 }
 
 /* HERO SECTION */
