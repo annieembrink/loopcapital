@@ -52,7 +52,7 @@ const Contact = () => {
                     <span data-aos="fade-right" data-aos-duration="3000">!</span>
                 </span>
                 </h1>
-                <p className='p-hero roboto-font' data-aos="fade-right" data-aos-duration="800">Just fill in the form or send us an email!</p>
+                <p className='p-hero' data-aos="fade-right" data-aos-duration="800">Just fill in the form or send us an email!</p>
                 </div>
                 {formSubmitted ?
                     <h1>{clientMessage}</h1>
