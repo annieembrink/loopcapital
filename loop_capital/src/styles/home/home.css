@@ -29,7 +29,7 @@
     background: none;
     color: #11271D;
     font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
 }
 
@@ -37,7 +37,7 @@
     background: none;
     color: #11271D;
     font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .green-border-numbers div {
-    margin: 16px;
+    margin: 40px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,7 +94,8 @@
 .numbers-icon {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: baseline;
+    margin-bottom: 5px;
 }
 
 .numbers-icon .bootstrap-icon {
@@ -151,9 +152,14 @@
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
     padding: 50px 0px 50px 0;
     font-family: 'Poppins', sans-serif;
-    text-align: left;
+    /* text-align: left; */
     justify-content: center;
     align-items: center;
+}
+
+.wrapper-offer-you h2 {
+    justify-self: center;
+    max-width: fit-content;
 }
 
 .wrapper-offer-you p {
@@ -173,6 +179,13 @@
 .right-align {
     text-align: right;
     font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 22px;
+}
+#title {
+    font-size: 16px;
+    font-weight: 200;
 }
 
 /* INTEREST */
@@ -192,15 +205,17 @@
     grid-template-rows: 1fr 1fr;
     gap: 30px;
 }
+
 /* CONTACT SECTION */
 
 #contact-section {
     position: relative;
 }
+
 #arrow-svg {
     position: absolute;
     right: 30%;
-    top: 50%;
+    top: 40%;
     transform: rotate(-15deg);
 }
 
@@ -210,8 +225,14 @@
 @media screen and (min-device-width: 430px) {
 
     /* CAROUSEL */
+
+    .carousel-item, .img-carousel {
+        height: 450px;
+    }
+
     .carousel-item h3 {
         font-size: 30px;
+        margin-top: 20%;
     }
 
     .carousel-item h4 {
@@ -227,11 +248,39 @@
     #quote-tag {
         font-size: 130px;
     }
+
+    .wrapper-offer-you h2 {
+        max-width: 100%;
+    }
+
+    .green-border-numbers {
+        padding: 20px 0;
+    }
+}
+
+@media screen and (min-device-width: 519px) {
+    #arrow-svg {
+       display: none;
+    }
+ }
+
+@media screen and (min-device-width: 900px) { 
+    .carousel-item h3 {
+      
+        margin-top: 15%;
+    }
+    #arrow-svg {
+        display: block;
+        position: absolute;
+        right: 45%;
+        top: 50%;
+        transform: rotate(-15deg);
+    }
 }
 
 /* TABLET */
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (min-device-width: 992px) {
 
     /* CAROUSEL */
     .wrapper-carousel {
@@ -242,7 +291,7 @@
     .img-carousel {
         display: block;
         width: 100%;
-        height: 400px;
+        
     }
 
     .carousel-item h3 {
@@ -256,13 +305,18 @@
 
     /* INVESTMENTS NUMBERS */
 
+    .numbers-icon {
+        align-items: baseline;
+    }
+
     .extra-big-font {
         display: flex;
     }
 
     .green-border-numbers {
+        display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .green-border-numbers div {
@@ -273,7 +327,7 @@
     }
 
     .green-border-numbers {
-        padding: 80px;
+        padding: 50px;
     }
 
     #quote-tag {
@@ -282,41 +336,47 @@
     }
 
     .wrapper-offer-you {
-        width: 50%;
+        width: 70%;
         padding: 60px 5px 60px 5px;
     }
 
     .wrapper-offer-you p {
         margin-top: 20px;
-    }   
+    }
 
     /* INTEREST */
 
-.wrapper-interest {
-    max-width: 100%;
-}
+    .wrapper-interest {
+        max-width: 100%;
+    }
 
-.wrapper-interest h2 {
-    font-size: 30px;
-}
+    .wrapper-interest h2 {
+        font-size: 30px;
+    }
 
 
-.grid-two {
-    grid-template-columns: 1.5fr 1fr;
-    justify-content: center;
-}
+    .grid-two {
+        grid-template-rows:1fr;
+        grid-template-columns: 1.5fr 1fr;
+        justify-content: center;
+    }
 
-.grid-two .interest-div {
-    text-align: right;
-}
+    /* .grid-two .interest-div {
+        text-align: right;
+    } */
 
-.grid-two .button-contact {
-    justify-content: start;
-}
+    .grid-two .button-contact {
+        justify-content: start;
+    }
 
-/* .interest-div h6 {
-    text-align: center;
-} */
+    #arrow-svg {
+        display: block;
+        position: absolute;
+        right: 25%;
+        top: 50%;
+        transform: scaleX(-1) rotate(-10deg) scale(1.2);
+       
+    }
 
 }
 
@@ -347,7 +407,7 @@
     .img-carousel {
         display: block;
         width: 100%;
-        height: 400px;
+       
     }
 
     .carousel-item h3 {
@@ -373,7 +433,7 @@
     }
 
     .green-border-numbers {
-        padding: 80px;
+        padding: 60px;
     }
 
     /* WE CAN OFFER YOU */
@@ -382,7 +442,7 @@
         padding: 40px;
         margin: 0 0px 80px 100px;
     }
-    
+
 
     .wrapper-offer-you .green-border {
         padding: 50px;
@@ -390,10 +450,6 @@
 
     .wrapper-offer-you h2 {
         margin-bottom: 40px;
-    }
-
-    .wrapper-offer-you p {
-        margin-left: 50px;
     }
 
     .bigger-p {
@@ -414,9 +470,9 @@
         padding-bottom: 20px;
     }
 
-    #title {
+    /* #title {
         font-size: 14px;
-    }
+    } */
 
     .wrapper-offer-you {
         width: 50%;
@@ -425,7 +481,7 @@
 
     .wrapper-offer-you p {
         margin-top: 0;
-    }   
+    }
 
     .wrapper-quote {
         width: 50%;
@@ -434,5 +490,20 @@
     .align-center {
         margin-left: 120px;
     }
-    
+
+    .wrapper-interest {
+       
+        grid-template-columns: 1fr 1fr;
+    }
+    .wrapper-interest .interest-div{
+        padding-left: 150px;
+    }
+    .wrapper-interest .button-contact{
+        padding-left: 100px;
+    }
+
+    /* .grid-two .interest-div {
+       margin-left: 10%;
+    }  */
+
 }
