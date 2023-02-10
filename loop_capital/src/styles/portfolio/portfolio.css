@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
+    text-align: center;
 }
 
 #filter-list li {
@@ -28,3 +29,37 @@
     border: none;
 }
 
+
+/* POPUP FORM */
+
+.modal-content {
+    background-color: #EEF9F1;
+    color: #11271D;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-body img {
+    width: 100%;
+    height: 80%;
+}
+
+.modal-body .nav-link {
+    background-color: none;
+    color: #11271D;
+}
+
+.modal-body .nav-link:active {
+    background-color: none;
+}
+
+@media screen and (min-device-width: 992px) {
+
+    .row-cols-lg-4>* {
+        flex: 0 0 auto;
+        width: 32%;
+    }
+
+}

@@ -183,6 +183,7 @@
     font-size: 18px;
     line-height: 22px;
 }
+
 #title {
     font-size: 16px;
     font-weight: 200;
@@ -226,7 +227,8 @@
 
     /* CAROUSEL */
 
-    .carousel-item, .img-carousel {
+    .carousel-item,
+    .img-carousel {
         height: 450px;
     }
 
@@ -260,15 +262,16 @@
 
 @media screen and (min-device-width: 519px) {
     #arrow-svg {
-       display: none;
+        display: none;
     }
- }
+}
 
-@media screen and (min-device-width: 900px) { 
+@media screen and (min-device-width: 900px) {
     .carousel-item h3 {
-      
+
         margin-top: 15%;
     }
+
     #arrow-svg {
         display: block;
         position: absolute;
@@ -291,7 +294,7 @@
     .img-carousel {
         display: block;
         width: 100%;
-        
+
     }
 
     .carousel-item h3 {
@@ -356,7 +359,7 @@
 
 
     .grid-two {
-        grid-template-rows:1fr;
+        grid-template-rows: 1fr;
         grid-template-columns: 1.5fr 1fr;
         justify-content: center;
     }
@@ -375,7 +378,7 @@
         right: 25%;
         top: 50%;
         transform: scaleX(-1) rotate(-10deg) scale(1.2);
-       
+
     }
 
 }
@@ -407,7 +410,7 @@
     .img-carousel {
         display: block;
         width: 100%;
-       
+
     }
 
     .carousel-item h3 {
@@ -492,13 +495,15 @@
     }
 
     .wrapper-interest {
-       
+
         grid-template-columns: 1fr 1fr;
     }
-    .wrapper-interest .interest-div{
+
+    .wrapper-interest .interest-div {
         padding-left: 150px;
     }
-    .wrapper-interest .button-contact{
+
+    .wrapper-interest .button-contact {
         padding-left: 100px;
     }
 

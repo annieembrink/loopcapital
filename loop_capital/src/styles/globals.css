@@ -105,7 +105,7 @@ h5 {
     font-family: 'Roboto Mono';
     font-size: 14px;
     letter-spacing: 1px;
-}   
+}
 
 /*  MENU */
 
@@ -128,7 +128,9 @@ h5 {
     margin: 16px
 }
 
-.navbar-toggler:focus, .navbar, .navbar.toggler {
+.navbar-toggler:focus,
+.navbar,
+.navbar.toggler {
     box-shadow: none !important;
 }
 
@@ -172,12 +174,6 @@ h5 {
     border: none !important;
     width: 34px;
 }
-
-/* .hamburger_icon:focus {
-       DOESNT BITE
-        outline: none !important;
-} */
-
 
 
 
@@ -323,6 +319,7 @@ li {
     .hero-section p {
         font-size: 18px;
     }
+
     .margin-bottom {
         margin-bottom: 70px;
     }
@@ -413,22 +410,22 @@ li {
 
     /* WHITE SPACE  */
 
-.margin-whitespace {
-    margin: 200px 0 100px 0;
-}
+    .margin-whitespace {
+        margin: 200px 0 100px 0;
+    }
 
-/* BUTTON STYLING */
+    /* BUTTON STYLING */
 
-.btn-primary {
-    width: 260px;
-    height: 60px;
-    font-size: 16px;
-    letter-spacing: 2px;
-}
+    .btn-primary {
+        width: 260px;
+        height: 60px;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
 
-.margin-bottom {
-    margin-bottom: 100px;
-}
+    .margin-bottom {
+        margin-bottom: 100px;
+    }
 
 }
 
