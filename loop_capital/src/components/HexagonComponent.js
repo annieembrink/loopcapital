@@ -15,7 +15,6 @@ const HexagonComponent = () => {
                     <SvgHexComponent/>
                     <h1 className={`${styles.absolute}`}>1</h1>
                 </div>
-                <SvgLineComponent/>
             </div>
 
             <div className={`${styles.contentdiv} ${styles.aligncenter}`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>

@@ -21,6 +21,8 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
     text
   }
 
+  console.log(popupCompany)
+
   return (
     <Modal className='modal-xl' show={showPopup} onHide={closeButton}>
       <Modal.Header closeButton>

@@ -1,7 +1,32 @@
 #filter-list {
     overflow: scroll;
 }
-
 #filter-list li {
    white-space: nowrap;
 }
+
+    /* LARGE PHONE */
+    @media screen and (min-device-width: 430px) {
+       
+    } 
+
+    /* TABLET */
+    @media screen and (min-device-width: 1024px) {
+        #filter-list {
+            overflow: auto;
+        }
+      }
+   
+    /* DESKTOP */
+    @media screen and (min-device-width: 1320px) {
+        #filter-list {
+            overflow: auto;
+        }
+      }
+
+
+    @media screen and (min-device-width: 1440px) {
+        #filter-list {
+            overflow: auto;
+        }
+    } 

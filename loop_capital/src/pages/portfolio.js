@@ -81,7 +81,7 @@ export default function Portfolio(props) {
             {chosenCompanies.map(company =>
               <Col key={company.title.rendered}>
                 <Card className="no-background" onClick={() => companyPopup(company)}>
-                  <Card.Img variant="top" src={company.acf.image_of_the_company} />
+                  <Card.Img variant="top" src={company.acf.image_of_the_company_logo} />
                   <Card.Body className="card-body">
                     <Card.Title className="h3">{company.title.rendered}</Card.Title>
                     <Card.Text className="green-text h4 roboto-font">{company.acf.branch}</Card.Text>
