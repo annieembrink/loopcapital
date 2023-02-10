@@ -62,13 +62,17 @@ export default function Home(props) {
         </div>
 
         {/* COMPONENT TO NUMBERS ON COUNT */}
-
-          {/* MOVE THIS TO COMPONENT? */}
           <div>
           <div>
             <SwingCounterComponent props={props}/>
-            <HexagonComponent/>
           </div>
+
+          {/* JOURNEY MAP */}
+        <div className="text-align-center roboto-font">
+        <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
+        <HexagonComponent/>
+
+        </div>
 
           {/* TEXT WITH BORDER */}
           <div className="green-border margin-bottom text-align-center padding-text">
