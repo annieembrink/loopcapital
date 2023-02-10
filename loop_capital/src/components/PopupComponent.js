@@ -28,7 +28,7 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => 
         <Modal.Title>{popupCompany.title.rendered}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Image src={popupCompany.acf.image_of_the_company} alt={popupCompany.title.rendered} width={500} height={500} />
+        <Image src={popupCompany.acf.image_of_the_company} alt={popupCompany.title.rendered} width={1000} height={600} />
 
         <p className="green-text">{popupCompany.acf.branch}</p>
         <ul className="nav nav-tabs">

@@ -106,7 +106,8 @@ export async function getStaticProps({ preview = false }) {
   try {
     let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio?per_page=100');
     let wpDataJson = await wpData.json();
-  
+    console.log(wpDataJson)
+
     return {
       props: { wpDataJson: wpDataJson, errormsg: "Nothing to read right now, try again later!" }
     }
