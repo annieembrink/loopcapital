@@ -74,7 +74,7 @@ export default function Home(props) {
 
         {/* TEXT WITH BORDER */}
         <div className="green-border margin-bottom text-align-center padding-text">
-          <h2 className="poppins-font bold-font">
+          <h2 className="poppins-font bold-font line-height">
             Skåne will become Sweden&apos;s leading Tech region and build companies active <span className="green-text">all over the world.</span>
           </h2>
         </div>
