@@ -64,16 +64,12 @@ export default function Home(props) {
         </div>
 
         {/* COMPONENT TO NUMBERS ON COUNT */}
+        <SwingCounterComponent props={props}/>
 
-          <div>
-            <SwingCounterComponent props={props}/>
-          </div>
-
-          {/* JOURNEY MAP */}
-        <div className="text-align-center roboto-font">
-        <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
-        <HexagonComponent/>
-
+        {/* JOURNEY MAP */}
+        <div className="text-align-center roboto-font margin-bottom">
+          <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
+          <HexagonComponent/>
         </div>
 
         {/* TEXT WITH BORDER */}
@@ -85,10 +81,8 @@ export default function Home(props) {
 
         {/* COMPONENT CAROUSEL */}
         <CarouselAboutComponent />
-        {/* test */}
 
         {/* DID WE CAUGHT YOUR INTEREST */}
-
         <div className="wrapper-interest grid-two margin-bottom">
           <div className="interest-div">
             <h2 className="roboto-font">Did we catch your interest?</h2>
