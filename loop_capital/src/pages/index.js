@@ -65,13 +65,16 @@ export default function Home(props) {
 
         {/* COMPONENT TO NUMBERS ON COUNT */}
 
-        {/* MOVE THIS TO COMPONENT? */}
+          <div>
+            <SwingCounterComponent props={props}/>
+          </div>
 
-        <div>
-          <SwingCounterComponent props={props} />
+          {/* JOURNEY MAP */}
+        <div className="text-align-center roboto-font">
+        <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
+        <HexagonComponent/>
+
         </div>
-
-        <HexagonComponent />
 
         {/* TEXT WITH BORDER */}
         <div className="green-border margin-bottom text-align-center padding-text">
@@ -79,8 +82,6 @@ export default function Home(props) {
             Skåne will become Sweden&apos;s leading Tech region and build companies active <span className="green-text">all over the world.</span>
           </h2>
         </div>
-
-
 
         {/* COMPONENT CAROUSEL */}
         <CarouselAboutComponent />
