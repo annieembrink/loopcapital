@@ -43,6 +43,8 @@ export default function Portfolio(props) {
   props.wpDataJson.map(c => set.add(c.acf.branch))[0];
   let arrOfBranches = Array.from(set);
 
+  console.log("props", props.wpDataJson);
+
   return (
     <>
       <DefaultLayoutComponent>
@@ -81,7 +83,7 @@ export default function Portfolio(props) {
             {chosenCompanies.map(company =>
               <Col key={company.title.rendered}>
                 <Card className="no-background" onClick={() => companyPopup(company)}>
-                  <Card.Img variant="top" src={company.acf.image_of_the_company} />
+                  <Card.Img variant="top" src={company.acf.image_of_the_company_logo} />
                   <Card.Body className="card-body">
                     <Card.Title className="h3">{company.title.rendered}</Card.Title>
                     <Card.Text className="green-text h4 roboto-font">{company.acf.branch}</Card.Text>
@@ -102,7 +104,7 @@ export default function Portfolio(props) {
 export async function getStaticProps({ preview = false }) {
 
   try {
-    let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio');
+    let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio?per_page=100');
     let wpDataJson = await wpData.json();
   
     return {
