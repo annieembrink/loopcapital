@@ -23,6 +23,9 @@
 .wrapper-hero {
     margin-top: 200px;
 }
+.wrapper-hero p {
+    margin-top: 20px!important;
+}
 
 .hello-contact {
     display: grid;
@@ -59,13 +62,17 @@
 
 /* TABLET */
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (min-device-width: 992px) {
     .filter-contact-mobile {
         display: none;
     }
 
     .hidden-on-mobile {
         display: grid;
+    }
+
+    .wrapper-hero p {
+        font-size: 22px;
     }
 
     .hello-contact {

@@ -9,10 +9,11 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 // REACT IMPORTS
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Portfolio(props) {
   const [chosenCompanies, setChosenCompanies] = useState(props.wpDataJson);
+  const [chosenBranch, setChosenBranch] = useState('All investments');
   const [showPopup, setShowPopup] = useState(false);
   const [popupCompany, setPopupCompany] = useState({});
 
@@ -20,6 +21,14 @@ export default function Portfolio(props) {
     const filteredData = props.wpDataJson.filter(company => company.acf.branch === e.target.innerText);
     setChosenCompanies(filteredData);
   }
+
+  useEffect(() => {
+    if (chosenCompanies !== props.wpDataJson) {
+      setChosenBranch(chosenCompanies[0].acf.branch)
+    } else {
+      setChosenBranch('All investments')
+    }
+  }, [chosenCompanies])
 
   const showAll = () => {
     setChosenCompanies(props.wpDataJson);
@@ -40,7 +49,7 @@ export default function Portfolio(props) {
       <FixedContactComponent/>
 
         {showPopup ?
-          <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} />
+          <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} errormsg={props.errormsg}/>
           : null}
         <div className="hero-section">
           <h1 data-aos="fade-right" data-aos-duration="600">Loop Capital invest at an early stage in the companies <span className="animated-text">
@@ -60,8 +69,8 @@ export default function Portfolio(props) {
         <div>
           <div>
             <ul id="filter-list" className="roboto-font">
-              <li onClick={showAll}>All investments</li>
-              {arrOfBranches.map(branch => <li onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
+              <li className={chosenBranch === 'All investments' ? "active" : ""} onClick={showAll}>All investments</li>
+              {arrOfBranches.map(branch => <li className={chosenBranch === branch ? "active" : ""} onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
             </ul>
           </div>
 
@@ -97,12 +106,12 @@ export async function getStaticProps({ preview = false }) {
     let wpDataJson = await wpData.json();
   
     return {
-      props: { wpDataJson: wpDataJson }
+      props: { wpDataJson: wpDataJson, errormsg: "Nothing to read right now, try again later!" }
     }
   } catch (error) {
     console.error(error);
     return {
-      props: {}
+      props: {errormsg: "Nothing to read right now, try again later!"}
     }
   }
 }

@@ -99,10 +99,12 @@ h5 {
     border: none !important;
     color: #fafafa;
     text-transform: uppercase;
-    width: 150px;
+    width: 160px;
     height: 50px;
     border-radius: 10px;
     font-family: 'Roboto Mono';
+    font-size: 14px;
+    letter-spacing: 1px;
 }   
 
 /*  MENU */
@@ -161,6 +163,7 @@ h5 {
 }
 
 .offcanvas_container_link .nav-link:first-child {
+    display: none;
     position: absolute;
     bottom: 50px;
 }
@@ -177,6 +180,7 @@ h5 {
 
 
 
+
 /* UL NO PADDING */
 ul {
     padding-left: 0;
@@ -188,7 +192,7 @@ ul {
     border: 3px solid #409250;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
     border-radius: 20px;
-    height: 60%;
+    /* height: 60%; */
 }
 
 .padding-text {
@@ -225,9 +229,9 @@ ul {
 
 /* WHITE SPACE  */
 
-.margin-whitespace {
+/* .margin-whitespace {
     margin: 200px 0 200px 0;
-}
+} */
 
 
 /* FILTER, this is not going to be here, this should be on "portfolio" */
@@ -306,7 +310,7 @@ li {
 }
 
 .hero-section p {
-    margin: 30px 0px 10px 0px !important;
+    margin: 20px 0px 16px 0px !important;
     /* font-family: 'Roboto Mono'; */
 }
 
@@ -323,7 +327,7 @@ li {
 
     /* Hero section */
     h1 {
-        font-size: 44px;
+        font-size: 40px;
     }
 
     /* Company name, We can offer you, Hello Contact, Journey, info  */
@@ -348,12 +352,15 @@ li {
     .hero-section p {
         font-size: 18px;
     }
+    .margin-bottom {
+        margin-bottom: 70px;
+    }
 
 }
 
 /* TABLET */
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (min-device-width: 992px) {
 
     main {
         max-width: 904px;
@@ -367,7 +374,7 @@ li {
 
     /* Company name popup, We can offer you, Hello Contact, Journey, info  */
     h2 {
-        font-size: 40px;
+        font-size: 33px;
     }
 
     /* Headline under Our vision and ambition, button text */
@@ -419,6 +426,7 @@ li {
 
     .hero-section p {
         font-size: 22px;
+
     }
 
     .bootstrap-icon {
@@ -441,9 +449,16 @@ li {
 /* BUTTON STYLING */
 
 .btn-primary {
-    width: 280px;
+    width: 260px;
     height: 60px;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
+
+.margin-bottom {
+    margin-bottom: 100px;
+}
+
 }
 
 
@@ -464,9 +479,9 @@ li {
     }
 
     /* Company name, We can offer you, Hello Contact, Journey, info  */
-    h2 {
+    /* h2 {
         font-size: 40px;
-    }
+    } */
 
     /* Headline under Our vision and ambition, button text */
     h3 {
@@ -524,7 +539,7 @@ li {
     /* HERO SECTION */
 
     .hero-section p {
-        font-size: 22px;
+        margin: 40px 0px 20px 0px !important;
     }
 
     .green-border {

@@ -1,7 +1,7 @@
 .contact {
     display: none;
 }
-@media screen and (min-device-width: 1024px) { 
+@media screen and (min-device-width: 992px) { 
     .contact { 
         display: block;
         z-index: 999999;
