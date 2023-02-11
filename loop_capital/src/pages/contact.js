@@ -14,10 +14,14 @@ const Contact = () => {
     const [activeLink, setActiveLink] = useState('Entrepreneur');
     const [clientMessage, setClientMessage] = useState('');
     const [helloMessage, setHelloMessage] = useState('');
+    const [wrapperHero, setWrapperHero] = useState(true);
 
     const buttonOnClick = (message) => {
+        // FULLÖSNING???
+        // document.querySelector(".wrapper-hero").style.display = "none"
         setShowForm(true);
         setHelloMessage(message);
+        setWrapperHero(false)
     };
 
     const showDivOnClick = (e) => {
@@ -32,13 +36,14 @@ const Contact = () => {
         helloMessage,
         setHelloMessage,
         setFormSubmitted,
-        setClientMessage
+        setClientMessage,
+        setWrapperHero
     }
 
     return (
         <DefaultLayoutComponent>
-
             <div className="hero-section-contact">
+            {wrapperHero ? 
                 <div className="wrapper-hero">
                 <h1 data-aos="fade-right" data-aos-duration="600">Let&apos;s start this journey <span className="animated-text">
                     <span data-aos="fade-right" data-aos-duration="800">t</span>
@@ -54,6 +59,8 @@ const Contact = () => {
                 </h1>
                 <p className='p-hero' data-aos="fade-right" data-aos-duration="800">Just fill in the form or send us an email!</p>
                 </div>
+                : ""
+            }
                 {formSubmitted ?
                     <h1>{clientMessage}</h1>
                     :
@@ -74,13 +81,13 @@ const Contact = () => {
                                 <div className={`hello-contact roboto-font grid-row-box ${!showDiv ? 'hidden-on-mobile' : null}`}>
                                     <div className='align-h2'><h2 className='font-bold'>Hello <span className='green-text'>Entrepreneur!</span></h2></div>
                                     <p>Are you an entrepreneur who is at the start of your big journey and need help to reach your full potential?</p>
-                                    <div><Button onClick={() => buttonOnClick('Hello Entrepreneur')}>Let&apos;s get in touch!</Button></div>
+                                    <div><Button onClick={() => buttonOnClick('Entrepreneur')}>Let&apos;s get in touch!</Button></div>
                                 </div>
 
                                 <div className={`hello-contact poppins-font grid-row-box ${showDiv ? 'hidden-on-mobile' : null}`}>
                                     <div><h2>Hello <span className='green-text'>Investor!</span></h2></div>
                                     <p>Are you an investor that wants to be apart of the journey to make Skåne the leading Tech region?</p>
-                                    <div><Button onClick={() => buttonOnClick('Hello Investor')}>Contact us!</Button></div>
+                                    <div><Button onClick={() => buttonOnClick('Investor')}>Contact us!</Button></div>
                                 </div>
 
                             </div>

@@ -17,9 +17,9 @@ const childProps = {
 }
 
 return (
-    <Form className='flexColumn' onSubmit={(e) => props.postForm(e, 'investor')}>
+    <Form className='flexColumn formComponent poppins-font' onSubmit={(e) => props.postForm(e, 'investor')}>
 
-    <p onClick={props.onClose}>Close</p>
+    <p className='closeForm-btn' onClick={props.onClose}>close</p>
 
         {props.currentInput === 0 && (
             <Form.Group>
@@ -33,7 +33,7 @@ return (
             <Form.Group>
                 <Form.Label htmlFor="emailInput">Your email:</Form.Label>
                 <Form.Control type="email" name="emailInput" id="emailInput" value={props.email} onChange={(e) => props.setEmail(e.target.value)} />
-                <Button type='submit'>SUBMIT</Button>
+                <Button className='btn-secondary' type='submit'>SUBMIT</Button>
 
             <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={0}/>
 

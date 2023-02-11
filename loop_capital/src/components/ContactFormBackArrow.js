@@ -8,7 +8,7 @@ const ContactFormBackArrow = ({ nr, setCurrentInput, setValidationError }) => {
     };
 
     return ( 
-        <p onClick={() => onBackClick(nr)}><Icon.ArrowReturnLeft className="green-text bootstrap-icon" onClick={() => onBackClick(nr)}/>Back</p>
+        <p className='back-btn' onClick={() => onBackClick(nr)}><Icon.ArrowReturnLeft className=" bootstrap-icon" onClick={() => onBackClick(nr)}/> Back</p>
      );
 }
 
