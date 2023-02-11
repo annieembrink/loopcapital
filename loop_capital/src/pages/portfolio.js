@@ -43,13 +43,15 @@ export default function Portfolio(props) {
   props.wpDataJson.map(c => set.add(c.acf.branch))[0];
   let arrOfBranches = Array.from(set);
 
+  console.log("props", props.wpDataJson);
+
   return (
     <>
       <DefaultLayoutComponent>
       <FixedContactComponent/>
 
         {showPopup ?
-          <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} />
+          <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} errormsg={props.errormsg}/>
           : null}
         <div className="hero-section">
           <h1 data-aos="fade-right" data-aos-duration="600">Loop Capital invest at an early stage in the companies <span className="animated-text">
@@ -102,16 +104,17 @@ export default function Portfolio(props) {
 export async function getStaticProps({ preview = false }) {
 
   try {
-    let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio');
+    let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio?per_page=100');
     let wpDataJson = await wpData.json();
-  
+    console.log(wpDataJson)
+
     return {
-      props: { wpDataJson: wpDataJson }
+      props: { wpDataJson: wpDataJson, errormsg: "Nothing to read right now, try again later!" }
     }
   } catch (error) {
     console.error(error);
     return {
-      props: {}
+      props: {errormsg: "Nothing to read right now, try again later!"}
     }
   }
 }

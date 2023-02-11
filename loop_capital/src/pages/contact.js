@@ -52,7 +52,7 @@ const Contact = () => {
                     <span data-aos="fade-right" data-aos-duration="3000">!</span>
                 </span>
                 </h1>
-                <p className='p-hero roboto-font' data-aos="fade-right" data-aos-duration="800">Just fill in the form or send us an email!</p>
+                <p className='p-hero' data-aos="fade-right" data-aos-duration="800">Just fill in the form or send us an email!</p>
                 </div>
                 {formSubmitted ?
                     <h1>{clientMessage}</h1>
@@ -62,11 +62,13 @@ const Contact = () => {
                             <ContactFormComponent {...childProps} />
                             :
 
-                            <div className='wrapper-contact section-2'>
+                            <div className='wrapper-contact'>
                                 <div className="filter-contact-mobile">
-                                    <p>Contact us!</p>
+                                    <p className='light-font'>Contact us!</p>
+                                    <div className='grid-row-contact'>
                                     <p className={activeLink === 'Entrepreneur' ? "active" : "" } onClick={(e) => showDivOnClick(e)}>Entrepreneur</p>
                                     <p className={activeLink === 'Investor' ? "active" : "" } onClick={(e) => showDivOnClick(e)}>Investor</p>
+                                    </div>
                                 </div>
 
                                 <div className={`hello-contact roboto-font grid-row-box ${!showDiv ? 'hidden-on-mobile' : null}`}>

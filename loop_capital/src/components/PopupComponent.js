@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import ActiveLinkComponent from './ActiveLinkComponent';
 
-const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
+const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => {
 
   const [content, setContent] = useState(popupCompany.acf.about);
   const [chosenLink, setChosenLink] = useState('About');
@@ -18,6 +18,7 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
     popupCompany,
     setChosenLink,
     chosenLink, 
+    errormsg,
     text
   }
 
@@ -29,8 +30,9 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
         <Modal.Title>{popupCompany.title.rendered}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <Image src={popupCompany.acf.image_of_the_company} alt={popupCompany.title.rendered} width={500} height={500} />
+        <Image src={popupCompany.acf.image_of_the_company} alt={popupCompany.title.rendered} width={1000} height={600} />
 
+        <p className="green-text">{popupCompany.acf.branch}</p>
         <ul className="nav nav-tabs">
           <li className="nav-item">
             <ActiveLinkComponent {...childProps} text='About'/>
@@ -40,7 +42,14 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany }) => {
           </li>
         </ul>
 
-        <div>{content}</div>
+        <div>
+        <p>{content}</p>
+        {/* NEEDS TO CHANGE */}
+        {/* Testimonials is centerd in screen and about is not */}
+        <p className="right-align">IF TESTIMONIALS : NAME NAMESSON</p>
+        {/* <p>Check out their website!</p>
+        <p>LINK TO WEBSITE HERE</p> */}
+        </div>
 
       </Modal.Body>
     </Modal>

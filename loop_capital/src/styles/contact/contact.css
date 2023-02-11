@@ -14,14 +14,31 @@
 
 .wrapper-contact {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-self: center;
-    gap: 100px;
-    margin-bottom: 200px;
+    grid-template-rows: 1fr 3fr;
+}
+
+.filter-contact-mobile {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.grid-row-contact {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+    margin-top: -20px;
+}
+
+.grid-row-contact p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
 }
 
 .wrapper-hero {
     margin-top: 200px;
+}
+.wrapper-hero p {
+    margin-top: 20px!important;
 }
 
 .hello-contact {
@@ -29,12 +46,14 @@
     grid-template-rows: 2fr 1fr;
     background-color: #CBD8CE;
     color: #11271D;
-    margin: 100px 30px 0 30px;
     border-radius: 10px;
     justify-content: center;
     align-items: end;
-    padding: 20px;
     text-align: center;
+    /* width: 285px; */
+    height: 335px; 
+    width: 100%;
+    padding: 0 16px;
 }
 
 .hello-contact h2 {
@@ -48,18 +67,35 @@
 
 .hello-contact .btn-primary {
     color: #11271D;
-    font-weight: bold;
-    margin-bottom: 30px;
+    margin: 30px 0 30px 0;
+    
+    /* font-weight: bold;
+    margin: 30px 0 30px 0;
+    width: 200px;
+    font-size: 14px; */
 }
 
 .hidden-on-mobile {
     display: none;
 }
 
+/* LARGE PHONE */
 
+@media screen and (min-device-width: 430px) {
+
+     .hello-contact {
+        max-width: 460px;
+    }  
+} 
 /* TABLET */
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (min-device-width: 992px) {
+
+    
+    .hero-section-contact {
+        gap: 80px;
+    } 
+
     .filter-contact-mobile {
         display: none;
     }
@@ -68,17 +104,33 @@
         display: grid;
     }
 
+    .wrapper-hero p {
+        font-size: 22px;
+    }
+
     .hello-contact {
-        width: 465px;
+        width: 400px;
         height: 440px;
+        margin: 100px 30px 0 30px;
+        padding: 20px;
     }
 
     .hello-contact h2 {
-        font-size: 33px;
+        font-size: 30px;
     }
 
     .hello-contact .btn-primary {
         margin-top: 70px;
+        margin-bottom: 30px;    
+    }
+
+    .wrapper-contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+        align-self: center;
+        margin-bottom: 200px;
+        gap: 50px;
     }
 }
 
@@ -90,7 +142,24 @@
         display: none;
     }
 
+    .hero-section-contact {
+        gap: 100px;
+    }
+
     .hidden-on-mobile {
         display: grid;
+    }
+
+    .hello-contact {
+        /* width: 465px; */
+        width: 100%;
+    }
+
+    .hello-contact h2 {
+        font-size: 33px;
+    }
+
+    .wrapper-contact {
+        gap: 100px;
     }
 }
