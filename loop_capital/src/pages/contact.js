@@ -14,12 +14,14 @@ const Contact = () => {
     const [activeLink, setActiveLink] = useState('Entrepreneur');
     const [clientMessage, setClientMessage] = useState('');
     const [helloMessage, setHelloMessage] = useState('');
+    const [wrapperHero, setWrapperHero] = useState(true);
 
     const buttonOnClick = (message) => {
         // FULLÖSNING???
-        document.querySelector(".wrapper-hero").style.display = "none"
+        // document.querySelector(".wrapper-hero").style.display = "none"
         setShowForm(true);
         setHelloMessage(message);
+        setWrapperHero(false)
     };
 
     const showDivOnClick = (e) => {
@@ -34,13 +36,14 @@ const Contact = () => {
         helloMessage,
         setHelloMessage,
         setFormSubmitted,
-        setClientMessage
+        setClientMessage,
+        setWrapperHero
     }
 
     return (
         <DefaultLayoutComponent>
-
             <div className="hero-section-contact">
+            {wrapperHero ? 
                 <div className="wrapper-hero">
                 <h1 data-aos="fade-right" data-aos-duration="600">Let&apos;s start this journey <span className="animated-text">
                     <span data-aos="fade-right" data-aos-duration="800">t</span>
@@ -56,6 +59,8 @@ const Contact = () => {
                 </h1>
                 <p className='p-hero' data-aos="fade-right" data-aos-duration="800">Just fill in the form or send us an email!</p>
                 </div>
+                : ""
+            }
                 {formSubmitted ?
                     <h1>{clientMessage}</h1>
                     :
