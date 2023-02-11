@@ -32,7 +32,7 @@ return (
         {props.currentInput === 1 && (
             <Form.Group>
                 <Form.Label htmlFor="emailInput">Your email:</Form.Label>
-                <Form.Control type="email" name="emailInput" id="emailInput" value={props.email} onChange={(e) => props.setEmail(e.target.value)} />
+                <Form.Control required type="email" name="emailInput" id="emailInput" value={props.email} onChange={(e) => props.setEmail(e.target.value)} />
                 <Button className='btn-secondary' type='submit'>SUBMIT</Button>
 
             <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={0}/>
