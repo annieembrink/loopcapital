@@ -3,14 +3,58 @@
 }
 
 .hero-section-contact {
-    margin-top: 100px;
+    margin-top: 160px;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr 2fr;
-    gap: 100px;
-    justify-content: center;
+    gap: 30px;
+    /* justify-content: center; */
     align-items: center;
+    position: relative;
+    margin-bottom: 150px;
+
 }
+
+    .closeForm-btn {
+        position: absolute;
+        top: -60px;
+        right: 0; 
+        font-size: 14px;
+        color: #BAB9B9;
+   }
+
+   .validationError {
+    color: #BAB9B9;
+    font-size: 12px;
+    position: absolute;
+    bottom: 50px;
+   }
+
+   .back-btn {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 12px;
+   }
+
+.formComponent input[type=text], 
+.formComponent input[type="email"] {
+    border-radius: 0%;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: solid;
+    border-bottom-color: #409250;
+    border-bottom-width: 3px;
+    background-color: inherit;
+  /* border-bottom-color:#409250 ; */
+    color: #CBD8CE;
+    margin-bottom: 40px;
+}
+
+.formComponent input:focus {
+    outline: none;
+  }
 
 .wrapper-contact {
     display: grid;
@@ -79,6 +123,9 @@
     display: none;
 }
 
+
+
+
 /* LARGE PHONE */
 
 @media screen and (min-device-width: 430px) {
@@ -132,6 +179,12 @@
         margin-bottom: 200px;
         gap: 50px;
     }
+
+   .validationError {
+    bottom: 70px;
+   }
+
+
 }
 
 
@@ -144,6 +197,7 @@
 
     .hero-section-contact {
         gap: 100px;
+        max-width: 780px;
     }
 
     .hidden-on-mobile {

@@ -111,6 +111,21 @@ h5 {
     letter-spacing: 1px !important;
 }
 
+.btn-secondary {
+    background-color: #409250 !important;
+    border: none !important;
+    color: #fafafa;
+    text-transform: uppercase;
+    padding: 6px 24px !important;
+    border-radius: 10px;
+    font-family: 'Roboto Mono';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px !important;
+    /* width: 100px;
+    height: 30px; */
+}
+
 /*  MENU */
 
 .nav-link {
