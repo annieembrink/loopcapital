@@ -21,8 +21,8 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => 
     errormsg,
     text
   }
-
-  console.log(popupCompany)
+  
+  console.log('testimonials', popupCompany.acf.who_left_the_testimonial, popupCompany.acf.testimonial)
 
   return (
     <Modal className='modal-xl' show={showPopup} onHide={closeButton}>
@@ -46,7 +46,9 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => 
         <p>{content}</p>
         {/* NEEDS TO CHANGE */}
         {/* Testimonials is centerd in screen and about is not */}
-        <p className="right-align">IF TESTIMONIALS : NAME NAMESSON</p>
+        {chosenLink === 'Testimonials' && popupCompany.acf.who_left_the_testimonial ?
+        <p className="right-align">{popupCompany.acf.who_left_the_testimonial}</p>
+        : null}
         {/* <p>Check out their website!</p>
         <p>LINK TO WEBSITE HERE</p> */}
         </div>
