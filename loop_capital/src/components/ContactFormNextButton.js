@@ -9,7 +9,7 @@ const ContactFormNextButton = ({string, nr, validateMap, validateEmail, validate
 
     return ( 
 
-        <Button type='button' onClick={() => onNextClick(string, nr)}>NEXT</Button>
+        <Button className="btn-secondary" type='button' onClick={() => onNextClick(string, nr)}>NEXT</Button>
 
      );
 }

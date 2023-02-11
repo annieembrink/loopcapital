@@ -17,9 +17,9 @@ const EntrepreneurFormComponent = (props) => {
     }
 
     return ( 
-        <Form className='flexColumn' onSubmit={(e) => props.postForm(e, 'entrepreneur')}>
+        <Form className='flexColumn formComponent roboto-font' onSubmit={(e) => props.postForm(e, 'entrepreneur')}>
 
-            <p onClick={props.onClose}>Close</p>
+            <p className='closeForm-btn roboto-font' onClick={props.onClose}>close</p>
 
             {props.currentInput === 0 && (
                 <Form.Group>
@@ -74,7 +74,7 @@ const EntrepreneurFormComponent = (props) => {
                     <Form.Control type='file' onChange={props.handleFileChange}></Form.Control>
                     <div>{props.file && `${props.file.name} - ${props.file.type}`}</div>
                     
-                    <Button type='submit'>SUBMIT</Button>
+                    <Button className='btn-secondary' type='submit'>SUBMIT</Button>
                     <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4}/>
                 </Form.Group>
             )}

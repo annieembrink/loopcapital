@@ -120,14 +120,14 @@ const ContactFormComponent = (props) => {
     return (
 
         <>
-            <h1>{props.helloMessage}</h1>
+            <h2 className='hellomessage roboto-font'>Hello <span className='green-text'>{props.helloMessage}</span></h2>
 
-            {props.helloMessage === 'Hello Entrepreneur' ?
+            {props.helloMessage === 'Entrepreneur' ?
                 <EntrepreneurFormComponent {...childProps} />
                 :
                 <InvestorFormComponent {...childProps} />
             }
-            <p>{validationError}</p>
+            <p className='validationError'>{validationError}</p>
         </>
     );
 }
