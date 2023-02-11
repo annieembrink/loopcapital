@@ -90,6 +90,10 @@
       display: none;
     }
   }
+    /* LARGE PHONE */
+    @media screen and (min-device-width: 430px) {
+
+    } 
 
   /* TABLET */
   @media screen and (min-device-width: 992px) {
