@@ -17,8 +17,6 @@ const Contact = () => {
     const [wrapperHero, setWrapperHero] = useState(true);
 
     const buttonOnClick = (message) => {
-        // FULLÖSNING???
-        // document.querySelector(".wrapper-hero").style.display = "none"
         setShowForm(true);
         setHelloMessage(message);
         setWrapperHero(false)
@@ -42,6 +40,7 @@ const Contact = () => {
 
     return (
         <DefaultLayoutComponent>
+            {/* <div className=" hero-section-container"> */}
             <div className="hero-section-contact">
             {wrapperHero ? 
                 <div className="wrapper-hero">
@@ -95,6 +94,7 @@ const Contact = () => {
                     </>
                 }
             </div>
+            {/* </div> */}
 
 
         </DefaultLayoutComponent>
