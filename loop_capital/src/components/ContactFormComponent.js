@@ -43,11 +43,10 @@ const ContactFormComponent = (props) => {
                 body: fd
             })
         } else {
-            // VALIDATE EMAIL
-            fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/137/feedback', {
-                method: 'POST',
-                body: fd
-            })
+                fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/contact-form-7/v1/contact-forms/137/feedback', {
+                    method: 'POST',
+                    body: fd
+                })
         };
         props.setClientMessage('Successfully sent form!');
     };
@@ -60,11 +59,6 @@ const ContactFormComponent = (props) => {
         startup: startup
     };
     
-    // const onNextClick = (input, nr) => {
-    //     const validateFunc = input === 'email' ? validateEmail : validateText;
-    //     validateFunc(validateMap[input], nr);
-    // };
-
     const onClose = () => {
         props.setShowForm(false);
         setCurrentInput(0);

@@ -56,6 +56,10 @@
 
 @media screen and (min-device-width: 992px) {
 
+    #filter-list {
+        overflow: hidden;
+    }
+
     .row-cols-lg-4>* {
         flex: 0 0 auto;
         width: 32%;
