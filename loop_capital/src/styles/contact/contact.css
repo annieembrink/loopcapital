@@ -85,10 +85,22 @@
 
 /* CONTACT FORM */
 
+.hero-section-container {
+margin-top: 100px;
+
+position: relative;
+left: 16px;
+right: 16px;
+
+display: flex;
+flex-direction: column;
+width: 100vw;
+}
+
 .closeForm-btn {
     position: absolute;
     top: -60px;
-    right: 0;
+    right: 16px;
     font-size: 14px;
     color: #BAB9B9;
 }
@@ -102,7 +114,7 @@
 
 .back-arrow {
     position: absolute;
-    right: 0;
+    right: 16px;
     bottom: 10px;
     font-size: 12px;
 }
@@ -119,15 +131,18 @@
     background-color: inherit;
     color: #CBD8CE;
     margin-bottom: 40px;
-
+    max-width: 300px;
+}
+.formComponent .input-file {
+margin-bottom: 40px;
+max-width: 275px;
 }
 
 .formComponent input:focus {
-    /* outline-color: hidden !important;
-outline-style: hidden !important; */
     outline-width: 4px;
     outline-style: solid;
     outline-color: #11271D;
+    background-color: #11271D;
 }
 
 
@@ -142,6 +157,17 @@ outline-style: hidden !important; */
     .hero-section-contact {
         grid-template-rows: 1fr 2fr;
     }
+
+    /* CONTACT FORM */
+ 
+    .formComponent input[type=text],
+    .formComponent input[type="email"] {
+        max-width: 350px;
+}
+    .formComponent .input-file {
+        margin-bottom: 40px;
+        max-width: 350px;
+}
 }
 
 /* TABLET */
@@ -191,6 +217,10 @@ outline-style: hidden !important; */
     }
 
     /* CONTACTFORM*/
+    .hero-section-container {
+        max-width: 70vw;
+        }
+
     .validationError {
         bottom: 70px;
     }
