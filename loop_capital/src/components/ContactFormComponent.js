@@ -48,7 +48,7 @@ const ContactFormComponent = (props) => {
                     body: fd
                 })
         };
-        props.setClientMessage('Successfully sent form!');
+        props.setClientMessage('Thank you for reaching out!');
     };
 
     const validateMap = {
