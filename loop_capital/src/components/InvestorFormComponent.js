@@ -23,7 +23,7 @@ return (
 
         {props.currentInput === 0 && (
             <Form.Group>
-                <Form.Label htmlFor="nameInput">What is your name?</Form.Label>
+                <Form.Label htmlFor="nameInput" className="roboto-font">What is your name?</Form.Label>
                 <Form.Control type="text" name="nameInput" id="nameInput" value={props.name} onChange={(e) => props.setName(e.target.value)} />
                 <ContactFormNextButton {...childProps} string={'name'} nr={1}/>
             </Form.Group>
@@ -31,7 +31,7 @@ return (
 
         {props.currentInput === 1 && (
             <Form.Group>
-                <Form.Label htmlFor="emailInput">Your email:</Form.Label>
+                <Form.Label htmlFor="emailInput" className="roboto-font">Your email:</Form.Label>
                 <Form.Control required type="email" name="emailInput" id="emailInput" value={props.email} onChange={(e) => props.setEmail(e.target.value)} />
                 <Button className='btn-secondary' type='submit'>SUBMIT</Button>
 
