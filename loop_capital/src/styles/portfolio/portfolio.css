@@ -53,9 +53,9 @@
     border: none;
 }
 
-/* .modal-body {
-    padding: 0 !important;
-} */
+.modal-body {
+    padding: 0;
+}
 
 .modal-body img {
     width: 100%;
