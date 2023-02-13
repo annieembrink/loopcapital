@@ -138,6 +138,7 @@ h5 {
 .active {
     color: #409250 !important;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 .navbar {
