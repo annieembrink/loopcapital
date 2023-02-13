@@ -96,6 +96,10 @@
     width: 100vw;
 }
 
+.hellomessage {
+    margin-bottom: 60px;
+}
+
 .closeForm-btn {
     position: absolute;
     top: -60px;
