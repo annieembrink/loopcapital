@@ -49,8 +49,9 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => 
         : null}
         {chosenLink === 'About' ? 
         <>
-        <p>Check out their website!</p>
-        <p>{popupCompany.acf.company_website}</p> 
+        <br></br>
+        <p className='roboto-font bold-font'>Check out their website!</p>
+        <p className='roboto-font cursor-pointer'>{popupCompany.acf.company_website}</p> 
         </>
         : null}
         </div>
