@@ -74,7 +74,6 @@
     color: #11271D;
     font-weight: bold;
     margin: 30px 0 30px 0;
-    /* width: 200px; */
     font-size: 14px;
 }
 
@@ -86,15 +85,15 @@
 /* CONTACT FORM */
 
 .hero-section-container {
-margin-top: 100px;
+    margin-top: 100px;
 
-position: relative;
-left: 16px;
-right: 16px;
+    position: relative;
+    left: 16px;
+    right: 16px;
 
-display: flex;
-flex-direction: column;
-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
 }
 
 .closeForm-btn {
@@ -131,11 +130,12 @@ width: 100vw;
     background-color: inherit;
     color: #CBD8CE;
     margin-bottom: 40px;
-    max-width: 300px;
+    max-width: 90%;
 }
+
 .formComponent .input-file {
-margin-bottom: 40px;
-max-width: 275px;
+    margin-bottom: 40px;
+    max-width: 275px;
 }
 
 .formComponent input:focus {
@@ -170,18 +170,14 @@ max-width: 275px;
     }
 
     /* CONTACT FORM */
- 
-    .formComponent input[type=text],
-    .formComponent input[type="email"] {
-        max-width: 350px;
-}
+
     .formComponent .input-file {
         margin-bottom: 40px;
         max-width: 350px;
-}
+    }
 }
 
-@media screen and (min-device-width: 500px) {
+/* @media screen and (min-device-width: 500px) {
     .hello-contact {
         width: 480px;
     }
@@ -198,7 +194,7 @@ max-width: 275px;
     .hello-contact {
         width: 680px;
     }
-}
+} */
 
 /* TABLET */
 
@@ -249,10 +245,15 @@ max-width: 275px;
     /* CONTACTFORM*/
     .hero-section-container {
         max-width: 70vw;
-        }
+    }
 
     .validationError {
         bottom: 70px;
+    }
+
+    .formComponent input[type=text],
+    .formComponent input[type="email"] {
+        max-width: 70%;
     }
 
 }
@@ -283,6 +284,11 @@ max-width: 275px;
 
     .wrapper-contact {
         gap: 100px;
+    }
+
+    .formComponent input[type=text],
+    .formComponent input[type="email"] {
+        max-width: 50%;
     }
 
 }
