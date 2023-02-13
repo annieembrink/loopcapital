@@ -54,7 +54,7 @@ const DefaultLayoutComponent = ({ children }) => {
                     content={metaDescription}
                     key="testing"
                 />
-                <link rel="icon" href={metaImgURl} />
+                <link type="image/x-icon" rel="icon" href={metaImgURl.replace("http://", "https://")} />
             </Head>
 
             <HeaderComponent/>
