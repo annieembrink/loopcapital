@@ -242,18 +242,10 @@ ul {
     align-items: flex-end;
 }
 
-/* WHITE SPACE  */
-
-/* .margin-whitespace {
-    margin: 200px 0 200px 0;
-} */
-
-
 /* ANIMATED AND GREEN TEXT */
 
 .animated-text {
     color: #409250;
-    /* text-decoration: underline; */
 }
 
 .green-text {
@@ -297,7 +289,6 @@ li {
 
 .hero-section p {
     margin: 20px 0px 16px 0px !important;
-    /* font-family: 'Roboto Mono'; */
 }
 
 /* MARGIN BOTTOM */
