@@ -60,7 +60,7 @@ const Contact = () => {
                     : ""
                 }
                 {formSubmitted ?
-                    <h1>{clientMessage}</h1>
+                    <h2>{clientMessage}</h2>
                     :
                     <>
                         {showForm ?
