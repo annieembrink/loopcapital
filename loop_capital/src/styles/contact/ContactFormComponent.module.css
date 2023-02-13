@@ -46,6 +46,7 @@
     /* border-bottom-color:#409250 ; */
     color: #CBD8CE;
     margin-bottom: 40px;
+    max-width: 300px;
 }
 
 .formComponent input:focus {
