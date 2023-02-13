@@ -66,7 +66,7 @@ export default function Portfolio(props) {
             <br /> Still early in the journey - but high ambitions!</p>
         </div>
 
-        <div>
+        <div className="margin-bottom">
           <div>
             <ul id="filter-list" className="roboto-font">
               <li className={chosenBranch === 'All investments' ? "active" : ""} onClick={showAll}>All investments</li>
