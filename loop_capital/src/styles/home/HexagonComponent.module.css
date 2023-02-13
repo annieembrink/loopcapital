@@ -24,15 +24,10 @@
     height: 120px;
   }
 
-  .contentdiv {
-    /* width: 90%; */
-    /* margin: auto; */
-    /* margin-top: 10px; */
-  }
-
   .absolute {
     position: absolute;
-    margin: 0 !important;
+    /* Siffrorna blir ej centrerade av den nedan så jag kommenterade ut den nu */
+    /* margin: 0 !important; */
   }
 
   .relative {
@@ -53,7 +48,7 @@
   }
 
   .pheadline {
-    font-weight: 700;
+    font-weight: bold;
   }
 
   .description {
@@ -93,18 +88,15 @@
 
   @media screen and (min-device-width: 760px) {
     .absoluteline {
-      /* position: absolute;
-        background-color: transparent;
-        width: 78%;
-        top: 45%;
-        left: 75%; */
       display: none;
     }
   }
-    /* LARGE PHONE */
-    @media screen and (min-device-width: 430px) {
 
-    } 
+  /* LARGE PHONE */
+  @media screen and (min-device-width: 430px) {
+
+  
+  }
 
   /* TABLET */
   @media screen and (min-device-width: 992px) {
@@ -116,11 +108,12 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
+      overflow: hidden;
     }
 
     .iconsize {
-      width: 140px;
-      height: 140px;
+      width: 160px;
+      height: 160px;
     }
   }
 
@@ -128,19 +121,11 @@
 
   @media screen and (min-device-width: 1440px) {
 
-    /* .hexcomponentcontainer {
-        width: 80%;
-        min-height: 300px;
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-      } */
+    .hexcomponentcontainer {
+      overflow: hidden;
+    }
+
     .absoluteline {
-      /* position: absolute;
-        background-color: transparent;
-        width: 110%;
-        top: 45%;
-        left: 57%; */
       display: none;
     }
   }

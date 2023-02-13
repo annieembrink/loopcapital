@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import ContactFormBackArrow from './ContactFormBackArrow';
 import ContactFormNextButton from './ContactFormNextButton';
 
+
 const EntrepreneurFormComponent = (props) => {
 
     let string;
@@ -71,7 +72,7 @@ const EntrepreneurFormComponent = (props) => {
             {props.currentInput === 5 && (
                 <Form.Group>
                     <Form.Label>Upload pitch if you have any</Form.Label>
-                    <Form.Control type='file' onChange={props.handleFileChange}></Form.Control>
+                    <Form.Control className='input-file' type='file' onChange={props.handleFileChange}></Form.Control>
                     <div>{props.file && `${props.file.name} - ${props.file.type}`}</div>
                     
                     <Button className='btn-secondary' type='submit'>SUBMIT</Button>
