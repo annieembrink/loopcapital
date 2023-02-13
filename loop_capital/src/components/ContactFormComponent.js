@@ -115,7 +115,7 @@ const ContactFormComponent = (props) => {
 
     return (
 
-        <div className='hero-section-container'>
+        <div className='form-container'>
         
             <h2 className='hellomessage roboto-font'>Hello <span className='green-text'>{props.helloMessage}!</span></h2>
             {props.helloMessage === 'Entrepreneur' ? <EntrepreneurFormComponent {...childProps} /> : <InvestorFormComponent {...childProps} />}
