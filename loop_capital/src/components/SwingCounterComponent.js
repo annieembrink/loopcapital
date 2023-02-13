@@ -2,7 +2,6 @@ import * as Icon from 'react-bootstrap-icons';
 import React, { useEffect, useState } from 'react';
 
 const SwingCounterComponent = (props) => {
-    // console.log(props.props.wpDataJson[0].acf.number_of_investments);
     const investors = props.props.wpDataJson[0].acf.investors
     const number_of_investments = props.props.wpDataJson[0].acf.number_of_investments
     const msek_investments = props.props.wpDataJson[0].acf.msek_investments
