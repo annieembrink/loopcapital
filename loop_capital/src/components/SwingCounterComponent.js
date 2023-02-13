@@ -21,7 +21,6 @@ const SwingCounterComponent = (props) => {
 
     const updateCounters = () => {
       counters.forEach((counter, index) => {
-        console.log('counters', counterValues[index])
         if(counterValues[index] > 0) {
           counter.textContent = counterValues[index];
         } else {
