@@ -43,8 +43,6 @@ export default function Portfolio(props) {
   props.wpDataJson.map(c => set.add(c.acf.branch))[0];
   let arrOfBranches = Array.from(set);
 
-  console.log("props", props.wpDataJson);
-
   return (
     <>
       <DefaultLayoutComponent>
@@ -76,9 +74,6 @@ export default function Portfolio(props) {
             </ul>
           </div>
 
-          {/* PUT THE CARDS IN THE COMPONENT, PASS PROPS? */}
-          {/* <CompanyCardComponent /> */}
-
           <Row xs={2} md={3} lg={4} className="g-4">
             {chosenCompanies.map(company =>
               <Col key={company.title.rendered}>
@@ -92,9 +87,7 @@ export default function Portfolio(props) {
               </Col>
             )}
           </Row>
-
         </div>
-
       </DefaultLayoutComponent>
     </>
   )
