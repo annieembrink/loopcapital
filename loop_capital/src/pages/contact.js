@@ -40,7 +40,6 @@ const Contact = () => {
 
     return (
         <DefaultLayoutComponent>
-            {/* <div className=" hero-section-container"> */}
             <div className="hero-section-contact">
                 {wrapperHero ?
                     <div className="wrapper-hero">
