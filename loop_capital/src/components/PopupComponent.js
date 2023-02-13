@@ -47,8 +47,12 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => 
         {chosenLink === 'Testimonials' && popupCompany.acf.who_left_the_testimonial ?
         <p className="right-align bold-font">{popupCompany.acf.who_left_the_testimonial}</p>
         : null}
+        {chosenLink === 'About' ? 
+        <>
         <p>Check out their website!</p>
-        {chosenLink === 'About' ? <p>{popupCompany.acf.company_website}</p> : null}
+        <p>{popupCompany.acf.company_website}</p> 
+        </>
+        : null}
         </div>
 
       </Modal.Body>
