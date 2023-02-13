@@ -145,8 +145,19 @@ max-width: 275px;
     background-color: #11271D;
 }
 
+@media screen and (min-device-width: 350px) {
+    .hello-contact {
+        width: 320px;
+    }
+}
 
 /* LARGE PHONE */
+@media screen and (min-device-width: 380px) {
+
+    .hello-contact {
+        width: 350px;
+    }
+}
 
 @media screen and (min-device-width: 430px) {
 
@@ -168,6 +179,25 @@ max-width: 275px;
         margin-bottom: 40px;
         max-width: 350px;
 }
+}
+
+@media screen and (min-device-width: 500px) {
+    .hello-contact {
+        width: 480px;
+    }
+}
+
+@media screen and (min-device-width: 570px) {
+
+    .hello-contact {
+        width: 540px;
+    }
+}
+
+@media screen and (min-device-width: 700px) {
+    .hello-contact {
+        width: 680px;
+    }
 }
 
 /* TABLET */
