@@ -22,7 +22,7 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => 
     text
   }
   
-  console.log('testimonials', popupCompany.acf.who_left_the_testimonial, popupCompany.acf.testimonial)
+  console.log('popup', popupCompany.acf)
 
   return (
     <Modal className='modal-xl' show={showPopup} onHide={closeButton}>
@@ -42,15 +42,13 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => 
           </li>
         </ul>
 
-        <div>
-        <p className='p-tag-about-testamonials'>{content}</p>
-        {/* NEEDS TO CHANGE */}
-        {/* Testimonials is centerd in screen and about is not */}
+        <div className='p-tag-about-testamonials'>
+        <p>{content}</p>
         {chosenLink === 'Testimonials' && popupCompany.acf.who_left_the_testimonial ?
-        <p className="right-align p-tag-about-testamonials bold-font">{popupCompany.acf.who_left_the_testimonial}</p>
+        <p className="right-align bold-font">{popupCompany.acf.who_left_the_testimonial}</p>
         : null}
-        {/* <p>Check out their website!</p>
-        <p>LINK TO WEBSITE HERE</p> */}
+        <p>Check out their website!</p>
+        {chosenLink === 'About' ? <p>{popupCompany.acf.company_website}</p> : null}
         </div>
 
       </Modal.Body>
