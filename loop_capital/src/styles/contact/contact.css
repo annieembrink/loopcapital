@@ -1,12 +1,17 @@
-.hero-section-contact p {
-    margin: 10px 0 40px 0px;
-}
+
 
 .hero-section-contact {
     margin-top: 100px;
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
 }
 
 .content-center {
@@ -22,7 +27,6 @@
 .wrapper-contact {
     display: flex;
     flex-direction: column;
-    /* grid-template-rows: 1fr 3fr; */
 }
 
 .filter-contact-mobile {
@@ -31,10 +35,6 @@
     gap: 50px;
     text-align: start;
     margin: 100px 0 30px 0;
-}
-
-.grid-row-contact p {
-    font-family: 'Roboto Mono', monospace;
 }
 
 .wrapper-hero {
@@ -88,18 +88,6 @@
 }
 
 /* CONTACT FORM */
-
-.hero-section-container {
-    margin-top: 100px;
-
-    position: relative;
-    left: 16px;
-    right: 16px;
-
-    display: flex;
-    flex-direction: column;
-    /* width: 100vw; */
-}
 
 .hellomessage {
     margin-bottom: 60px;
@@ -164,7 +152,7 @@
 @media screen and (min-device-width: 380px) {
 
     .hello-contact {
-        width: 350px;
+        width: 80%;
     }
 }
 
@@ -182,25 +170,6 @@
         max-width: 350px;
     }
 }
-
-/* @media screen and (min-device-width: 500px) {
-    .hello-contact {
-        width: 480px;
-    }
-}
-
-@media screen and (min-device-width: 570px) {
-
-    .hello-contact {
-        width: 540px;
-    }
-}
-
-@media screen and (min-device-width: 700px) {
-    .hello-contact {
-        width: 680px;
-    }
-} */
 
 /* TABLET */
 
@@ -248,11 +217,6 @@
         gap: 50px;
     }
 
-    /* CONTACTFORM*/
-    .hero-section-container {
-        max-width: 70vw;
-    }
-
     .validationError {
         bottom: 70px;
     }
@@ -270,10 +234,6 @@
 @media screen and (min-device-width: 1440px) {
     .filter-contact-mobile {
         display: none;
-    }
-
-    .hero-section-contact {
-        gap: 100px;
     }
 
     .hidden-on-mobile {
