@@ -26,8 +26,7 @@
 
   .absolute {
     position: absolute;
-    /* Siffrorna blir ej centrerade av den nedan så jag kommenterade ut den nu */
-    /* margin: 0 !important; */
+    font-weight: 100 !important;
   }
 
   .relative {
