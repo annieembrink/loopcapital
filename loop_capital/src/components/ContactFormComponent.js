@@ -64,7 +64,6 @@ const ContactFormComponent = (props) => {
         props.setShowForm(false);
         setCurrentInput(0);
         props.setHelloMessage('');
-
     };
 
     const validateEmail = (email, nr) => {
@@ -114,17 +113,10 @@ const ContactFormComponent = (props) => {
     }
 
     return (
-
-        <div className='hero-section-container'>
-        
+        <div className='form-container'>
             <h2 className='hellomessage roboto-font'>Hello <span className='green-text'>{props.helloMessage}!</span></h2>
-            {props.helloMessage === 'Entrepreneur' ?
-                <EntrepreneurFormComponent {...childProps} />
-                :
-                <InvestorFormComponent {...childProps} />
-            }
+            {props.helloMessage === 'Entrepreneur' ? <EntrepreneurFormComponent {...childProps} /> : <InvestorFormComponent {...childProps} />}
             <p className='validationError'>{validationError}</p>
-            
         </div>
     );
 }

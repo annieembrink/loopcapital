@@ -13,7 +13,7 @@ const SwingCounterComponent = (props) => {
         msek_investments
     ]
 
-  const [counterValues, setCounterValues] = useState([investors / 4, 1, 1]);
+  const [counterValues, setCounterValues] = useState([investors - number_of_investments, 0, msek_investments - number_of_investments]);
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {

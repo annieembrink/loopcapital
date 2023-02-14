@@ -1,15 +1,15 @@
-.hero-section-contact p {
-    margin: 10px 0 40px 0px;
-}
-
 .hero-section-contact {
     margin-top: 100px;
     width: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1.5fr;
-    gap: 100px;
     justify-content: center;
     align-items: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
 }
 
 .content-center {
@@ -17,27 +17,22 @@
     justify-content: center;
 }
 
+.wrapper-filter-contact {
+    display: flex;
+    flex-direction: column;
+}
 
 .wrapper-contact {
-    display: grid;
-    grid-template-rows: 1fr 3fr;
+    display: flex;
+    flex-direction: column;
 }
 
 .filter-contact-mobile {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.grid-row-contact {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 30px;
-    margin-top: -20px;
-}
-
-.grid-row-contact p {
-    font-family: 'Roboto Mono', monospace;
-    /* font-size: 18px; */
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    text-align: start;
+    margin: 100px 0 30px 0;
 }
 
 .wrapper-hero {
@@ -46,6 +41,14 @@
 
 .wrapper-hero p {
     margin-top: 20px !important;
+}
+
+.wrapper-form-hello {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 100px 0;
 }
 
 .hello-contact {
@@ -83,18 +86,6 @@
 }
 
 /* CONTACT FORM */
-
-.hero-section-container {
-    margin-top: 100px;
-
-    position: relative;
-    left: 16px;
-    right: 16px;
-
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-}
 
 .hellomessage {
     margin-bottom: 60px;
@@ -159,7 +150,7 @@
 @media screen and (min-device-width: 380px) {
 
     .hello-contact {
-        width: 350px;
+        width: 80%;
     }
 }
 
@@ -169,9 +160,6 @@
         width: 400px;
     }
 
-    .hero-section-contact {
-        grid-template-rows: 1fr 2fr;
-    }
 
     /* CONTACT FORM */
 
@@ -180,25 +168,6 @@
         max-width: 350px;
     }
 }
-
-/* @media screen and (min-device-width: 500px) {
-    .hello-contact {
-        width: 480px;
-    }
-}
-
-@media screen and (min-device-width: 570px) {
-
-    .hello-contact {
-        width: 540px;
-    }
-}
-
-@media screen and (min-device-width: 700px) {
-    .hello-contact {
-        width: 680px;
-    }
-} */
 
 /* TABLET */
 
@@ -238,17 +207,12 @@
     }
 
     .wrapper-contact {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: none;
         align-self: center;
-        margin-bottom: 200px;
-        gap: 50px;
+        margin-bottom: 100px;
     }
 
-    /* CONTACTFORM*/
-    .hero-section-container {
-        max-width: 70vw;
+    .wrapper-form-hello {
+        gap: 50px;
     }
 
     .validationError {
@@ -268,10 +232,6 @@
 @media screen and (min-device-width: 1440px) {
     .filter-contact-mobile {
         display: none;
-    }
-
-    .hero-section-contact {
-        gap: 100px;
     }
 
     .hidden-on-mobile {
