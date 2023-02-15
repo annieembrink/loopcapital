@@ -3,7 +3,7 @@ const ContactAnimationComponent = () => {
         <div className="wrapper-hero">
             <h1 data-aos="fade-right" data-aos-duration="600">Let&apos;s start this journey  
                 <span className="animated-text">
-                    <span data-aos="fade-right" data-aos-duration="800">t</span>
+                    <span data-aos="fade-right" data-aos-duration="800"> t</span>
                     <span data-aos="fade-right" data-aos-duration="1100">o</span>
                     <span data-aos="fade-right" data-aos-duration="1400">g</span>
                     <span data-aos="fade-right" data-aos-duration="1700">e</span>

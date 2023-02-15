@@ -93,8 +93,8 @@
 
 .closeForm-btn {
     position: absolute;
-    top: -60px;
-    right: 16px;
+    right: 5%;
+    top: 15%;
     font-size: 14px;
     color: #BAB9B9;
 }
@@ -103,14 +103,14 @@
     color: #BAB9B9;
     font-size: 12px;
     position: absolute;
-    bottom: 50px;
+    top: 42%;
 }
 
 .back-arrow {
     position: absolute;
-    right: 16px;
-    bottom: 10px;
     font-size: 12px;
+    right: 5%;
+    top: 45%;
 }
 
 .formComponent input[type=text],
@@ -143,6 +143,13 @@
 @media screen and (min-device-width: 350px) {
     .hello-contact {
         width: 320px;
+    }
+
+    .validationError {
+        color: #BAB9B9;
+        font-size: 12px;
+        position: absolute;
+        top: 40%;
     }
 }
 
@@ -215,13 +222,23 @@
         gap: 50px;
     }
 
-    .validationError {
-        bottom: 70px;
-    }
-
     .formComponent input[type=text],
     .formComponent input[type="email"] {
         max-width: 70%;
+    }
+
+    .closeForm-btn {
+        right: 10%;
+        top: 20%;
+    }
+    
+    .validationError {
+        top: 40%;
+    }
+
+    .back-arrow {
+        right: 35%;
+        bottom: 55%;
     }
 
 }
@@ -254,5 +271,6 @@
     .formComponent input[type="email"] {
         max-width: 50%;
     }
+
 
 }
