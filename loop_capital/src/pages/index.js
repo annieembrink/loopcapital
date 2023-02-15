@@ -31,7 +31,7 @@ export default function Home(props) {
             <span data-aos="fade-right" data-aos-duration="3000">.</span>
           </span>
           </h1>
-          <p className="light-font" data-aos="fade-right" data-aos-duration="600">Get access to 48 investors with a lot of experience and network.</p>
+          <p className="light-font" data-aos="fade-right" data-aos-duration="600">Get access to {props.wpDataJson[0].acf.investors} investors with a lot of experience and network.</p>
           <Link href="/contact">
             <Button data-aos="fade-right" data-aos-duration="700">Make Contact</Button>
           </Link>
