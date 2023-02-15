@@ -4,6 +4,9 @@ import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import SwingCounterComponent from "@/components/SwingCounterComponent";
 import FixedContactComponent from "@/components//FixedContactComponent";
 import HexagonComponent from "@/components/HexagonComponent";
+import HeroSectionComponent from "@/components/HeroSectionComponent";
+import WeCanOfferYouComponent from "@/components/WeCanOfferYouComponent";
+import QuoteComponent from "@/components/QuoteComponent";
 
 // REACT/NEXT IMPORTS
 import Link from "next/link";
@@ -17,50 +20,16 @@ export default function Home(props) {
     <>
       <DefaultLayoutComponent>
         <FixedContactComponent />
-        {/* HERO-SECTION */}
-        <div className="hero-section" >
-          <h1 data-aos="fade-right" data-aos-duration="500">Welcome to one of Skåne&apos;s most active early-stage <span className="animated-text underline-animation">
-            <span data-aos="fade-right" data-aos-duration="800">I</span>
-            <span data-aos="fade-right" data-aos-duration="1100">n</span>
-            <span data-aos="fade-right" data-aos-duration="1400">v</span>
-            <span data-aos="fade-right" data-aos-duration="1700">e</span>
-            <span data-aos="fade-right" data-aos-duration="2000">s</span>
-            <span data-aos="fade-right" data-aos-duration="2300">t</span>
-            <span data-aos="fade-right" data-aos-duration="2600">o</span>
-            <span data-aos="fade-right" data-aos-duration="2900">r</span>
-            <span data-aos="fade-right" data-aos-duration="3000">.</span>
-          </span>
-          </h1>
-          <p className="light-font" data-aos="fade-right" data-aos-duration="600">Get access to {props.wpDataJson[0].acf.investors} investors with a lot of experience and network.</p>
-          <Link href="/contact">
-            <Button data-aos="fade-right" data-aos-duration="700">Make Contact</Button>
-          </Link>
-        </div>
 
-        {/* WE CAN OFFER YOU */}
+        {/* HEROSECTION */}
+        <HeroSectionComponent props={props}/>
 
         <div className="align-item-center two-containers">
-          <div className="wrapper-offer-you green-border">
-            <h2 className="underline-animation roboto-font">We can offer you</h2>
-            <p className="bigger-p" data-aos="fade-right" data-aos-duration="400"><Icon.ArrowRight className="green-text bootstrap-icon" />A creative enviroment</p>
-            <p className="bigger-p" data-aos="fade-right" data-aos-duration="600"><Icon.ArrowRight className="green-text bootstrap-icon" />Possibility to ask for advice</p>
-            <p className="bigger-p" data-aos="fade-right" data-aos-duration="800"><Icon.ArrowRight className="green-text bootstrap-icon" />Wide contact network</p>
-            <p className="bigger-p" data-aos="fade-right" data-aos-duration="1000"><Icon.ArrowRight className="green-text bootstrap-icon" />Access to capital</p>
-          </div>
+          {/* WE CAN OFFER YOU */}
+          <WeCanOfferYouComponent/>
 
           {/* QUOTE */}
-
-          <div className="wrapper-quote margin-bottom">
-            <Icon.Quote className="green-text" id="quote-tag" />
-            <p className="quote">
-              We are looking for early stage startups in the Skåne region with a lot of passion and with a scaleable tech idea. The total investment round are usually between 2-6 MSEK a pre-seed round. The first steps have been taken, the idea have been verified and a founding team are in place.
-              <br></br>
-              <br></br>
-              Together we build a global game changer! And that are exactly how we work. We are doing this together in the same boat. You run and we support!</p>
-            {/* Right align text */}
-            <p className="right-align">David Nilsson-Sträng <br /><span id="title">Co-founder</span></p>
-          </div>
-
+          <QuoteComponent/>
         </div>
 
         {/* COMPONENT TO NUMBERS ON COUNT */}
