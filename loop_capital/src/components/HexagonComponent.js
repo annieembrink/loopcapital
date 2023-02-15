@@ -6,6 +6,10 @@ const HexagonComponent = () => {
 
     return (
 
+        <div className="text-align-center roboto-font margin-bottom">
+
+        <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
+
         <div className={`${styles.hexcomponentcontainer}`}>
 
             {/* HEX 1 */}
@@ -68,6 +72,8 @@ const HexagonComponent = () => {
             </div>
 
         </div>
+        </div>
+
 
     );
 }
