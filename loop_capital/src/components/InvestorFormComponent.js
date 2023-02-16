@@ -17,10 +17,7 @@ const childProps = {
 }
 
 const onNextKeyDown = (e, input, nr) => {
-    console.log('pressed enter 1')
-
     if (e.key === 'Enter') {
-        console.log('pressed enter 2')
         const validateFunc = input === 'email' ? props.validateEmail : props.validateText;
         validateFunc(props.validateMap[input], nr);
       }

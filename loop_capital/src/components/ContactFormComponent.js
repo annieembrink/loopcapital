@@ -32,7 +32,6 @@ const ContactFormComponent = (props) => {
     };
 
     const postForm = (e, string) => {
-        console.log(e.nativeEvent.submitter)
         e.preventDefault()
         if (e.nativeEvent.submitter !== null && e.nativeEvent.submitter !== undefined) {
         props.setShowForm(false);
