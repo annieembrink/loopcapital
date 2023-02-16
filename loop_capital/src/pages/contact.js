@@ -41,7 +41,7 @@ const Contact = () => {
             <DefaultLayoutComponent>
                     {wrapperHero ? <ContactAnimationComponent/> : null}
 
-                {formSubmitted ? <h2>{clientMessage}</h2> :
+                {formSubmitted ? <h2 className='success-message'>{clientMessage}</h2> :
                     <>{showForm ? <ContactFormComponent {...childProps} /> : <ContactCardsComponent 
                     buttonOnClick={buttonOnClick} 
                     showDivOnClick={showDivOnClick} 
