@@ -2,16 +2,14 @@ import styles from '../styles/home/HexagonComponent.module.css';
 import SvgHexComponent from './SvgHexComponent';
 import SvgLineComponent from './SvgLineComponent';
 
-const HexagonComponent = () => {
-
+const HexagonComponent = (props) => {
+    const headline = props.props[0].title.rendered;
     return (
 
         <div className="text-align-center roboto-font margin-bottom">
-
-        <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2>
-
+        {/* <h2>How could a <span className="green-text">journey</span> with Loop Capital look like?</h2> */}
+        <h2>{headline}</h2>
         <div className={`${styles.hexcomponentcontainer}`}>
-
             {/* HEX 1 */}
             <div className={`${styles.onehexcontainer}`} data-aos="fade-right" data-aos-duration="400">
                 <div className={`${styles.relative}`}>
@@ -20,12 +18,11 @@ const HexagonComponent = () => {
                         <h1 className={`${styles.absolute}`}>1</h1>
                     </div>
                     <SvgLineComponent />
-
                 </div>
 
                 <div className={`${styles.contentdiv} ${styles.aligncenter}`}>
-                    <p className={`${styles.pheadline} roboto-font`}>Contact</p>
-                    <p className={`${styles.description}`}>The journey starts with a contact.</p>
+                    <p className={`${styles.pheadline} roboto-font`}>{props.props[0].acf.headline_1}</p>
+                    <p className={`${styles.description}`}>{props.props[0].acf.paragraph_1}</p>
                 </div>
             </div>
 
@@ -39,8 +36,8 @@ const HexagonComponent = () => {
                     <SvgLineComponent />
                 </div>
                 <div className={`${styles.contentdiv} ${styles.aligncenter}`}>
-                    <p className={`${styles.pheadline} roboto-font`}>Pitch</p>
-                    <p className={`${styles.description}`}>Time to pitch your idea.</p>
+                    <p className={`${styles.pheadline} roboto-font`}>{props.props[0].acf.headline_2}</p>
+                    <p className={`${styles.description}`}>{props.props[0].acf.paragraph_2}</p>
                 </div>
             </div>
 
@@ -54,8 +51,8 @@ const HexagonComponent = () => {
                     <SvgLineComponent />
                 </div>
                 <div className={`${styles.contentdiv} ${styles.aligncenter}`}>
-                    <p className={`${styles.pheadline} roboto-font`}>Meet</p>
-                    <p className={`${styles.description}`}>Meet the investment network of Loop Capital.</p>
+                    <p className={`${styles.pheadline} roboto-font`}>{props.props[0].acf.headline_3}</p>
+                    <p className={`${styles.description}`}>{props.props[0].acf.paragraph_3}</p>
                 </div>
             </div>
 
@@ -66,8 +63,8 @@ const HexagonComponent = () => {
                         <h1 className={`${styles.absolute}`}>4</h1>
                     </div>
                 <div className={`${styles.contentdiv} ${styles.aligncenter}`}>
-                    <p className={`${styles.pheadline} roboto-font`}>Investment</p>
-                    <p className={`${styles.description}`}>Investment from Loop Capital and direct investment from individual investors.</p>
+                    <p className={`${styles.pheadline} roboto-font`}>{props.props[0].acf.headline_4}</p>
+                    <p className={`${styles.description}`}>{props.props[0].acf.paragraph_4}</p>
                 </div>
             </div>
 

@@ -2,10 +2,10 @@ import * as Icon from 'react-bootstrap-icons';
 import React, { useEffect, useState } from 'react';
 
 const SwingCounterComponent = (props) => {
-
-    const investors = props.props.wpDataJson[0].acf.investors 
-    const number_of_investments = props.props.wpDataJson[0].acf.number_of_investments 
-    const msek_investments = props.props.wpDataJson[0].acf.msek_investments 
+  
+    const investors = props.props[0].acf.investors 
+    const number_of_investments = props.props[0].acf.number_of_investments 
+    const msek_investments = props.props[0].acf.msek_investments 
 
     let allNumbers = [
         investors,
@@ -68,7 +68,7 @@ const SwingCounterComponent = (props) => {
 
   return (
     <>
-      {props.props.wpDataJson.map((num, index) =>
+      {props.props.map((num, index) =>
         <div key={num} className="green-border green-border-numbers margin-bottom">
           
           <div>
