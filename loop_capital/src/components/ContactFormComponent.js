@@ -32,7 +32,9 @@ const ContactFormComponent = (props) => {
     };
 
     const postForm = (e, string) => {
-        e.preventDefault();
+        console.log(e.nativeEvent.submitter)
+        e.preventDefault()
+        if (e.nativeEvent.submitter !== null && e.nativeEvent.submitter !== undefined) {
         props.setShowForm(false);
         props.setFormSubmitted(true);
         createFormData(string);
@@ -49,6 +51,7 @@ const ContactFormComponent = (props) => {
                 })
         };
         props.setClientMessage('Thank you for reaching out!');
+        }
     };
 
     const validateMap = {
