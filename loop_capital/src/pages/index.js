@@ -11,8 +11,8 @@ import DidWeCatchYourInterestComponent from "@/components/DidWeCatchYourInterest
 
 export default function Home(props) {
   return (
-    <>
-      <DefaultLayoutComponent>
+ 
+    <DefaultLayoutComponent>
         <FixedContactComponent />
 
         {/* HEROSECTION */}
@@ -47,8 +47,6 @@ export default function Home(props) {
 
         {/* COMPONENT DEFAULT LAYOUT */}
       </DefaultLayoutComponent>
-
-    </>
   )
 }
 
