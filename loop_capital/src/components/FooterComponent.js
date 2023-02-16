@@ -3,8 +3,6 @@ import Link from "next/link";
 import * as Icon from 'react-bootstrap-icons';
 import Image from 'next/image'
 
-
-
 const Footer = () => {
     return (
         <div className={styles.footer}>
