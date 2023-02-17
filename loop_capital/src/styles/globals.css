@@ -127,18 +127,13 @@ h5 {
 
 .nav-link {
     color: #FAFAFA;
-
-    /* from globals? */
     font-family: 'Roboto Mono';
-
-    /* FUNKAR INTE */
     font-weight: 400;
 }
 
 .active {
     color: #409250 !important;
     font-weight: 700;
-    text-decoration: underline;
 }
 
 .navbar {
@@ -506,4 +501,5 @@ li {
     .margin-bottom {
         margin-bottom: 120px;
     }
+
 }

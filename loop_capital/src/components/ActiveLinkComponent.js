@@ -12,10 +12,8 @@ const ActiveLinkComponent = (props) => {
           props.setContent(props.popupCompany.acf.testimonial);
         }
     }
-
     return ( 
         <p className={`nav-link ${props.chosenLink === props.text ? "active" : ""}`} onClick={(e) => chooseLink(e)}>{props.text}</p>
      );
 }
- 
 export default ActiveLinkComponent;

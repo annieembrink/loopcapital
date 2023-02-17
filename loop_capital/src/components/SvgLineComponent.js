@@ -1,3 +1,4 @@
+// IMPORT CSS
 import styles from '../styles/home/HexagonComponent.module.css';
 
 const SvgLineComponent = () => {

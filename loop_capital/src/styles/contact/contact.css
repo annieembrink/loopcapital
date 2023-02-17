@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 70vh;
+    height: 100vh;
 }
 
 .content-center {
@@ -36,7 +36,12 @@
 }
 
 .wrapper-hero {
-    margin-top: 200px;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30vh;
 }
 
 .wrapper-hero p {
@@ -91,10 +96,14 @@
     margin-bottom: 60px;
 }
 
+.formComponent {
+    position: relative;
+}
+
 .closeForm-btn {
     position: absolute;
-    top: -60px;
-    right: 16px;
+    right: 5%;
+    top: 15%;
     font-size: 14px;
     color: #BAB9B9;
 }
@@ -103,14 +112,14 @@
     color: #BAB9B9;
     font-size: 12px;
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
 }
 
 .back-arrow {
     position: absolute;
-    right: 16px;
-    bottom: 10px;
     font-size: 12px;
+    right: 5%;
+    top: 45%;
 }
 
 .formComponent input[type=text],
@@ -128,6 +137,16 @@
     max-width: 90%;
 }
 
+/* REMOVE BACKGROUND COLOR AND BORDER ON AUTOFILL */
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+input[data-autocompleted] {
+    background-color: transparent !important;
+}
+
 .formComponent .input-file {
     margin-bottom: 40px;
     max-width: 275px;
@@ -140,19 +159,54 @@
     background-color: #11271D;
 }
 
+
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control:focus, .form-control:active {
+    background: transparent;
+}
+
+/* STYLING FOR PDF */
+
+.form-control[type=file]:not(:disabled):not([readonly]) {
+    background-color: #11271D;
+    border: 1px solid #409250;
+    color: #CBD8CE;
+    margin-top: 10px;
+}
+
+/* SUCCESSFULLY SENT FORM */
+
+.success-message {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20vh 0 20vh 0;
+    text-align: center;
+}
+
 @media screen and (min-device-width: 350px) {
     .hello-contact {
-        width: 320px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .validationError {
+        color: #BAB9B9;
+        font-size: 12px;
+        position: absolute;
+        top: 40%;
     }
 }
 
 /* LARGE PHONE */
-@media screen and (min-device-width: 380px) {
-
-    .hello-contact {
-        width: 80%;
-    }
-}
+@media screen and (min-device-width: 380px) {}
 
 @media screen and (min-device-width: 430px) {
 
@@ -215,13 +269,23 @@
         gap: 50px;
     }
 
-    .validationError {
-        bottom: 70px;
-    }
-
     .formComponent input[type=text],
     .formComponent input[type="email"] {
         max-width: 70%;
+    }
+
+    .closeForm-btn {
+        right: 10%;
+        top: 20%;
+    }
+
+    .validationError {
+        top: 40%;
+    }
+
+    .back-arrow {
+        right: 35%;
+        bottom: 55%;
     }
 
 }
@@ -255,4 +319,7 @@
         max-width: 50%;
     }
 
+    .formComponent .btn-primary {
+        width: 10%;
+    }
 }

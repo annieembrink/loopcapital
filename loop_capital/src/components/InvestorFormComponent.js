@@ -13,18 +13,24 @@ const childProps = {
     validateEmail: props.validateEmail,
     validateText: props.validateText,
     string,
-    nr
+    nr 
 }
+
+const onNextKeyDown = (e, input, nr) => {
+    if (e.key === 'Enter') {
+        const validateFunc = input === 'email' ? props.validateEmail : props.validateText;
+        validateFunc(props.validateMap[input], nr);
+      }
+};
 
 return (
     <Form className='flexColumn formComponent poppins-font' onSubmit={(e) => props.postForm(e, 'investor')}>
 
     <p className='closeForm-btn' onClick={props.onClose}>close</p>
-
         {props.currentInput === 0 && (
             <Form.Group>
                 <Form.Label htmlFor="nameInput" className="roboto-font">What is your name?</Form.Label>
-                <Form.Control type="text" name="nameInput" id="nameInput" value={props.name} onChange={(e) => props.setName(e.target.value)} />
+                <Form.Control type="text" name="nameInput" id="nameInput" value={props.name} onKeyDown={(e) => onNextKeyDown(e, 'name', 1)} onChange={(e) => props.setName(e.target.value)} />
                 <ContactFormNextButton {...childProps} string={'name'} nr={1}/>
             </Form.Group>
         )}
@@ -43,5 +49,4 @@ return (
     </Form>
 );
 }
-
 export default InvestorFormComponent;
