@@ -43,7 +43,7 @@ const Contact = (props) => {
         <>
             <DefaultLayoutComponent>
                 {wrapperHero ? <ContactAnimationComponent props={props.wpDataJson.contactHeroSection}/> : null}
-                {formSubmitted ? <h2>{clientMessage}</h2> :
+                {formSubmitted ? <h2 className='success-message'>{clientMessage}</h2> :
                     <>{showForm ? <ContactFormComponent {...childProps} /> : <ContactCardsComponent 
                     buttonOnClick={buttonOnClick} 
                     showDivOnClick={showDivOnClick} 
