@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import ActiveLinkComponent from './ActiveLinkComponent';
 
+import Link from 'next/link';
+
 const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => {
 
   const [content, setContent] = useState(popupCompany.acf.about);
@@ -51,7 +53,10 @@ const PopupComponent = ({ showPopup, setShowPopup, popupCompany, errormsg }) => 
         <>
         <br></br>
         <p className='roboto-font bold-font'>Check out their website!</p>
-        <p className='roboto-font cursor-pointer'>{popupCompany.acf.company_website}</p> 
+        <Link href={popupCompany.acf.company_website} legacyBehavior>
+          <a target="_blank" rel="noopener noreferrer">{popupCompany.acf.company_website}</a>
+        </Link>
+        
         </>
         : null}
         </div>

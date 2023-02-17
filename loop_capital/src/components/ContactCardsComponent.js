@@ -19,7 +19,10 @@ const ContactCardsComponent = ({buttonOnClick, showDivOnClick, activeLink, showD
             <div className={`hello-contact poppins-font grid-row-box ${showDiv ? 'hidden-on-mobile' : null}`}>
                 <div><h2>Hello <span className='green-text'>Investor!</span></h2></div>
                 <p>Are you an investor that wants to be apart of the journey to make Skåne the leading Tech region?</p>
-                <div><Button onClick={() => buttonOnClick('Investor')}>Contact us!</Button></div>
+                <div>
+                    
+                    <Button onClick={() => buttonOnClick('Investor')}>Contact us!</Button>
+                </div>
             </div>
         </div>
 
