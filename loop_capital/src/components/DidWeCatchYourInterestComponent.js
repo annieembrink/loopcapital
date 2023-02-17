@@ -18,6 +18,8 @@ const DidWeCatchYourInterestComponent = () => {
             </Link>
           </div>
       </div>
+      </div>
      );
 }
+
 export default DidWeCatchYourInterestComponent;

@@ -12,7 +12,7 @@ import DidWeCatchYourInterestComponent from "@/components/DidWeCatchYourInterest
 export default function Home(props) {
   
   return (
- 
+  <>
     <DefaultLayoutComponent>
         <FixedContactComponent />
 
