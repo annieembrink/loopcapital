@@ -1,3 +1,4 @@
+// IMPORT COMPONENT
 import NavBarComponent from "./NavBarComponent";
 
 const HeaderComponent = () => {
@@ -7,5 +8,4 @@ const HeaderComponent = () => {
         </div>
     );
 }
-
 export default HeaderComponent;
