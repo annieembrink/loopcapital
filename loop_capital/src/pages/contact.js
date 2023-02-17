@@ -17,10 +17,15 @@ const Contact = (props) => {
     const [helloMessage, setHelloMessage] = useState('');
     const [wrapperHero, setWrapperHero] = useState(true);
 
+    const isBrowser = () => typeof window !== 'undefined';
+
     const buttonOnClick = (message) => {
         setShowForm(true);
         setHelloMessage(message);
         setWrapperHero(false)
+
+        if (!isBrowser()) return;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const showDivOnClick = (e) => {
@@ -54,6 +59,7 @@ const Contact = (props) => {
     );
 }
 export default Contact; 
+
 
 export async function getStaticProps({ preview = false }) {
     try {
