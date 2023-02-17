@@ -1,6 +1,7 @@
+// IMPORTS COMPONENT
 import HeaderComponent from "./HeaderComponent";
 import FooterComponent from "./FooterComponent";
-import FixedContactComponent from "./FixedContactComponent";
+// IMPORTS NEXT/REACT
 import Head from 'next/head';
 import { useState, useEffect } from "react";
 

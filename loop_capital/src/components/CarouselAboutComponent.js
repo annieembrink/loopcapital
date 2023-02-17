@@ -2,7 +2,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import Image from 'next/image'
 
 const CarouselAboutComponent = (props) => {
-    console.log(props.props[0])
     const headline = props.props[0].title.rendered;
     const data = props.props[0].acf;
     return (
@@ -42,7 +41,5 @@ const CarouselAboutComponent = (props) => {
             </div>
         </> 
     );
-
 }
-
 export default CarouselAboutComponent;

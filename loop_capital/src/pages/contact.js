@@ -1,12 +1,13 @@
+// IMPORTS REACT
 import { useState } from 'react';
+
+// IMPORTS COMPONENTS
 import ContactFormComponent from '@/components/ContactFormComponent';
 import DefaultLayoutComponent from "@/components/DefaultLayoutComponent";
 import ContactAnimationComponent from '@/components/ContactAnimationComponent';
 import ContactCardsComponent from '@/components/ContactCardsComponent';
 
 const Contact = (props) => {
-
-    console.log(props)
 
     const [showForm, setShowForm] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -41,15 +42,13 @@ const Contact = (props) => {
     return (
         <>
             <DefaultLayoutComponent>
-                    {wrapperHero ? <ContactAnimationComponent/> : null}
-
+                {wrapperHero ? <ContactAnimationComponent props={props.wpDataJson.contactHeroSection}/> : null}
                 {formSubmitted ? <h2>{clientMessage}</h2> :
                     <>{showForm ? <ContactFormComponent {...childProps} /> : <ContactCardsComponent 
                     buttonOnClick={buttonOnClick} 
                     showDivOnClick={showDivOnClick} 
                     activeLink={activeLink} 
-                    showDiv={showDiv}/> }</>}
-
+                    showDiv={showDiv} props={props.wpDataJson.contactCardsData}/> }</>}
             </DefaultLayoutComponent>
         </>
     );

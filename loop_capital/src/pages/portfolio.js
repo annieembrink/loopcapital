@@ -99,7 +99,6 @@ export default function Portfolio(props) {
   )
 }
 
-// pages/index.js
 export async function getStaticProps({ preview = false }) {
   try {
     function fetchPortfolio() {
@@ -128,9 +127,3 @@ export async function getStaticProps({ preview = false }) {
     }
   }
 }
-
- // let portfolioData = fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio?per_page=100');
-    // let heroSectionData = fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/hero-section');
-    // let promises = [portfolioData, heroSectionData];
-    // let portfolioData = [];
-    // let heroSectionData = [];

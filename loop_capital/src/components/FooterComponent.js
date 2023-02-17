@@ -1,9 +1,10 @@
+//IMPORTS CSS
 import styles from '../styles/FooterComponent.module.css';
+// IMPORTS REACT/NEXT
 import Link from "next/link";
-import * as Icon from 'react-bootstrap-icons';
 import Image from 'next/image'
-
-
+// IMPORTS BOOTSTRAP
+import * as Icon from 'react-bootstrap-icons';
 
 const Footer = () => {
     return (
@@ -17,5 +18,4 @@ const Footer = () => {
         </div>
     );
 }
-
 export default Footer;

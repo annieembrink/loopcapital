@@ -21,10 +21,10 @@ export default function Home(props) {
 
         <div className="align-item-center two-containers">
           {/* WE CAN OFFER YOU */}
-          <WeCanOfferYouComponent/>
+          <WeCanOfferYouComponent props={props.wpDataJson.weOfferYouData}/>
 
           {/* QUOTE */}
-          <QuoteComponent/>
+          <QuoteComponent props={props.wpDataJson.quoteData}/>
         </div>
 
         {/* COMPONENT TO NUMBERS ON COUNT */}
@@ -48,21 +48,13 @@ export default function Home(props) {
 
         {/* COMPONENT DEFAULT LAYOUT */}
       </DefaultLayoutComponent>
-
     </>
   )
 }
 
-// pages/index.js
 export async function getStaticProps({ preview = false }) {
 
   try {
-    // let wpData = await fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/startpage-numbers')
-    // let wpDataJson = await wpData.json()
-
-    // return {
-    //   props: { wpDataJson: wpDataJson }
-    // }
     function fetchHeroSection() {
       return fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/hero-section')
       .then (res => res.json())
@@ -92,7 +84,6 @@ export async function getStaticProps({ preview = false }) {
       .then(res => res.json())
     }
 
-    
     const [heroSectionData, weOfferYou, quote, numbers, journey, vision, carousel] = await Promise.allSettled(
         [fetchHeroSection(), fetchWeOfferYou(),fetchQuote(),
          fetchNumbers(), fetchJourney(), fetchVision(), fetchCarousel()]);
@@ -107,12 +98,9 @@ export async function getStaticProps({ preview = false }) {
     const journeyData = journey.value;
     const visionData = vision.value;
     const carouselData = carousel.value;
-
-    // console.log("wpdata", portfolioData, portfolioHeroSection)
     return {
       props: { wpDataJson: {startpageHeroSection, weOfferYouData, quoteData, numbersData, journeyData, visionData, carouselData}, errormsg: "Nothing to read right now, try again later!" }
     }
-
   } catch (error) {
     console.log(error)
     return {
