@@ -27,7 +27,6 @@ return (
     <Form className='flexColumn formComponent poppins-font' onSubmit={(e) => props.postForm(e, 'investor')}>
 
     <p className='closeForm-btn' onClick={props.onClose}>close</p>
-
         {props.currentInput === 0 && (
             <Form.Group>
                 <Form.Label htmlFor="nameInput" className="roboto-font">What is your name?</Form.Label>
@@ -50,5 +49,4 @@ return (
     </Form>
 );
 }
-
 export default InvestorFormComponent;

@@ -122,5 +122,4 @@ const ContactFormComponent = (props) => {
         </div>
     );
 }
-
 export default ContactFormComponent;

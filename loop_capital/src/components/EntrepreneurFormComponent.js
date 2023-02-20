@@ -26,9 +26,7 @@ const EntrepreneurFormComponent = (props) => {
 
     return ( 
         <Form className='flexColumn formComponent roboto-font' onSubmit={(e) => props.postForm(e, 'entrepreneur')}>
-
             <p className='closeForm-btn roboto-font' onClick={props.onClose}>close</p>
-
             {props.currentInput === 0 && (
                 <Form.Group>
                     <Form.Label htmlFor="nameInput" className="roboto-font">What is your name?</Form.Label>
@@ -44,8 +42,6 @@ const EntrepreneurFormComponent = (props) => {
                     <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={0}/>
                 </Form.Group>
             )}
-
-
             {props.currentInput === 2 && (
                 <Form.Group>
                     <Form.Label htmlFor="emailInput" className="roboto-font">Your email:</Form.Label>
@@ -54,8 +50,6 @@ const EntrepreneurFormComponent = (props) => {
                     <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={1}/>
                 </Form.Group>
             )}
-
-
             {props.currentInput === 3 && (
                 <Form.Group>
                     <Form.Label htmlFor="subjectInput" className="roboto-font">What problem do you solve?</Form.Label>
@@ -65,8 +59,6 @@ const EntrepreneurFormComponent = (props) => {
 
                 </Form.Group>
             )}
-
-
             {props.currentInput === 4 && (
                 <Form.Group>
                     <Form.Label htmlFor="messageInput" className="roboto-font">How are you doing this?</Form.Label>
@@ -75,7 +67,6 @@ const EntrepreneurFormComponent = (props) => {
                     <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={3}/>
                 </Form.Group>
             )}
-
             {props.currentInput === 5 && (
                 <Form.Group>
                     <Form.Label className="roboto-font">Upload pitch if you have any</Form.Label>
@@ -86,9 +77,7 @@ const EntrepreneurFormComponent = (props) => {
                     <ContactFormBackArrow setCurrentInput={props.setCurrentInput} setValidationError={props.setValidationError} nr={4}/>
                 </Form.Group>
             )}
-
         </Form>
     );
 }
-
 export default EntrepreneurFormComponent;

@@ -1,4 +1,6 @@
+// IMPORTS CSS
 import styles from '../styles/FixedContactComponent.module.css';
+// IMPORTS REACT/NEXT
 import Link from "next/link";
 
 const FixedContactComponent = () => {
@@ -8,5 +10,4 @@ const FixedContactComponent = () => {
         </div>
     );
 }
-
 export default FixedContactComponent;
