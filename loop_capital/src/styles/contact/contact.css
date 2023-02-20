@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
 }
 
 .content-center {
@@ -103,7 +103,7 @@
 .closeForm-btn {
     position: absolute;
     right: 5%;
-    top: 15%;
+    top: -130%;
     font-size: 14px;
     color: #BAB9B9;
 }
@@ -112,14 +112,14 @@
     color: #BAB9B9;
     font-size: 12px;
     position: absolute;
-    bottom: 0;
+    bottom: 54%;
 }
 
 .back-arrow {
     position: absolute;
     font-size: 12px;
-    right: 5%;
-    top: 45%;
+    right: 10%;
+    top: 80%;
 }
 
 .formComponent input[type=text],
@@ -191,6 +191,8 @@ input[data-autocompleted] {
     text-align: center;
 }
 
+/* LARGE PHONE */
+
 @media screen and (min-device-width: 350px) {
     .hello-contact {
         width: 100%;
@@ -201,12 +203,9 @@ input[data-autocompleted] {
         color: #BAB9B9;
         font-size: 12px;
         position: absolute;
-        top: 40%;
     }
 }
 
-/* LARGE PHONE */
-@media screen and (min-device-width: 380px) {}
 
 @media screen and (min-device-width: 430px) {
 
@@ -275,18 +274,14 @@ input[data-autocompleted] {
     }
 
     .closeForm-btn {
-        right: 10%;
-        top: 20%;
-    }
-
-    .validationError {
-        top: 40%;
+        top: -70%;
+        right: 0;
     }
 
     .back-arrow {
-        right: 35%;
-        bottom: 55%;
+        right: 30%;
     }
+
 
 }
 
@@ -319,7 +314,18 @@ input[data-autocompleted] {
         max-width: 50%;
     }
 
-    .formComponent .btn-primary {
+    .formComponent .btn-secondary {
         width: 10%;
     }
+
+    
+    .closeForm-btn {
+        top: -90%;
+        right: 2%;
+    }
+
+    .back-arrow {
+        right: 50%;
+    }
+
 }
