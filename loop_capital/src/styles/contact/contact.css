@@ -319,7 +319,7 @@ input[data-autocompleted] {
         max-width: 50%;
     }
 
-    .formComponent .btn-primary {
+    .formComponent .btn-secondary {
         width: 10%;
     }
 }
