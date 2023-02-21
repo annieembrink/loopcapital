@@ -17,7 +17,7 @@ export default function Portfolio(props) {
   const headline = props.wpDataJson.portfolioHeroSection.headline;
   const headlineGreenWord = props.wpDataJson.portfolioHeroSection.headline_greenword;
   const paragraph = props.wpDataJson.portfolioHeroSection.paragraph;
-  
+
   const [chosenCompanies, setChosenCompanies] = useState(props.wpDataJson.portfolioData);
   const [chosenBranch, setChosenBranch] = useState('All investments');
   const [showPopup, setShowPopup] = useState(false);
@@ -52,35 +52,35 @@ export default function Portfolio(props) {
   return (
     <>
       <DefaultLayoutComponent>
-      <FixedContactComponent/>
+        <FixedContactComponent />
 
         {showPopup ?
-          <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} errormsg={props.errormsg}/>
-          : null} 
+          <PopupComponent showPopup={showPopup} setShowPopup={setShowPopup} popupCompany={popupCompany} errormsg={props.errormsg} />
+          : null}
         <div className="hero-section">
           <h1 data-aos="fade-right" data-aos-duration="600">{headline} <span className="animated-text">
-                {headlineGreenWord}
-                {/* <span data-aos="fade-right" data-aos-duration="800">j</span>
+            {headlineGreenWord}
+            {/* <span data-aos="fade-right" data-aos-duration="800">j</span>
                 <span data-aos="fade-right" data-aos-duration="1100">o</span>
                 <span data-aos="fade-right" data-aos-duration="1400">u</span>
                 <span data-aos="fade-right" data-aos-duration="1700">r</span>
                 <span data-aos="fade-right" data-aos-duration="2000">n</span>
                 <span data-aos="fade-right" data-aos-duration="2300">e</span>
                 <span data-aos="fade-right" data-aos-duration="2600">y</span> */}
-              </span>
-            </h1>
+          </span>
+          </h1>
           <p data-aos="fade-right" data-aos-duration="800">{paragraph}</p>
         </div>
 
-         <div className="margin-bottom">
+        <div className="margin-bottom">
           <div>
             <ul id="filter-list" className="roboto-font">
               <li className={chosenBranch === 'All investments' ? "active" : ""} onClick={showAll}>All investments</li>
               {arrOfBranches.map(branch => <li className={chosenBranch === branch ? "active" : ""} onClick={(e) => filter(e)} key={branch}>{branch}</li>)}
             </ul>
-          </div> 
+          </div>
 
-           <Row xs={2} md={3} lg={4} className="g-4">
+          <Row xs={2} md={3} lg={4} className="g-4">
             {chosenCompanies.map(company =>
               <Col key={company.title.rendered}>
                 <Card className="no-background" onClick={() => companyPopup(company)}>
@@ -92,8 +92,8 @@ export default function Portfolio(props) {
                 </Card>
               </Col>
             )}
-          </Row> 
-        </div> 
+          </Row>
+        </div>
       </DefaultLayoutComponent>
     </>
   )
@@ -103,11 +103,11 @@ export async function getStaticProps({ preview = false }) {
   try {
     function fetchPortfolio() {
       return fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/portfolio?per_page=100')
-      .then(res => res.json())
+        .then(res => res.json())
     }
     function fetchHeroSection() {
       return fetch('https://172-104-145-53.ip.linodeusercontent.com/wp-json/wp/v2/hero-section')
-      .then (res => res.json())
+        .then(res => res.json())
     }
     const [portfolio, heroSectionData] = await Promise.allSettled([fetchPortfolio(), fetchHeroSection()]);
     // Get only portfolio hero-section
@@ -118,12 +118,12 @@ export async function getStaticProps({ preview = false }) {
     const portfolioData = portfolio.value;
     // console.log("wpdata", portfolioData, portfolioHeroSection)
     return {
-      props: { wpDataJson: {portfolioData, portfolioHeroSection}, errormsg: "Nothing to read right now, try again later!" }
+      props: { wpDataJson: { portfolioData, portfolioHeroSection }, errormsg: "Nothing to read right now, try again later!" }
     }
   } catch (error) {
     console.error(error);
     return {
-      props: {errormsg: "Nothing to read right now, try again later!"}
+      props: { errormsg: "Nothing to read right now, try again later!" }
     }
   }
 }
