@@ -4,7 +4,7 @@ import SvgArrowComponent from "./SvgArrowComponent";
 
 const DidWeCatchYourInterestComponent = () => {
     return ( 
-        <div className="wrapper-interest grid-two margin-bottom">
+        <div className="wrapper-interest margin-bottom">
 
         <div className="interest-div">
           
