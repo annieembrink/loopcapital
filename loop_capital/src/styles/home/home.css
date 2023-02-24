@@ -215,8 +215,8 @@
 
 #arrow-svg {
     position: absolute;
-    right: 20%;
-    top: 40%;
+    right: 15%;
+    top: 70%;
     transform: rotate(-15deg);
 }
 
@@ -258,6 +258,13 @@
     .green-border-numbers {
         padding: 20px 0;
     }
+
+    #arrow-svg {
+        position: absolute;
+        right: 20%;
+        top: 70%;
+        transform: rotate(-15deg);
+    }
 }
 
 @media screen and (min-device-width: 519px) {
@@ -270,14 +277,6 @@
     .carousel-item h3 {
 
         margin-top: 15%;
-    }
-
-    #arrow-svg {
-        display: block;
-        position: absolute;
-        right: 45%;
-        top: 50%;
-        transform: rotate(-15deg);
     }
 }
 
@@ -367,12 +366,23 @@
         justify-content: start;
     }
 
+    .wrapper-interest {
+        grid-template-columns: 1fr
+    }
+
+    .interest-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
     #arrow-svg {
         display: block;
         position: absolute;
         right: 0;
-        top: 50%;
-        transform: scaleX(1) rotate(-10deg) scale(1.2);
+        top: 85%;
+        transform: scaleX(-1) rotate(0deg) scale(1.2);
     }
 }
 
@@ -395,13 +405,6 @@
         gap: 3rem;
     }
 
-    #arrow-svg {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 85%;
-        transform: scaleX(-1) rotate(0deg) scale(1.2);
-    }
 }
 
 @media screen and (min-device-width: 1440px) {
