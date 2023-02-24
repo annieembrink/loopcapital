@@ -357,16 +357,11 @@
         font-size: 30px;
     }
 
-
     .grid-two {
         grid-template-rows: 1fr;
         grid-template-columns: 1.5fr 1fr;
         justify-content: center;
     }
-
-    /* .grid-two .interest-div {
-        text-align: right;
-    } */
 
     .grid-two .button-contact {
         justify-content: start;
@@ -375,12 +370,10 @@
     #arrow-svg {
         display: block;
         position: absolute;
-        right: 25%;
+        right: 0;
         top: 50%;
-        transform: scaleX(-1) rotate(-10deg) scale(1.2);
-
+        transform: scaleX(1) rotate(-10deg) scale(1.2);
     }
-
 }
 
 
@@ -389,6 +382,25 @@
 @media screen and (min-device-width: 1320px) {
     .align-center {
         margin-left: 100px;
+    }
+
+    .wrapper-interest {
+        grid-template-columns: 1fr
+    }
+
+    .interest-div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    #arrow-svg {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 85%;
+        transform: scaleX(-1) rotate(0deg) scale(1.2);
     }
 }
 
@@ -473,10 +485,6 @@
         padding-bottom: 20px;
     }
 
-    /* #title {
-        font-size: 14px;
-    } */
-
     .wrapper-offer-you {
         width: 50%;
         padding: 40px 5px 40px 5px;
@@ -493,22 +501,4 @@
     .align-center {
         margin-left: 120px;
     }
-
-    .wrapper-interest {
-
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .wrapper-interest .interest-div {
-        padding-left: 150px;
-    }
-
-    .wrapper-interest .button-contact {
-        padding-left: 100px;
-    }
-
-    /* .grid-two .interest-div {
-       margin-left: 10%;
-    }  */
-
 }
