@@ -60,7 +60,7 @@
     display: grid;
     grid-template-rows: 2fr 1fr;
     background-color: #CBD8CE;
-    color: #11271D;
+    color: #224B3B;
     border-radius: 10px;
     justify-content: center;
     align-items: end;
@@ -79,7 +79,7 @@
 }
 
 .hello-contact .btn-primary {
-    color: #11271D;
+    color: #224B3B;
     font-weight: bold;
     margin: 30px 0 30px 0;
     font-size: 14px;
@@ -131,7 +131,7 @@
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: solid;
-    border-bottom-color: #409250;
+    border-bottom-color: #1CBA89;
     border-bottom-width: 3px;
     background-color: inherit;
     color: #CBD8CE;
@@ -157,8 +157,8 @@ input[data-autocompleted] {
 .formComponent input:focus {
     outline-width: 4px;
     outline-style: solid;
-    outline-color: #11271D;
-    background-color: #11271D;
+    outline-color: #224B3B;
+    background-color: #224B3B;
 }
 
 
@@ -175,8 +175,8 @@ input[data-autocompleted] {
 /* STYLING FOR PDF */
 
 .form-control[type=file]:not(:disabled):not([readonly]) {
-    background-color: #11271D;
-    border: 1px solid #409250;
+    background-color: #224B3B;
+    border: 1px solid #1CBA89;
     color: #CBD8CE;
     margin-top: 10px;
 }

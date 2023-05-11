@@ -9,18 +9,20 @@ const CarouselAboutComponent = (props) => {
         <div className="wrapper-carousel margin-bottom">
             <Carousel>
                 <Carousel.Item interval={8000}>
-                    <div>
+                    <div className='center_carousel'>
                         <h3>{headline}</h3>
                         <h4>{data.headline_1}</h4>
-                    </div>
+                    
                         <p className='p_element_carousel'>{data.paragraph_1}</p>
+                        </div>
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
-                    <div>
+                    <div className='center_carousel'>
                         <h3>{headline}</h3>
                         <h4>{data.headline_2}</h4>
-                    </div>
+                
                         <p className='p_element_carousel'>{data.paragraph_2}</p>
+                        </div>
                 </Carousel.Item>
                 <Carousel.Item>
                     <div>
