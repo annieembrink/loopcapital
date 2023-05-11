@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 
-const ContactCardsComponent = ({buttonOnClick, showDivOnClick, activeLink, showDiv, props}) => {
-    return ( 
+const ContactCardsComponent = ({ buttonOnClick, showDivOnClick, activeLink, showDiv, props }) => {
+    return (
         <div className='wrapper-contact'>
             <div className="wrapper-filter-contact">
                 <div className="filter-contact-mobile">
@@ -23,6 +23,6 @@ const ContactCardsComponent = ({buttonOnClick, showDivOnClick, activeLink, showD
                 </div>
             </div>
         </div>
-     );
+    );
 }
 export default ContactCardsComponent;

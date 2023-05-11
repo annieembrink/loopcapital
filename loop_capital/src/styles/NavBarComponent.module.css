@@ -3,12 +3,12 @@
 /* STYLING FOR ALL DEVICES */
 
 .nav-link {
-    color: #FAFAFA;
+    color: #FFF8EE;
     font-weight: lighter;
 }
 
 .active {
-    color: #409250 !important;
+    color: #1CBA89 !important;
     font-weight: bold;
 }
 
@@ -27,7 +27,7 @@
     }
 
     .offcanvas_container {
-        background-color: #11271D;
+        background-color: #224B3B;
     }
     
 
@@ -42,7 +42,7 @@
         align-items: center;
         text-align: center;
         gap: 30px;
-        color: white;
+        color: #FFF8EE;
         text-transform: uppercase;
     }
 
@@ -58,12 +58,12 @@
 
     .hamburger_icon span {
         background-color: #409250;
-        color: white !important;
+        color: #FFF8EE !important;
     }
 
     .btn-close {
         background-color: #409250;
-        color: white !important;
+        color: #FFF8EE !important;
     }
 }
 

@@ -11,13 +11,20 @@
     align-items: center;
     background-color: #CBD8CE;
     width: 100%;
-    height: 400px;
+    height: 420px;
 }
 
+.center_carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
 .p_element_carousel {
     background: none;
-    color: #11271D;
+    color: #224B3B;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     margin-top: 20px;
@@ -27,7 +34,7 @@
 .carousel-item h3 {
     margin-top: 30%;
     background: none;
-    color: #11271D;
+    color: #224B3B;
     font-family: 'Roboto Mono', monospace;
     font-size: 22px;
     font-weight: 500;
@@ -35,7 +42,7 @@
 
 .carousel-item h4 {
     background: none;
-    color: #11271D;
+    color: #224B3B;
     font-family: 'Roboto Mono', monospace;
     font-size: 16px;
     font-weight: bold;
@@ -45,7 +52,7 @@
     border-radius: 50%;
     height: 5px;
     width: 5px;
-    background-color: #11271D;
+    background-color: #224B3B;
     opacity: 1;
 }
 
@@ -56,7 +63,7 @@
 
 
 .carousel .carousel-indicators button.active {
-    background-color: #409250;
+    background-color: #1CBA89;
     height: 6px;
     width: 6px;
 }
@@ -69,7 +76,7 @@
 /* INVESTMENTS NUMBERS */
 
 .extra-big-font {
-    color: #409250;
+    color: #1CBA89;
     font-family: 'Roboto Mono';
     font-style: normal;
     font-weight: 700;
@@ -118,7 +125,7 @@
     bottom: -5px;
     left: 0;
     border-radius: 10px;
-    background-color: #409250;
+    background-color: #1CBA89;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
 
@@ -137,7 +144,7 @@
     display: flex;
     margin: auto;
     font-size: 100px;
-    color: #409250;
+    color: #1CBA89;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
 
@@ -257,7 +264,14 @@
     }
 
     .green-border-numbers {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 80px;
         padding: 20px 0;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
     }
 
     #arrow-svg {
@@ -389,6 +403,11 @@
         right: 0;
         top: 85%;
         transform: scaleX(-1) rotate(0deg) scale(1.2);
+    }
+
+    .green-border-numbers {
+        width: 100%;
+        margin-bottom: 200px;
     }
 }
 

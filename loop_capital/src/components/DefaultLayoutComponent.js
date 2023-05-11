@@ -17,19 +17,19 @@ const DefaultLayoutComponent = ({ children }) => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
-              }
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (!data) {
-                console.error('Error: Data is undefined');
-                return;
             }
-            setMetaData(data.json)
         })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+            .then(res => res.json())
+            .then(data => {
+                if (!data) {
+                    console.error('Error: Data is undefined');
+                    return;
+                }
+                setMetaData(data.json)
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }
 
     useEffect(() => {
@@ -43,7 +43,7 @@ const DefaultLayoutComponent = ({ children }) => {
             setMetaImgUrl(metaData.og_image[0].url)
         }
     }, [metaData]);
-    
+
     return (
         <>
             <Head>
@@ -58,9 +58,9 @@ const DefaultLayoutComponent = ({ children }) => {
                 <link type="image/x-icon" rel="icon" href={metaImgURl.replace("http://", "https://")} />
             </Head>
 
-            <HeaderComponent/>
+            <HeaderComponent />
             <main>{children}</main>
-            <FooterComponent/>
+            <FooterComponent />
         </>
     );
 }

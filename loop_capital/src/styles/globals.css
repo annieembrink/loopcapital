@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #11271D !important;
+    background-color: #224B3B !important;
     width: 100vw;
 }
 
@@ -83,7 +83,7 @@ h5 {
 
 .icon {
     font-size: 25px;
-    color: #409250;
+    color: #1CBA89;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
 }
 
@@ -98,9 +98,9 @@ h5 {
 /* BUTTON STYLING */
 
 .btn-primary {
-    background-color: #409250 !important;
+    background-color: #1CBA89 !important;
     border: none !important;
-    color: #fafafa;
+    color: #FFF8EE;
     text-transform: uppercase;
     padding: 16px 20px !important;
     border-radius: 10px;
@@ -111,9 +111,9 @@ h5 {
 }
 
 .btn-secondary {
-    background-color: #409250 !important;
+    background-color: #1CBA89 !important;
     border: none !important;
-    color: #fafafa;
+    color: #FFF8EE;
     text-transform: uppercase;
     border-radius: 10px;
     font-family: 'Roboto Mono';
@@ -125,13 +125,13 @@ h5 {
 /*  MENU */
 
 .nav-link {
-    color: #FAFAFA;
+    color: #FFF8EE;
     font-family: 'Roboto Mono';
     font-weight: 400;
 }
 
 .active {
-    color: #409250 !important;
+    color: #1CBA89 !important;
     font-weight: 700;
 }
 
@@ -152,7 +152,7 @@ h5 {
 
 .offcanvas_container {
     width: 100% !important;
-    background-color: #11271D !important;
+    background-color: #224B3B !important;
 }
 
 .offcanvas_header {
@@ -165,7 +165,7 @@ h5 {
     align-items: center;
     text-align: center;
     gap: 30px;
-    color: white;
+    color: #FFF8EE;
     text-transform: uppercase;
     margin-top: 30%;
 }
@@ -189,7 +189,7 @@ ul {
 /* GREEN-BORDER */
 
 .green-border {
-    border: 3px solid #409250;
+    border: 3px solid #1CBA89;
     filter: drop-shadow(0px 4px 15px rgba(238, 249, 241, 0.1));
     border-radius: 20px;
 }
@@ -229,11 +229,11 @@ ul {
 /* ANIMATED AND GREEN TEXT */
 
 .animated-text {
-    color: #409250;
+    color: #1CBA89;
 }
 
 .green-text {
-    color: #409250;
+    color: #1CBA89;
 }
 
 /* NO DOTS ON LISTELEMENTS*/
