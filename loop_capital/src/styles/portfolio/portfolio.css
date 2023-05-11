@@ -43,7 +43,7 @@ ol, ul {
 
 .card-body .h3 {
     margin-bottom: 0;
-    color: #11271D;
+    color: #224B3B;
     font-size: 16px !important;
 }
 
@@ -54,8 +54,8 @@ ol, ul {
 /* POPUP FORM */
 
 .modal-content {
-    background-color: #EEF9F1;
-    color: #11271D;
+    background-color: #FFF8EE;
+    color: #224B3B;
 }
 
 .modal-header {
@@ -76,13 +76,13 @@ ol, ul {
 }
 
 .modal-body a {
-    color: #11271D !important;
+    color: #224B3B !important;
 }
 
 
 .modal-body .nav-link {
     background-color: none;
-    color: #11271D;
+    color: #224B3B;
     padding: 30px;
     font-family: 'Poppins', sans-serif;
     border: none;
@@ -134,7 +134,7 @@ ol, ul {
         font-size: 30px;
         padding: 20px 0 0 30px;
         font-weight: bold;
-        color: #11271D;
+        color: #224B3B;
     }
 
     .modal-content .btn-close {

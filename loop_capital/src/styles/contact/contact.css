@@ -59,7 +59,7 @@
 .hello-contact {
     display: grid;
     grid-template-rows: 2fr 1fr;
-    background-color: #CBD8CE;
+    background-color: #FFF8EE;
     color: #224B3B;
     border-radius: 10px;
     justify-content: center;
@@ -134,7 +134,7 @@
     border-bottom-color: #1CBA89;
     border-bottom-width: 3px;
     background-color: inherit;
-    color: #CBD8CE;
+    color: #FFF8EE;
     margin-bottom: 40px;
     max-width: 90%;
 }
@@ -177,7 +177,7 @@ input[data-autocompleted] {
 .form-control[type=file]:not(:disabled):not([readonly]) {
     background-color: #224B3B;
     border: 1px solid #1CBA89;
-    color: #CBD8CE;
+    color: #FFF8EE;
     margin-top: 10px;
 }
 
